@@ -1,0 +1,5 @@
+.carousel .carousal-image{
+   height: 480px !important;   
+   filter: brightness(80%);  
+
+}

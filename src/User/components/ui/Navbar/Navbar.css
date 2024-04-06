@@ -1,0 +1,60 @@
+
+
+.collapse {
+    visibility: visible !important;
+}
+
+.navbar .logo{
+  height: 70px;
+  width: 150px;
+  
+}
+.navbar .nav-text{
+  border-bottom: 0px solid rgba(250, 190, 57, 0);
+  text-transform: uppercase;
+  color: #000000;
+  font-family:"Jost", sans-serif;
+  font-size: 0.850rem;
+
+}
+.navbar .nav-text{
+  border-bottom: 0px solid rgba(250, 190, 57, 0);
+    text-transform: uppercase;
+    color: #000000;
+    font-family: "Jost", sans-serif;
+    font-size: 0.850rem;
+}
+.navbar .book-now-btn{
+  padding: 8px 20px;
+    margin-top: -4px;
+    color: #f6d284 !important;
+}
+.nav-text-book-now{
+  border-bottom: 0px solid rgba(250, 190, 57, 0);
+  text-transform: uppercase;
+  color: #f6d284;
+  font-family: "Jost", sans-serif;
+  font-size: 0.850rem;
+  cursor: pointer;
+
+}
+.active{
+  color: #f6d284 !important;
+}
+.navbar .nav-text:hover{
+  color: #FFC107;
+}
+.navbar .heading-fonts{
+  font-size: 1.5rem;
+}
+
+.navbar .heading-fonts{
+  font-family: "Playfair Display", serif;
+
+}
+ 
+@media screen and (min-width: 1200px) {
+  .navbar .nav-padding {
+      padding: 0px 80px; 
+  }
+}
