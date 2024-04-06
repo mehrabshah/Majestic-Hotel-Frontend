@@ -13,6 +13,7 @@ import ProtectedRoute from '../Admin/components/ProtectedRoute';
 import BookingDetails from '../Admin/pages/BookingDetails';
 import BookingCheckin from '../Admin/pages/BookingCheckin';
 import Home from '../User/pages/Home';
+import Contact from '../User/pages/Contact';
 
 function AppRoutes() {
   return (
@@ -37,6 +38,7 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
       <Route path="/home" element={<Home/>} />
+      <Route path="/contact-us" element={<Contact/>} />
     </Routes>
   );
 }

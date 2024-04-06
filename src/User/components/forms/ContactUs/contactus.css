@@ -1,0 +1,16 @@
+.border-sidebottom-0{
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-color: black !important;
+    border-radius: 0px;
+    --tw-ring-offset-color:none !important;
+  }
+
+  .focus\:outline-none:focus{
+    box-shadow: none !important;
+}
+textarea:focus{
+      box-shadow: none !important;
+    border-color: black !important;
+  }
