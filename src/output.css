@@ -1935,7 +1935,6 @@ input[type='file']:focus {
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
 @media (min-width: 640px) {
   .sm\:py-32 {
     padding-top: 8rem;
