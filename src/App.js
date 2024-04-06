@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { ThemeContextProvider } from './contexts/ThemeContext';
+import { ThemeContextProvider } from '../src/Admin/contexts/ThemeContext';
 import AppRoutes from './Routes/Routes';
+
 
 function App() {
   return (
     <ThemeContextProvider>
         <BrowserRouter>
-          <AppRoutes />
+          <AppRoutes/>
         </BrowserRouter>
         <Toaster
           toastOptions={{
@@ -24,7 +25,8 @@ function App() {
             },
           }}
         />
-    </ThemeContextProvider>
+        </ThemeContextProvider>
+    
   );
 }
 

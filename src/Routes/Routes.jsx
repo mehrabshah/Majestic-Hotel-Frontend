@@ -1,17 +1,18 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
-import Bookings from '../pages/Bookings';
-import Cabins from '../pages/Cabins';
-import Users from '../pages/Users';
-import Settings from '../pages/Settings';
-import Account from '../pages/Account';
-import Login from '../pages/Login';
-import PageNotFound from '../pages/PageNotFound';
-import AppLayout from '../components/AppLayout';
-import ProtectedRoute from '../components/ProtectedRoute';
-import BookingDetails from '../pages/BookingDetails';
-import BookingCheckin from '../pages/BookingCheckin';
+import Dashboard from '../Admin/pages/Dashboard';
+import Bookings from '../Admin/pages/Bookings';
+import Cabins from '../Admin/pages/Cabins';
+import Users from '../Admin/pages/Users';
+import Settings from '../Admin/pages/Settings';
+import Account from '../Admin/pages/Account';
+import Login from '../Admin/pages/Login';
+import PageNotFound from '../Admin/pages/PageNotFound';
+import AppLayout from '../Admin/components/AppLayout';
+import ProtectedRoute from '../Admin/components/ProtectedRoute';
+import BookingDetails from '../Admin/pages/BookingDetails';
+import BookingCheckin from '../Admin/pages/BookingCheckin';
+import Home from '../User/pages/Home';
 
 function AppRoutes() {
   return (
@@ -35,6 +36,7 @@ function AppRoutes() {
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
+      <Route path="/home" element={<Home/>} />
     </Routes>
   );
 }

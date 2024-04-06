@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.js';
 import './index.css';
 import { ErrorBoundary } from 'react-error-boundary';
-import ErrorFallback from './components/ErrorFallback.jsx';
+import ErrorFallback from '../src/Admin/components/ErrorFallback.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
