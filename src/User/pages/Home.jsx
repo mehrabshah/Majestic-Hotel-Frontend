@@ -1,12 +1,18 @@
 import React from 'react'
 import Navbar from '../components/ui/Navbar/Navbar'
-import Carousal from '../components/ui/Carousal/Carousal'
+import Welcome from '../components/ui/Welcome/Welcome'
+import Dinning from '../components/ui/Dinning/Dinning'
+import Hero from '../components/ui/Hero/Hero'
+import Facilities from '../components/ui/Facilities/Facilities'
 
 function Home() {
   return (
     <>
        <Navbar/>
-       <Carousal/>
+       <Hero/>
+       <Welcome/>
+       <Dinning/>
+       <Facilities/>
     </>
   )
 }

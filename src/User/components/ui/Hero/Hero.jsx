@@ -1,7 +1,7 @@
 import React from "react";
-import "./Carousal.css"
+import "./Hero.css"
 
-function Carousal() {
+function Hero() {
   return (
     <div
       id="carouselExampleFade"
@@ -41,4 +41,4 @@ function Carousal() {
   );
 }
 
-export default Carousal;
+export default Hero;
