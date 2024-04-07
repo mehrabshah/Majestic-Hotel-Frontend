@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --color-brand-50: 238 242 255;
+    --color-brand-50: 46 22 58;
     --color-brand-100: 224 231 255;
     --color-brand-200: 199 210 254;
     --color-brand-500: 99 102 241;
-    --color-brand-600: 79 70 229;
+    --color-brand-600: 246 210 132;
     --color-brand-700: 67 56 202;
     --color-brand-800: 55 48 163;
     --color-brand-900: 49 46 129;
@@ -50,7 +50,7 @@
     --color-brand-100: 224 231 255;
     --color-brand-200: 199 210 254;
     --color-brand-500: 99 102 241;
-    --color-brand-600: 79 70 229;
+    --color-brand-600:  246 210 132;
     --color-brand-700: 67 56 202;
     --color-brand-800: 55 48 163;
     --color-brand-900: 49 46 129;
