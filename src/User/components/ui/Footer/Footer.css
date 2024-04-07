@@ -1,4 +1,14 @@
 .footer{
-   background-color:  #000000;
-    
+   background-color:  #000000 !important;   
+}
+.footer .logo{
+    height: 100px;  
+}
+.footer .icon-color{
+   color: #ffffff;
+}
+.footer .footer-heading{
+   font-size: 1.125rem;
+   color: #ffffff;
+
 }

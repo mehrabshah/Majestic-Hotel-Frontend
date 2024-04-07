@@ -13,9 +13,9 @@ function Hero() {
           <div className="carousel-inner">
             
             <div className="carousel-item active">
-            <div className="image-overlay">
+            <div className="image-fluid">
               <img
-                src="./assets/banner-1.jpg"
+                src="./assets/pc/pc-2.jpg"
                 className="d-block w-100  img-fluid "
                 alt="carousal-image"
               />
@@ -61,7 +61,7 @@ function Hero() {
               <div class="carousel-caption ">
                 <div className="absolute  bottom-72   right-10  ">
                   <div className="caption text-center">
-                    <h1 class=" light-color main-heading-hero ft-55">
+                    <h1 class="  main-heading-hero ft-55">
                       An invitation to explore
                     </h1>
                     <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-hero text-uppercase border-bottom d-inline-block px-3 pb-2">
