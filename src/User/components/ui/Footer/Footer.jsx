@@ -18,40 +18,55 @@ function Footer() {
             <GrInstagram size={30} className="ms-4 me-4 icon-color" />
             <FaLinkedinIn size={30} className="icon-color" />
           </div>
-          <div className="row mt-4">
+          <div className="row mt-16 ">
             <div className="col-md-3 d-flex justify-center">
               <ul>
-                <h1 className="mb-3 footer-heading">heading 1</h1>
-                <li>text 1</li>
-                <li>text 2</li>
-                <li>text 3</li>
+                <h1 className="mb-3 footer-heading g-book font-bold">
+                  heading 1
+                </h1>
+                <li className="footer-link g-book ">text 1</li>
+                <li className="footer-link g-book">text 2</li>
+                <li className="footer-link g-book">text 3</li>
               </ul>
             </div>
             <div className="col-md-3 d-flex justify-center">
               <ul>
-                <h1 className="mb-3 footer-heading">heading 2</h1>
-                <li>text 1</li>
-                <li>text 2</li>
-                <li>text 3</li>
+                <h1 className="mb-3 footer-heading g-book font-bold">
+                  heading 2
+                </h1>
+                <li className="footer-link g-book">text 1</li>
+                <li className="footer-link g-book">text 2</li>
+                <li className="footer-link g-book">text 3</li>
               </ul>
             </div>
             <div className="col-md-3 d-flex justify-center">
-            <ul>
-              <h1 className="mb-3 footer-heading">heading 3</h1>
-              <li>text 1</li>
-              <li>text 2</li>
-              <li>text 3</li>
-            </ul>
+              <ul>
+                <h1 className="mb-3 footer-heading g-book font-bold">
+                  heading 3
+                </h1>
+                <li className="footer-link g-book">text 1</li>
+                <li className="footer-link g-book">text 2</li>
+                <li className="footer-link g-book">text 3</li>
+              </ul>
             </div>
             <div className="col-md-3 d-flex justify-center">
-            <ul>
-              <h1 className="mb-3 footer-heading">heading 4</h1>
-              <li>text 1</li>
-              <li>text 2</li>
-              <li>text 3</li>
-            </ul>
+              <ul>
+                <h1 className="mb-3 footer-heading g-book font-bold">
+                  heading 4
+                </h1>
+                <li className="footer-link g-book">text 1</li>
+                <li className="footer-link g-book">text 2</li>
+                <li className="footer-link g-book">text 3</li>
+              </ul>
             </div>
-
+            <div className=" ps-16 pe-16">
+              <hr className="line mt-3  "></hr>
+            </div>
+          </div>
+          <div className="row">
+              <p className="text-center g-book footer-link">
+                  All right reserved © 2024 Website design by Ascendant
+              </p>
           </div>
         </div>
       </div>

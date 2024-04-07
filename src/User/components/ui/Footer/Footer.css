@@ -12,3 +12,11 @@
    color: #ffffff;
 
 }
+.footer .footer-link{
+   cursor: pointer;
+   color: #fff;
+}
+.footer .line{
+   color: #ffffff;
+   height: 16px;
+}

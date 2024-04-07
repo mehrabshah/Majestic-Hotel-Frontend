@@ -13,4 +13,10 @@
     font-size: 1rem;
     font-weight: 100;
 }
+.g-book{
+    font-family:'Gotham';
+}
+.p-fair{
+    font-family: "Playfair Display", serif;    
+}
 
