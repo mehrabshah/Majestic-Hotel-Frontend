@@ -1,3 +1,7 @@
 .Facilities{
     background-color:rgba(211, 232, 232, 0.7) !important;
 }
+
+.Facilities-background {
+    background-image: url('../../../../../public/assets/pc//flower-3.png');     
+}

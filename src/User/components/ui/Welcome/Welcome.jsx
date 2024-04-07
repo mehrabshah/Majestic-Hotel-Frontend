@@ -42,7 +42,7 @@ function Welcome() {
           </div>
         </div>
       </div>
-      {/* <LuxurySlider/> */}
+      {/* <LuxurySlider/>  */}
     </div>
   );
 }
