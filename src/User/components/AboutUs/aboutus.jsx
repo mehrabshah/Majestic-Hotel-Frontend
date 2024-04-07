@@ -1,18 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './aboutus.css'
+import {  Bed,Champagne,ForkKnife
+} from '@phosphor-icons/react';
 const AboutUs = () => {
  
   return (
     <>
-  <div className='row h-[80vh] mx-auto align-items-center about-us-background'>
+  <div className='container-fluid about-us-background'>
+  <div className='row h-[80vh] mx-auto align-items-center'>
+
     <div className='col-md-6 p-md-5 p-3'>
     <h1 className='el-messiri-bold text-brand-600 text-4xl md:text-8xl'>ABOUT</h1>
-    <div className='row align-items-center'>
+    <div className='row align-items-center justify-content-between'>
     <div className='col-md-2'>
       <p className='el-messiri-bold text-4xl text-white md:text-8xl'>US</p>
       </div>
-    <div className='col-md-9 ms-5'>
+    <div className='col-md-9'>
     <div className="border-b border-white  mx-auto"></div>
     </div>
     </div>
@@ -25,35 +29,38 @@ const AboutUs = () => {
     </div>
 
   </div>
+  </div>
   
-  <div className="flex flex-col w-full max-w-3xl mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold text-center mb-4">Our History</h2>
-      <div className="flex items-center mb-6">
-        <div className="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center">
-          <img src="path/to/mercury.svg" alt="Mercury Logo" className="w-6 h-6" />
+  <div className="flex flex-col w-full 3xlmax-w- mx-auto py-8">
+      <h2 className="text-2xl md:text-4xl font-bold text-center my-5">Our <span className='text-brand-600'>History</span></h2>
+      <div className='flex flex-wrap align-items-center justify-content-around'>
+      <div className="flex flex-col items-center">
+        <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
+        <Bed size={32} color="white" />
         </div>
-        <div className="flex-grow border-b border-gray-300 pb-2">
-          <h3 className="text-lg font-bold">2012</h3>
+        <div className="flex-grow  pb-2">
+          <h3 className="text-lg font-bold border-b border-brand-50 px-3 mt-2">Text 1</h3>
+        </div>
           <p className="text-gray-700">It's the closest planet to the Sun</p>
-        </div>
       </div>
-      <div className="flex items-center mb-6">
-        <div className="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center">
-          <img src="path/to/venus.svg" alt="Venus Logo" className="w-6 h-6" />
+      <div className="flex flex-col items-center">
+        <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
+        <Champagne size={32} color="white" />
         </div>
-        <div className="flex-grow border-b border-gray-300 pb-2">
-          <h3 className="text-lg font-bold">2014</h3>
+        <div className="flex-grow  pb-2">
+          <h3 className="text-lg font-bold border-b border-brand-50 px-3 mt-2">Text 2</h3>
+        </div>
           <p className="text-gray-700">Venus has a beautiful name</p>
-        </div>
       </div>
-      <div className="flex items-center">
-        <div className="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center">
-          <img src="path/to/mars.svg" alt="Mars Logo" className="w-6 h-6" />
+      <div className="flex flex-col items-center">
+        <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
+        <ForkKnife size={32} color="white" />
         </div>
-        <div className="flex-grow border-b border-gray-300 pb-2">
-          <h3 className="text-lg font-bold">2016</h3>
+        <div className="flex-grow  pb-2">
+          <h3 className="text-lg font-bold border-b border-brand-50 px-3 mt-2 ">Text 3</h3>
+        </div>
           <p className="text-gray-700">Mars is actually a very cold place</p>
-        </div>
+      </div>
       </div>
     </div>
     </>
