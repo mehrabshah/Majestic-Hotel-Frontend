@@ -5,9 +5,7 @@
 }
 
 .navbar .logo{
-  height: 70px;
-  width: 150px;
-  
+  height: 100px;  
 }
 .navbar .nav-text{
   border-bottom: 0px solid rgba(250, 190, 57, 0);
