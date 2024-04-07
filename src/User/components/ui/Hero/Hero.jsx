@@ -11,12 +11,15 @@ function Hero() {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
+            
             <div className="carousel-item active">
+            <div className="image-overlay">
               <img
-                src="./assets/pc/pc-2.jpg"
+                src="./assets/banner-1.jpg"
                 className="d-block w-100  img-fluid "
                 alt="carousal-image"
               />
+              </div>
               <div class="carousel-caption ">
                 <div className="absolute  bottom-72    right-10 ">
                   <div className="caption text-center">
@@ -111,12 +114,6 @@ function Hero() {
                 <p className="box-paragraph">Lahore</p>
               </div>
             </div>
-            {/* <div className="box-golden col-md-3 p-2">
-            <div className="box-inner-last text-center p-3">
-              <h1 className="box-heading">Destination</h1>
-              <p className="box-paragraph">Lahore</p>
-            </div>
-          </div> */}
             <div className="box col-3 p-2">
               <div className="box-inner-last text-center p-3">
                 <h1 className="box-heading">Destination</h1>
