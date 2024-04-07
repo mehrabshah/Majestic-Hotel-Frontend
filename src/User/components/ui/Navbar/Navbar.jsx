@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-xl bg-white   pt-0 px-0 px-md-3 pe-lg-5 pb-0 ">
       <div className="container-lg container-fluid nav-padding">
         <a className="navbar-brand magestic-logo" href="#">
-          <img src="./assets/logo.jpeg" className="logo"></img>
+          <img src="./assets/logo.png" className="logo"></img>
         </a>
         <button
           className="navbar-toggler"
