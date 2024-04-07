@@ -25,6 +25,37 @@ const AboutUs = () => {
     </div>
 
   </div>
+  
+  <div className="flex flex-col w-full max-w-3xl mx-auto px-4 py-8">
+      <h2 className="text-2xl font-bold text-center mb-4">Our History</h2>
+      <div className="flex items-center mb-6">
+        <div className="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center">
+          <img src="path/to/mercury.svg" alt="Mercury Logo" className="w-6 h-6" />
+        </div>
+        <div className="flex-grow border-b border-gray-300 pb-2">
+          <h3 className="text-lg font-bold">2012</h3>
+          <p className="text-gray-700">It's the closest planet to the Sun</p>
+        </div>
+      </div>
+      <div className="flex items-center mb-6">
+        <div className="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center">
+          <img src="path/to/venus.svg" alt="Venus Logo" className="w-6 h-6" />
+        </div>
+        <div className="flex-grow border-b border-gray-300 pb-2">
+          <h3 className="text-lg font-bold">2014</h3>
+          <p className="text-gray-700">Venus has a beautiful name</p>
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center">
+          <img src="path/to/mars.svg" alt="Mars Logo" className="w-6 h-6" />
+        </div>
+        <div className="flex-grow border-b border-gray-300 pb-2">
+          <h3 className="text-lg font-bold">2016</h3>
+          <p className="text-gray-700">Mars is actually a very cold place</p>
+        </div>
+      </div>
+    </div>
     </>
 
   );
