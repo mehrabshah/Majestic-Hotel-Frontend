@@ -1,0 +1,12 @@
+.about-us-background {
+  /* Set height and width as needed for your section */
+  width: 100%;
+
+  background-image: linear-gradient(to right, #2E163A 70%, #e7d682 30%);
+}
+.el-messiri-bold {
+  font-family: "El Messiri", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}

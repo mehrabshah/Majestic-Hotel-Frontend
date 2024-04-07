@@ -14,6 +14,7 @@ import BookingDetails from '../Admin/pages/BookingDetails';
 import BookingCheckin from '../Admin/pages/BookingCheckin';
 import Home from '../User/pages/Home';
 import Contact from '../User/pages/Contact';
+import About from '../User/pages/AboutUs';
 
 function AppRoutes() {
   return (
@@ -39,6 +40,7 @@ function AppRoutes() {
       <Route path="*" element={<PageNotFound />} />
       <Route path="/home" element={<Home/>} />
       <Route path="/contact-us" element={<Contact/>} />
+      <Route path="/about-us" element={<About/>} />
     </Routes>
   );
 }
