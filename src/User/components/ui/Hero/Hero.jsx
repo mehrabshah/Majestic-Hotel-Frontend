@@ -1,79 +1,39 @@
 import React from "react";
 import "./Hero.css";
+import CarouselItem from "./components/CarousalItem";
+import BookingSection from "./components/BookingSectionInner";
+import BookingSectionOuter from "./components/BookingSectionOuter";
 
 function Hero() {
+
   return (
     <>
-      <div className="hero relative ">
+      <div className="hero relative">
         <div
           id="carouselExampleFade"
-          className="carousel slide carousel-fade -z-10 "
+          className="carousel slide carousel-fade "
           data-bs-ride="carousel"
         >
-          <div className="carousel-inner">
-            
-            <div className="carousel-item active">
-            <div className="image-fluid">
-              <img
-                src="./assets/pc/pc-2.jpg"
-                className="d-block w-100  img-fluid "
-                alt="carousal-image"
-              />
-              </div>
-              <div class="carousel-caption ">
-                <div className="absolute  bottom-72    right-10 ">
-                  <div className="caption text-center">
-                    <h1 class=" light-color main-heading-hero ft-55">
-                      An invitation to explore
-                    </h1>
-                    <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-hero text-uppercase border-bottom d-inline-block px-3 pb-2">
-                      Badshahi Masjid
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item ">
-              <img
-                src="./assets/pc/pc-2.jpg"
-                className="d-block w-100 img-fluid "
-                alt="carousal-image"
-              />
-              <div class="carousel-caption ">
-                <div className="absolute    bottom-72   right-10 ">
-                  <div className="caption text-center">
-                    <h1 class=" light-color main-heading-hero ft-55">
-                      Get A TASTE OF OLD LAHORE
-                    </h1>
-                    <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-hero text-uppercase border-bottom d-inline-block px-3 pb-2">
-                      Badshahi Masjid
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item ">
-              <img
-                src="./assets/pc/pc-3.jpg"
-                className="d-block w-100 img-fluid"
-                alt="carousal-image"
-              />
-              <div class="carousel-caption ">
-                <div className="absolute  bottom-72   right-10  ">
-                  <div className="caption text-center">
-                    <h1 class="  main-heading-hero ft-55">
-                      An invitation to explore
-                    </h1>
-                    <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-hero text-uppercase border-bottom d-inline-block px-3 pb-2">
-                      Badshahi Masjid
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="carousel-inner ">
+            <CarouselItem
+              image="./assets/banner-10.jpg"
+              title="The ultimate shopisticate and premium"
+              subtitle="All Inclusive & Exclusive"
+              active={true}
+            />
+            <CarouselItem
+              image="./assets/banner-2.jpg"
+              title="One Prgrammme, Saving everyday, New Experiences  "
+              subtitle="Your Loyalty Rewarded"
+            />
+            <CarouselItem
+              image="./assets/banner-7.jpg"
+              title="Hospitality are the origins traditions Motto" 
+              subtitle="Generous & Authentic Approach"
+            />
           </div>
           <button
-            className="carousel-control-prev"
+            className="carousel-control-prev z-20"
             type="button"
             data-bs-target="#carouselExampleFade"
             data-bs-slide="prev"
@@ -82,7 +42,7 @@ function Hero() {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next"
+            className="carousel-control-next z-20"
             type="button"
             data-bs-target="#carouselExampleFade"
             data-bs-slide="next"
@@ -90,40 +50,10 @@ function Hero() {
             <span className="carousel-control-next-icon" aria-hidden="true" />
             <span className="visually-hidden">Next</span>
           </button>
-        </div>
-
-      <div className="booking d-flex justify-center    ">
-        <div className=" absolute container bottom-0  pe-36 ps-36 d-none d-lg-block">
-          <div className="row ">
-            <div className="box col-3 p-2">
-              <div className="box-inner text-center p-3">
-                <h1 className="box-heading">Destination</h1>
-                <p className="box-paragraph">Lahore</p>
-              </div>
-            </div>
-
-            <div className="box col-3 p-2">
-              <div className="box-inner text-center p-3">
-                <h1 className="box-heading">Destination</h1>
-                <p className="box-paragraph">Lahore</p>
-              </div>
-            </div>
-            <div className="box col-3 p-2">
-              <div className="box-inner text-center p-3">
-                <h1 className="box-heading">Destination</h1>
-                <p className="box-paragraph">Lahore</p>
-              </div>
-            </div>
-            <div className="box col-3 p-2">
-              <div className="box-inner-last text-center p-3">
-                <h1 className="box-heading">Destination</h1>
-                <p className="box-paragraph">Lahore</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
+        </div> 
+      
       </div>
+      <BookingSectionOuter/>
     </>
   );
 }

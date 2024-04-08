@@ -11,12 +11,13 @@ function Home() {
   return (
     <>
        <Navbar/>
-       <Hero/>
-       <Welcome/>
-        <Dinning/>
-        <Facilities/>
+        <Hero/>
+        <Welcome/>
+        {/* <Dinning/>
+
+         <Facilities/>
         <Awards/>
-        <Footer/>
+        <Footer/>      */}
     </>
   )
 }

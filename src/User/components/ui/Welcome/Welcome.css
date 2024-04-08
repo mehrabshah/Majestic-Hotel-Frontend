@@ -20,3 +20,7 @@
     font-family: "Playfair Display", serif;    
 }
 
+.welcome-cover{
+  background-image: url("../../../../../public/assets/pc/flower-1.png");
+
+}
