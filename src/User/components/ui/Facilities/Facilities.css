@@ -1,7 +1,20 @@
 .Facilities{
-    background-color:rgba(211, 232, 232, 0.7) !important;
+    /* background-color:rgba(211, 232, 232, 0.7) !important; */
+    background-color: #000000 !important;
 }
 
 .Facilities-background {
-    background-image: url('../../../../../public/assets/pc//flower-3.png');     
+    background-image: url('../../../../../public/assets/contact-bg.jpg');     
+}
+
+.main-heading-facilities{
+    font-size: 2.25rem;
+    font-family: "Playfair Display", serif;
+    color: #ffffff;
+}
+.main-paragraph-facilities{
+    font-family:'Gotham';
+    font-size: 1rem;
+    font-weight: 100;
+    color: #ffffff;
 }

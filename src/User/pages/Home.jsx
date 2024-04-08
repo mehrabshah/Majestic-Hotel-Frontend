@@ -6,6 +6,7 @@ import Hero from '../components/ui/Hero/Hero'
 import Facilities from '../components/ui/Facilities/Facilities'
 import Awards from '../components/ui/Awards/Awards'
 import Footer from '../components/ui/Footer/Footer'
+import Rooms from '../components/ui/Rooms/Rooms'
 
 function Home() {
   return (
@@ -13,11 +14,11 @@ function Home() {
        <Navbar/>
         <Hero/>
         <Welcome/>
-        {/* <Dinning/>
-
-         <Facilities/>
-        <Awards/>
-        <Footer/>      */}
+        <Rooms/>
+        <Dinning/> 
+        <Facilities/>
+         <Awards/>
+         {/* <Footer/>      */}
     </>
   )
 }

@@ -14,13 +14,13 @@ const Facilities = () => {
           <div className="max-w-screen-lg mx-auto pt-5 pb-5">
             <div className="row">
               <div className="col-md-6 align-self-center text-center order-2 order-md-2">
-                <h5 className="border-bottom border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
+                <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
                   Business Centre
                 </h5>
-                <h2 className=" ft-30 mb-4 main-heading-font">
+                <h2 className=" ft-30 mb-4 main-heading-facilities">
                   Impeccable Service
                 </h2>
-                <p className="px-0 px-lg-5 w-75 mx-auto mb-4 ps-2 pe-2 main-paragraph-font">
+                <p className="px-0 px-lg-5 w-75 mx-auto mb-4 ps-2 pe-2 main-paragraph-facilities">
                   Explore our meeting venues with a wide variety of
                   well-equipped conference halls and meeting rooms, perfect for
                   all your events.
@@ -33,13 +33,13 @@ const Facilities = () => {
                 <img src="./assets/pc/pc-8.jpg"></img>
               </div>
               <div className="col-md-6 align-self-center text-center order-4 order-md-4">
-                <h5 class="border-bottom border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
+                <h5 class="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
                   Spa &amp; Wellness
                 </h5>
-                <h2 class="main-heading-font ft-30 mb-4">
+                <h2 class="main-heading-facilities ft-30 mb-4">
                   Relax &amp; Recover
                 </h2>
-                <p class="main-paragraph-font px-0 px-lg-5 w-75 mx-auto mb-4 g-light">
+                <p class="main-paragraph-facilities px-0 px-lg-5 w-75 mx-auto mb-4 g-light">
                   Embark on a soul-soothing journey in our Spa with a variety of
                   treatments and massages.
                 </p>
