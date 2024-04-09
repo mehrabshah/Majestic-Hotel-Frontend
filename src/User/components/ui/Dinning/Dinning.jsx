@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dinning.css";
-import SlideCarousal from "../SlideCarousal/SlideCarousal";
+import SlideCarousal from "./components/SlideCarousal/SlideCarousal";
 
 function Dinning() {
   return (

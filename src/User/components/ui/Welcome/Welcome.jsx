@@ -4,34 +4,41 @@ import "./Welcome.css";
 function Welcome() {
   return (
     <>
-      
-    <div className=" pt-32 text-center our-hotel">
-      <div className="max-w-screen-lg mx-auto ">
-        <div className="row    ms-0 me-0">
-          <div className="col-lg-7 mb-4 ps-0 pe-0   ps-sm-5 pe-sm-5 ps-lg-0 pe-lg-0  ">
-            <h2 className="main-heading-font text-center text-uppercase ft-34 mb-5">
-              <span className="d-block w-100">WELCOME TO</span>Majestic-Continental
-              Hotel England
-            </h2>
-            <p className="text-center main-paragraph-font ps-3 pe-3">
-              Surround yourself with serenity in the heart of the bustling city
-              as we welcome you to Pearl-Continental Hotel Lahore. Experience
-              the comforts of home by staying in our modern rooms and suites.
-              Enjoy delicious food at our signature restaurants serving both
-              international and local cuisines. Relax in the fitness centre, spa
-              or swimming pool. With our round-the-clock services, we ensure
-              making your stay pleasant and comfortable, each time you vist :
-            </p>
+      <div className=" pt-32 text-center our-hotel">
+        <div className="max-w-screen-xl mx-auto ">
+          <div className="row    ms-0 me-0">
+            <div className="col-lg-6  text-center text-lg-start">
+              <h3 className="main-heading-font">
+                Welcome to{" "}
+                <span className="me-2  text-[#f6d284]"> 
+                  Hotel <br className="d-none d-lg-block" />
+                  the heaven 
+                </span>
+                 of your weekend
+              </h3>
+              <p className="pt-4 main-paragraph-font">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio eligendi odit, impedit voluptas aliquam quidem
+                explicabo dolor nesciunt quibusdam reiciendis labore cum quod
+                assumenda blanditiis illum! Accusamus ipsum molestiae, a nisi
+                laudantium quia? Suscipit, quidem!
+              </p>
+              <p className="pt-4 main-paragraph-font">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt numquam corporis sequi fuga recusandae labore eveniet
+                illo, ratione placeat temporibus!
+              </p>
+              <button className="mt-4 border-2 border-[#f6d284] pt-2 pb-2 ps-4 pe-4 text-[#f6d284] font-bold rounded-3xl  ">
+                   Explore
+              </button>
+            </div>
+            <div className="col-lg-6  d-flex justify-center">
+              <img src="./assets/side-image-3.jpg" alt="side-image"></img>
+            </div>
           </div>
-          <div className="col-lg-5  d-flex justify-center"> 
-            <img src="./assets/side-image-3.jpg" alt="side-image"></img>
-          </div>
-          
         </div>
       </div>
-    </div>
     </>
-
   );
 }
 

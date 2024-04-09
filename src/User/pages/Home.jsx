@@ -16,9 +16,10 @@ function Home() {
         <Welcome/>
         <Rooms/>
         <Dinning/> 
+       
         <Facilities/>
-         <Awards/>
-         {/* <Footer/>      */}
+         {/* <Awards/> */}
+         <Footer/>     
     </>
   )
 }
