@@ -14,10 +14,10 @@ function Home() {
        <Navbar/>
         <Hero/>
         <Welcome/>
-        <Rooms/>
+         <Rooms/>
         <Dinning/> 
        
-        <Facilities/>
+        <Facilities/>  
          {/* <Awards/> */}
          <Footer/>     
     </>
