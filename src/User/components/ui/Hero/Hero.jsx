@@ -8,7 +8,7 @@ function Hero() {
 
   return (
     <>
-      <div className="hero relative">
+      <div className="hero relative pb-lg-5 ">
         <div
           id="carouselExampleFade"
           className="carousel slide carousel-fade "

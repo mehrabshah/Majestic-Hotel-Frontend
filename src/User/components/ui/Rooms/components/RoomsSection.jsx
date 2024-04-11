@@ -4,29 +4,29 @@ import RoomsCard from "./RoomsCard";
 
 function RoomsSection() {
   return (
-    <div className="mt-5 row">
-      <div className="col-md-4">
+    <div className="pt-5 pb-5 row ms-2 me-2">
+      <div className="col-lg-4   mt-0 mt-lg-0">
         <RoomsCard
           imageSrc="./assets/banner-4.jpg"
-          title="Luxury Suite"
+          title="Double Room"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien vel mi."
           price="$300/Night"
           bookText="Book Now"
         />
       </div>
-      <div className="col-md-4">
+      <div className="col-lg-4 mt-5 mt-lg-0">
         <RoomsCard
-          imageSrc="./assets/banner-4.jpg"
-          title="Luxury Suite"
+          imageSrc="./assets/bed-2.jpg"
+          title="Twim Room"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien vel mi."
           price="$500/Night"
           bookText="Book Now"
         />
       </div>
-      <div className="col-md-4">
+      <div className="col-lg-4 mt-5 mt-lg-0">
         <RoomsCard
-          imageSrc="./assets/banner-4.jpg"
-          title="Executive King "
+          imageSrc="./assets/bed-3.jpg"
+          title="Single Room"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien vel mi."
           price="$450/Night"
           bookText="Book Now"

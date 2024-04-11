@@ -43,7 +43,7 @@ function SlideCarousal() {
           </div>
           <div className="carousel-item">
             <img
-              src="./assets/banner-10.jpg"
+              src="./assets/interior-4.jpg"
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
@@ -81,7 +81,7 @@ function SlideCarousal() {
           </div>
           <div className="carousel-item">
             <img
-              src="./assets/banner-10.jpg"
+              src="./assets/interior-6.jpg"
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
