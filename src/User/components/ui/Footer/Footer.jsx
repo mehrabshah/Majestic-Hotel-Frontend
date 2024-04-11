@@ -35,7 +35,7 @@ function Footer() {
         <div className="grid ">
           <div className="row">
             <div className="col-md-4">
-              <div className="flex flex-col flex-shrink-0">
+              <div className="flex flex-col  items-center lg:items-start flex-shrink-0">
                 <div className="dark:text-white">
                   <img
                     src="./assets/logo.png"
@@ -43,7 +43,7 @@ function Footer() {
                     className="logo img-fluid py-2 h-[150px] w-auto"
                   />
                 </div>
-                <div className="flex items-center gap-x-4 mt-12">
+                <div className="flex items-center gap-x-4 mt-2 lg:mt-12">
                   <FacebookLogo size={32} color="#f6d284" />
                   <InstagramLogo size={32} color="#f6d284" />
                   <LinkedinLogo size={32} color="#f6d284" />
@@ -53,9 +53,9 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-md-8 ">
+            <div className="col-md-8 md:pt-0 pt-12">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 col-6">
                   <div className="sm:ml-0 ml-8 flex flex-col">
                     <h2 className="text-base font-semibold leading-4 text-brand-600 bg-black p-3 py-2 w-fit dark:text-white">
                       Company
@@ -71,7 +71,7 @@ function Footer() {
                     ))}
                   </div>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-6">
                   <div className="flex flex-col">
                     <h2 class="text-base font-semibold leading-4 text-brand-600 bg-black p-3 py-2 w-fit dark:text-white">
                       Support

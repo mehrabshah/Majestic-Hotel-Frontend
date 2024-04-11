@@ -1,25 +1,25 @@
 import React from "react";
-import "./SlideCarousal.css";
+import "../Dinning.css"
 
 function SlideCarousal() {
   return (
     <div className="slide-carousal ">
       <div id="carouselExample" className="carousel slide">
         <div className="carousel-inner h-50">
-          <div className="carousel-item active">
+          <div className="carousel-item active ">
             <img
               src="./assets/banner-11.jpg"
               className="d-block w-100  slick-image"
               alt="banner-2"
             />
-            <div class="carousel-caption d-flex justify-between pb-0 bottom-[-0.75rem]">
+            <div class="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]   ">
               <div className="  pt-20">
                 <h1 class=" light-color main-heading-dinning ft-55">NADIA</h1>
                 <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
                   BAR & RESTAURENT
                 </h2>
               </div>
-              <div className="menu">
+              <div className="menu hidden lg:block">
                 <div className="menu-inner p-12 ">
                   <p className="text-start">
                     Nadia offers a diverse combination of food and beverages in
@@ -47,7 +47,7 @@ function SlideCarousal() {
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
-            <div class="carousel-caption d-flex justify-between pb-0 bottom-[-0.75rem]">
+            <div class="carousel-caption d-flex  justify-center pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
               <div  className="  pt-20">
                 <h1 class=" light-color main-heading-dinning ft-55">
                   MARCO POLO{" "}
@@ -56,7 +56,7 @@ function SlideCarousal() {
                   BAR & RESTAURENT
                 </h2>
               </div>
-              <div className="menu">
+              <div className="menu hidden lg:block">
                 <div className="menu-inner ps-12 pe-12 pb-4 pt-12 ">
                   <p className="text-start">
                     Offering an all-day international dining experience, Marco
@@ -85,16 +85,16 @@ function SlideCarousal() {
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
-            <div class="carousel-caption d-flex justify-between pb-0 bottom-[-0.75rem]">
+            <div class="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
               <div  className="pt-20">
                 <h1 class=" light-color main-heading-dinning ft-55">
-                  MARCO POLO{" "}
+                  TAI-PAN
                 </h1>
                 <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
                   BAR & RESTAURENT
                 </h2>
               </div>
-              <div className="menu">
+              <div className="menu hidden lg:block">
                 <div className="menu-inner p-12 ">
                   <p className="text-start">
                     Serving authentic Chinese cuisine with an essence of the
