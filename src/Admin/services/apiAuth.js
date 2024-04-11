@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const backendUrl = process.env.backendUrl; // Assuming backendUrl is defined in your environment variables
+const backendUrl = "http://localhost:8000/"
+// const backendUrl = process.env.backendUrl;
 
 /**
  * Sign up user
@@ -21,7 +22,7 @@ export async function signUp({ name, email, password }) {
  */
 export async function login({ email, password }) {
   try {
-    const response = await axios.post(`${backendUrl}/login`, { email, password });
+    const response = await axios.post(`${backendUrl}auth/login`, { email, password });
     return response.data;
   } catch (error) {
     throw new Error('Either email or password is incorrect.');

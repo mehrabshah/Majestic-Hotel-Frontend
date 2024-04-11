@@ -1,8 +1,8 @@
 export function useCurrentUser() {
   const user = JSON.parse(localStorage.getItem('MajesticUser'));
 
-  const isAuthenticated = user?.role === 'authenticated';
-  const isAdmin = user?.user_metadata.user_role === 'admin';
+  const isAuthenticated = user;
+  const isAdmin = user?.role === 'ADMIN';
 
   return { isLoading: false, user, isAuthenticated, isAdmin };
 }

@@ -29,7 +29,7 @@ function LoginForm() {
               type="email"
               id="email"
               autoComplete="email"
-              defaultValue="demo@example.com"
+              defaultValue="admin@gmail.com"
               {...register('email', {
                 required: 'Email cannot be kept empty',
                 pattern: {
@@ -51,7 +51,7 @@ function LoginForm() {
               type="password"
               id="password"
               autoComplete="current-password"
-              defaultValue="demo@example.com"
+              defaultValue="Qwerty@123"
               {...register('password', {
                 required: 'Password cannot be kept empty',
                 minLength: {

@@ -1,95 +1,107 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import './contactus.css'
+import './contactus.css';
 import ContactUsInfo from './ContactUsInfo';
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
+import { useContactUs } from './hooks/useCreateContactUs';
+import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
+import Footer from '../../ui/Footer/Footer';
 const ContactUs = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-
+  const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
+  const [token, setToken] = useState("");
+  const { register, handleSubmit, setValue,formState: { errors } } = useForm();
+  const { submitContactUs, isLoading } = useContactUs(setRefreshReCaptcha,refreshReCaptcha);
+  const [telephone, setTelephone] = useState('');
+  const onTelephoneChange = (status, phoneNumber, country) => {
+    setValue('telephone', phoneNumber); // Set the telephone field phoneNumber using setValue
+    setTelephone(phoneNumber); // Update local state for telephone
+  };
   const onSubmit = (data) => {
     console.log(data);
+    submitContactUs(data);
     // Handle form submission here (e.g., send data to server)
   };
-
+  const setTokenFunc = (getToken) => {
+    setToken(getToken);
+  };
   // Sample dropdown options (replace with your actual data)
-  const dropdownOptions = [
-    { value: 'Mr', label: 'Mr' },
-    { value: 'Ms', label: 'Ms' },
-    { value: 'Mrs', label: 'Mrs' },
+  const subjectOptions = [
+    { value: 'General information of the hotel', label: 'General information of the hotel' },
+    { value: 'Report website bugs or suggest improvements', label: 'Report website bugs or suggest improvements' },
+    { value: 'I want to book this hotel', label: 'I want to book this hotel' },
+    { value: 'I booked my stay ON THIS WEBSITE and require further information', label: 'I booked my stay ON THIS WEBSITE and require further information' },
+    { value: 'I booked my stay ON A DIFFERENT WEBSITE and require further information', label: 'I booked my stay ON A DIFFERENT WEBSITE and require further information' },
+    { value: 'Other', label: 'Other' },
   ];
 
   return (
     <>
-    <ContactUsInfo/>
-    <div className="bg-auto bg-center" style={{ backgroundImage: 'url(assets/ONLY_DECOR1.png)' }}>
-      <div className="flex justify-center items-center mt-5">
-        <form onSubmit={handleSubmit(onSubmit)} className="rounded px-8 pt-6 pb-8 mb-4 w-full max-w-2xl">
-          <div className='row'>
-          <div className="mb-4 col-md-2 col-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">Title</label>
-            <select {...register('title', { required: true })} className="appearance-none border border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none">
-              {dropdownOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-            {errors.title && <span className="text-red-500 text-xs italic">Title is required</span>}
-          </div>
-          <div className="mb-4 col-md-5 col-8">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">First Name</label>
-            <input {...register('firstName', { required: true, maxLength: 50 })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
-            {errors.firstName && (
-              <span className="text-red-500 text-xs italic">
-                {errors.firstName.type === 'required' && 'First name is required'}
-                {errors.firstName.type === 'maxLength' && 'First name cannot exceed 50 characters'}
-              </span>
-            )}
-          </div>
-          <div className="mb-4 col-md-5">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">Last Name</label>
-            <input {...register('lastName', { required: true, maxLength: 50 })} className="appearance-none border-sidebottom-0  w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
-            {errors.lastName && (
-              <span className="text-red-500 text-xs italic">
-                {errors.lastName.type === 'required' && 'Last name is required'}
-                {errors.lastName.type === 'maxLength' && 'Last name cannot exceed 50 characters'}
-              </span>
-            )}
-          </div>
-          </div>
+      <ContactUsInfo />
+          <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_RECAPTCHA_KEY}>
+          <GoogleReCaptcha
+            className="google-recaptcha-custom-class"
+            onVerify={setTokenFunc}
+            refreshReCaptcha={refreshReCaptcha}
+          />
+        </GoogleReCaptchaProvider>
+      <div className="bg-auto bg-center" style={{ backgroundImage: 'url(assets/ONLY_DECOR1.png)' }}>
+        <div className="flex justify-center items-center mt-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="rounded px-8 pt-6 pb-8 mb-4 w-full max-w-2xl">
+            <div className='row'>
+              <div className="mb-4 col-md-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Name</label>
+                <input {...register('name', { required: true })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
+                {errors.name && <span className="text-red-500 text-xs italic">Name is required</span>}
+              </div>
+              <div className="mb-4 col-md-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email</label>
+                <input {...register('email', { required: true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
+                {errors.email && (
+                  <span className="text-red-500 text-xs italic">
+                    {errors.email.type === 'required' && 'Email is required'}
+                    {errors.email.type === 'pattern' && 'Invalid email format'}
+                  </span>
+                )}
+              </div>
+              <div className="mb-4 col-md-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="telephone">Telephone</label>
+                <IntlTelInput
+                  {...register('telephone', { required: true })}
+                  containerClassName="intl-tel-input"
+                  inputClassName="appearance-none border-sidebottom-0 w-full py-2 px-3 m-[40px] text-gray-700 leading-tight focus:outline-none"
+                  value={telephone}
+                  onPhoneNumberChange={onTelephoneChange}
+                />
+                {errors.telephone && <span className="text-red-500 text-xs italic">Telephone is required</span>}
+              </div>
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subject">Subject</label>
+              <select {...register('subject', { required: true })} className="form-control border-rd-2 base-soft-gray-bg w-full py-2 px-3 border-black text-gray-700 leading-tight focus:outline-none">
+                {subjectOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              {errors.subject && <span className="text-red-500 text-xs italic">Subject is required</span>}
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="comments">Comments</label>
+              <textarea rows={8} {...register('comments')} className="appearance-none border border-black w-full py-2 px-3 text-gray-700 leading-tight" />
+            </div>
 
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email</label>
-            <input {...register('email', { required: true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
-            {errors.email && (
-              <span className="text-red-500 text-xs italic">
-                {errors.email.type === 'required' && 'Email is required'}
-                {errors.email.type === 'pattern' && 'Invalid email format'}
-              </span>
-            )}
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">Phone</label>
-            <input {...register('phone', { pattern: /^\d+$/ })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
-            {errors.phone && (
-              <span className="text-red-500 text-xs italic">
-                {errors.phone.type === 'pattern' && 'Invalid phone number (digits only)'}
-              </span>
-            )}
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="howCanWeHelp">How Can We Help You?</label>
-            <textarea rows={8} {...register('howCanWeHelp')} className="appearance-none border border-black w-full py-2 px-3 text-gray-700 leading-tight" />
-          </div>
-          <div className="flex items-center justify-between">
-            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
-              Submit
-            </button>
-          </div>
-        </form>
+            <div className="flex items-center justify-between">
+              <button type="submit" className="bg-dark  text-brand-600 font-bold py-2 px-4 focus:outline-none">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+      <Footer/>
     </>
-
   );
 };
 

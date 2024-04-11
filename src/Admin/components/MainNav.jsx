@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Calendar, Gear, House, Users, Warehouse } from '@phosphor-icons/react';
+import { Calendar, Gear, House, Users, Warehouse,SealQuestion  } from '@phosphor-icons/react';
 
 function NavItem({ to, icon, label }) {
   return (
@@ -21,7 +21,8 @@ function MainNav() {
   const navItems = [
     { to: '/dashboard', icon: <House />, label: 'Home' },
     { to: '/bookings', icon: <Calendar />, label: 'Bookings' },
-    { to: '/cabins', icon: <Warehouse />, label: 'Cabins' },
+    { to: '/contactUs', icon: <SealQuestion  />, label: 'Contact Us' },
+    // { to: '/cabins', icon: <Warehouse />, label: 'Cabins' },
     { to: '/users', icon: <Users />, label: 'Users' },
     { to: '/settings', icon: <Gear />, label: 'Settings' },
   ];

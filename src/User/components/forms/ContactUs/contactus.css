@@ -14,3 +14,9 @@ textarea:focus{
       box-shadow: none !important;
     border-color: black !important;
   }
+  .intl-tel-input.allow-dropdown input{
+    margin-left: 40px !important;
+  }
+  .intl-tel-input{
+    width: 90% !important;
+  }

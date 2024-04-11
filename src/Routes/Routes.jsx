@@ -15,6 +15,8 @@ import BookingCheckin from '../Admin/pages/BookingCheckin';
 import Home from '../User/pages/Home';
 import Contact from '../User/pages/Contact';
 import About from '../User/pages/AboutUs';
+import ContactUsAdmin from '../Admin/pages/ContactUs';
+import ContactUsDetail from '../Admin/features/contactUs/contactUsDetails/ContactUsDetail';
 
 function AppRoutes() {
   return (
@@ -31,6 +33,8 @@ function AppRoutes() {
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/bookings/:bookingId" element={<BookingDetails />} />
         <Route path="/checkin/:bookingId" element={<BookingCheckin />} />
+        <Route path="/contactUs" element={<ContactUsAdmin />} />
+        <Route path="/contactUs/:contactUsId" element={<ContactUsDetail />} />
         <Route path="/cabins" element={<Cabins />} />
         <Route path="/users" element={<Users />} />
         <Route path="/settings" element={<Settings />} />
