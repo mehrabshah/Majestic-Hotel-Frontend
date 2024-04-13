@@ -3,7 +3,6 @@ import "./Hero.css";
 import CarouselItem from "./components/CarousalItem";
 import BookingSection from "./components/BookingSectionInner";
 import BookingSectionOuter from "./components/BookingSectionOuter";
-
 function Hero() {
 
   return (

@@ -1,9 +1,8 @@
 import React from "react";
 import "../Hero.css";
 import BookingBox from "./BookingBox";
-
 function BookingSectionInner() {
-
+  
     return (
       <div className="booking  justify-center">
         <div className="absolute container bottom-0  md:block hidden ">

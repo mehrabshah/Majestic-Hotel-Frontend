@@ -6,7 +6,6 @@ import Hero from '../components/ui/Hero/Hero'
 import Facilities from '../components/ui/Facilities/Facilities'
 import Footer from '../components/ui/Footer/Footer'
 import Rooms from '../components/ui/Rooms/Rooms'
-
 function Home() {
 
   return (

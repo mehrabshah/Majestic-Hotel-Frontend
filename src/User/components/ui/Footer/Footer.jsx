@@ -8,7 +8,6 @@ import {
   YoutubeLogo,
   PaperPlaneRight,
 } from "@phosphor-icons/react";
-
 const companyLinks = [
   { label: "Rooms", url: "#" },
   { label: "Services", url: "#" },
@@ -16,7 +15,6 @@ const companyLinks = [
   { label: "Events", url: "#" },
   { label: "Special Offers", url: "#" },
 ];
-
 const supportLinks = [
   { label: "Reservation Policy", url: "#" },
   { label: "Cancellation Policy", url: "#" },
@@ -24,8 +22,8 @@ const supportLinks = [
   { label: "Terms and Conditions", url: "#" },
   { label: "Blogs", url: "#" },
 ];
-
 function Footer() {
+
   return (
     <>
       <div
@@ -52,7 +50,6 @@ function Footer() {
                 </div>
               </div>
             </div>
-
             <div className="col-md-8 md:pt-0 pt-12">
               <div className="row">
                 <div className="col-md-3 col-6">
@@ -111,7 +108,6 @@ function Footer() {
             </div>
           </div>
         </div>
-
         <div className="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
           <p class="mb-6 text-sm text-left text-gray-600 md:mb-0">
             © Copyright 2024 Majestic Hotel. All Rights Reserved.

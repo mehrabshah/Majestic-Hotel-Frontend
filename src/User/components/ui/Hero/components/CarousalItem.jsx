@@ -1,8 +1,13 @@
 import React from "react";
 import "../Hero.css";
 import BookingSection from "./BookingSectionInner";
-
-function CarouselItem({ image, title, subtitle, active }) {
+function CarouselItem({ 
+  image, 
+  title, 
+  subtitle, 
+  active }
+) {
+  
   return (
     <div className={`carousel-item  ${active ? "active" : ""}`}>
       <img
