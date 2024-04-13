@@ -3,7 +3,6 @@ import { useLocalStorageState } from '../hooks/useLocalStorageState';
 
 // Create a context
 const ThemeContext = createContext();
-
 function ThemeContextProvider({ children }) {
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
     window.matchMedia('(prefers-color-scheme: dark)').matches,

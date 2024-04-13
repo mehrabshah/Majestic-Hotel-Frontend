@@ -32,6 +32,7 @@ function Accommodation() {
         <div className="lg:max-w-screen-lg  ps-4 pe-4 mx-auto">
           <div className="mt-4 mt-lg-0">
             <Category
+              id={1}
               orderFirst="order-lg-2"
               orderSecond="order-lg-1"
               imgSrc="./assets/bed-2.jpg"
@@ -45,6 +46,7 @@ function Accommodation() {
           </div>
           <div className="mt-4 mt-lg-0">
             <Category
+              id={2}
               orderFirst="order-lg-1"
               orderSecond="order-lg-2"
               imgSrc="./assets/bed-5.jpg"
@@ -58,6 +60,7 @@ function Accommodation() {
           </div>
           <div className="mt-4 mt-lg-0">
             <Category
+              id={3}
               orderFirst="order-lg-2"
               orderSecond="order-lg-1"
               imgSrc="./assets/bed-3.jpg"

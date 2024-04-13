@@ -4,7 +4,6 @@ import { useThemeContext } from '../hooks/useThemeContext';
 
 function Sidebar() {
   const { isDarkMode } = useThemeContext();
-
   const src = isDarkMode ? '/logo-light.svg' : '/logo-dark.svg';
 
   return (
@@ -12,7 +11,6 @@ function Sidebar() {
       <Link to="/">
       <img src="./assets/logo.png" alt="Logo" className="logo img-fluid py-2 h-[100px] w-auto" />
       </Link>
-
       <MainNav />
     </div>
   );

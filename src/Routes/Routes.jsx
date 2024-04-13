@@ -18,6 +18,7 @@ import About from '../User/pages/AboutUs';
 import ContactUsAdmin from '../Admin/pages/ContactUs';
 import ContactUsDetail from '../Admin/features/contactUs/contactUsDetails/ContactUsDetail';
 import Rooms from '../User/pages/Rooms';
+import SingleRoom from '../User/pages/SingleRoom';
 
 function AppRoutes() {
   return (
@@ -47,10 +48,7 @@ function AppRoutes() {
       <Route path="/contact-us" element={<Contact/>} />
       <Route path="/about-us" element={<About/>} />
       <Route path="/rooms" element={<Rooms/>} />
-      
-       
-      
-
+      <Route path="/category/:categoryName" element={<SingleRoom/>} />
     </Routes>
   );
 }
