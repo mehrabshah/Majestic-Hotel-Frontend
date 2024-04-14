@@ -7,11 +7,11 @@ function Button({
   padding,
   onClick, 
   text,
-  type
+  type,
+  size
 }) {
-
 return (
-     <button type={type} className={` ${backgroundColor}  ${color}  ${border}  ${padding} text-center   uppercase`}  onClick={onClick}>
+     <button type={type} className={` ${backgroundColor}  ${size}  ${color}  ${border}  ${padding} text-center uppercase`}  onClick={onClick}>
         {text}
     </button>
  )

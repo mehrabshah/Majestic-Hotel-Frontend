@@ -2,24 +2,23 @@ import React from "react";
 import "../Hero.css";
 import BookingBox from "./BookingBox";
 function BookingSectionInner() {
-  
-    return (
-      <div className="booking  justify-center">
-        <div className="absolute container bottom-0  md:block hidden ">
-          <div className="row  d-flex flex-md-row flex-column">
-            <BookingBox heading="Destination" paragraph="Lahore" />
-            <BookingBox heading="Destination" paragraph="Lahore" />
-            <BookingBox heading="Destination" paragraph="Lahore" />
-            <div className="box col-md-3 p-2">
-              <div className="box-inner-last text-center p-3">
-                <h1 className="box-heading">Destination</h1>
-                <p className="box-paragraph">Lahore</p>
-              </div>
+  return (
+    <div className="booking  justify-center">
+      <div className="absolute container bottom-0  md:block hidden ">
+        <div className="row  d-flex flex-md-row flex-column">
+          <BookingBox heading="Destination" paragraph="Lahore" />
+          <BookingBox heading="Destination" paragraph="Lahore" />
+          <BookingBox heading="Destination" paragraph="Lahore" />
+          <div className="box col-md-3 p-2">
+            <div className="box-inner-last text-center p-3">
+              <h1 className="box-heading">Destination</h1>
+              <p className="box-paragraph">Lahore</p>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-  
-  export default BookingSectionInner;
+    </div>
+  );
+}
+
+export default BookingSectionInner;

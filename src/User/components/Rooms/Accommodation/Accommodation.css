@@ -4,9 +4,7 @@
 @font-face {
     font-family: 'Gotham'; 
     src: url('../../../../../public/fonts/Gotham-Light.ttf') ; 
-  }
-
-
+}
 .accomodation h2{
     font-size: 1.0625rem !important;
     border-color: #000 !important;
@@ -31,10 +29,3 @@
 }
 
 /* -------------------------category End------------------------------ */
-
-/* -------------------------Feature Start------------------------------ */
-
-
-
-
-/* -------------------------Feature End-------------------------------- */

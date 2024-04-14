@@ -1,7 +1,6 @@
 import React from "react";
 import "./Awards.css";
 function Awards() {
-  
   return (
     <div className="Awards-background">
       <div className="max-w-screen-lg mx-auto / pb-32 ">

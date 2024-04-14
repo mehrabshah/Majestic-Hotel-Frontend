@@ -23,7 +23,6 @@ const supportLinks = [
   { label: "Blogs", url: "#" },
 ];
 function Footer() {
-
   return (
     <>
       <div

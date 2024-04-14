@@ -1,10 +1,8 @@
 import React from "react";
 import "./Hero.css";
 import CarouselItem from "./components/CarousalItem";
-import BookingSection from "./components/BookingSectionInner";
 import BookingSectionOuter from "./components/BookingSectionOuter";
 function Hero() {
-
   return (
     <>
       <div className="hero relative pb-lg-5 ">
@@ -27,7 +25,7 @@ function Hero() {
             />
             <CarouselItem
               image="./assets/banner-7.jpg"
-              title="Hospitality are the origins traditions Motto" 
+              title="Hospitality are the origins traditions Motto"
               subtitle="Generous & Authentic Approach"
             />
           </div>
@@ -49,10 +47,9 @@ function Hero() {
             <span className="carousel-control-next-icon" aria-hidden="true" />
             <span className="visually-hidden">Next</span>
           </button>
-        </div> 
-      
+        </div>
       </div>
-      <BookingSectionOuter/>
+      <BookingSectionOuter />
     </>
   );
 }

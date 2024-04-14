@@ -1,7 +1,6 @@
 import React from "react";
 import "./Facilities.css";
 const Facilities = () => {
-  
   return (
     <>
       <div class="col-md-12 main-heading-font ft-34 text-uppercase text-center my-4  pb-2 ">

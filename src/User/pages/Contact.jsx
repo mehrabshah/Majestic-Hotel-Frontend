@@ -1,14 +1,13 @@
-import React from 'react'
-import ContactUs from '../components/forms/ContactUs/contactus'
-import Navbar from '../components/ui/Navbar/Navbar'
+import React from "react";
+import ContactUs from "../components/forms/ContactUs/contactus";
+import Navbar from "../components/ui/Navbar/Navbar";
 function Contact() {
-
   return (
     <>
-       <Navbar/>
-       <ContactUs/>
+      <Navbar />
+      <ContactUs />
     </>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

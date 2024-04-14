@@ -1,14 +1,17 @@
 import React from "react";
 import "./Navbar.css";
 import { IoIosArrowForward } from "react-icons/io";
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 function Navbar() {
-
-  return (  
+  return (
     <nav className="navbar navbar-expand-xl bg-white pt-0 px-0 px-md-3 pe-lg-5 pb-0 ">
       <div className="container-lg container-fluid nav-padding">
         <NavLink to="/home">
-          <img src="./assets/logo.png" alt="Logo" className="logo img-fluid py-2 w-auto" />
+          <img
+            src="/assets/logo.png"
+            alt="Logo"
+            className="logo img-fluid py-2 w-auto"
+          />
         </NavLink>
         <button
           className="navbar-toggler"
@@ -30,38 +33,71 @@ function Navbar() {
               Majestic-Continental Hotel England
             </h4>
             <li className="nav-item ms-2 mt-lg-5">
-              <NavLink className={({ isActive }) => "nav-link nav-text" + (isActive ? " active" : "")} to="/home">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link nav-text" + (isActive ? " active" : "")
+                }
+                to="/home"
+              >
                 Home
               </NavLink>
             </li>
             <li className="nav-item ms-2 mt-lg-5">
-              <NavLink className={({ isActive }) => "nav-link nav-text" + (isActive ? " active" : "")} to="/about-us">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link nav-text" + (isActive ? " active" : "")
+                }
+                to="/about-us"
+              >
                 ABOUT
               </NavLink>
             </li>
             <li className="nav-item ms-2 mt-lg-5">
-              <NavLink className={({ isActive }) => "nav-link nav-text" + (isActive ? " active" : "")} to="/rooms">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link nav-text" + (isActive ? " active" : "")
+                }
+                to="/rooms"
+              >
                 ROOMS
               </NavLink>
             </li>
             <li className="nav-item ms-2 mt-lg-5">
-              <NavLink className={({ isActive }) => "nav-link nav-text" + (isActive ? " active" : "")} to="/events">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link nav-text" + (isActive ? " active" : "")
+                }
+                to="/events"
+              >
                 EVENTS & CELEBRATIONS
               </NavLink>
             </li>
             <li className="nav-item ms-2 mt-lg-5">
-              <NavLink className={({ isActive }) => "nav-link nav-text" + (isActive ? " active" : "")} to="/dining">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link nav-text" + (isActive ? " active" : "")
+                }
+                to="/dining"
+              >
                 DINING
               </NavLink>
             </li>
             <li className="nav-item me-lg-5 mt-lg-5">
-              <NavLink className={({ isActive }) => "nav-link nav-text" + (isActive ? " active" : "")} to="/contact-us">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link nav-text" + (isActive ? " active" : "")
+                }
+                to="/contact-us"
+              >
                 CONTACT US
               </NavLink>
             </li>
             <li className="nav-item mt-lg-5 cursor-pointer">
               <NavLink
-                className={({ isActive }) => "nav-link bg-dark ml-0 ml-xl-4 text-center book-now-btn d-flex align-items-center ps-4 pe-5" + (isActive ? " active" : "")}
+                className={({ isActive }) =>
+                  "nav-link bg-dark ml-0 ml-xl-4 text-center book-now-btn d-flex align-items-center ps-4 pe-5" +
+                  (isActive ? " active" : "")
+                }
                 to="/booking"
               >
                 <span className="nav-text-book-now pe-4"> BOOK NOW </span>
@@ -72,7 +108,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-);
+  );
 }
 
 export default Navbar;

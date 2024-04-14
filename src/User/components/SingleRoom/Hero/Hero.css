@@ -1,0 +1,13 @@
+.singleRoomBanner{
+    background-image:url('../../../../../public/assets/banner-7.jpg'); 
+    background-position: 50%;
+    background-repeat: no-repeat;
+    aspect-ratio: 11/3;
+    background-size: cover;    
+    display: flex;
+    align-items: center;
+    background-blend-mode: multiply;   
+}
+.booking{
+   background-color: black;
+}
