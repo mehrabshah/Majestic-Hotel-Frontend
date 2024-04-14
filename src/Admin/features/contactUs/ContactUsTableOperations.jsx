@@ -3,7 +3,7 @@ import SortBy from '../../components/ui/SortBy';
 
 function ContactUsTableOperations() {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-cent                                                                                                                                                                                                                                                                                                                                             er gap-2">
       <SortBy
         searchParameterName="sortBy"
         options={[
