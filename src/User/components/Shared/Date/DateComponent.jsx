@@ -7,7 +7,7 @@ function DateComponent({ control, name, placeholder, label , labelColor }) {
   // For getting the current date
   const currentDate = new Date();
   return (
-    <div className="date-picker ">
+    <div className="date-picker  xl:w-52  md:w-full  ">
       <label htmlFor={name} className={`${labelColor}`}>{label}</label>
       <Controller
         name={name}
@@ -25,8 +25,8 @@ function DateComponent({ control, name, placeholder, label , labelColor }) {
             }}
             minDate={currentDate}
             dateFormat="MMMM d, yyyy"
-            placeholderText={placeholder}
-            className="cursor-pointer ps-4  pe-4"
+            placeholderText={placeholder} 
+            className="cursor-pointer h-[40px] "
           />
         )}
       />

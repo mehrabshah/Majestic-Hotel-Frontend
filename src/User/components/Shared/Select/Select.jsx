@@ -1,17 +1,14 @@
 import React from 'react'
 import "./Select.css"
-function Select({ label, register, options, onChange}) {
+function Select({ label, register, options}) {
   return (
-    <div className="">
-    <label  className="form-label fw-bold mb-0">
+    <div className="xl:w-52  md:w-full">
+    <label  className="form-label text-[#fff]  mb-0">
       {label} 
     </label>
     <select
-      className ="form-select"
+      className ="form-select h-[40px]"
       {...register}
-      onChange={(e) => {
-        if (onChange) onChange(e.target.value);
-      }}
     >
       {options.map((option) => (
         <option key ={option.value} value ={option.value}>

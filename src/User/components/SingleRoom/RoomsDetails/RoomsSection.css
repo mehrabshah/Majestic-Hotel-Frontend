@@ -17,7 +17,12 @@
     padding-right: 10px;
     margin-bottom: 0px;
 }
-
+@media (max-width: 768px) {
+    .room .side-image {
+        height: auto; 
+        max-width:inherit; 
+    }
+}
 /* -------------------Room End -------------------------- */
 /* -------------------Booking Start -------------------------- */
 .bookings .heading{
