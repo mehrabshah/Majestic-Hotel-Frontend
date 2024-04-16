@@ -1,5 +1,5 @@
 import React from "react";
-import "../RoomsSection.css";
+import "../Availability.css";
 function Rooms({ imgSrc, heading, numberOfGuests, price }) {
   const guestArray = Array.from({ length: numberOfGuests },(_, index) => index
   );

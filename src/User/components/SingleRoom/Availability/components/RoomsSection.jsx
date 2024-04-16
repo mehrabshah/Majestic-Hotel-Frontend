@@ -1,7 +1,8 @@
 import React from "react";
-import "./RoomsSection.css";
-import Rooms from "./components/Rooms";
-import Booking from "./components/Booking";
+import "../Availability.css";
+
+import Rooms from "./Rooms";
+import Booking from "./Booking";
 function RoomsSection() {
   return (
     <div className="xl:max-w-screen-xl lg:max-w-screen-lg  ps-4 pe-4 mx-auto mt-16 ">
