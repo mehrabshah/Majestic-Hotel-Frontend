@@ -1,6 +1,6 @@
 import axios from 'axios';
 const API_BASE_URL = 'http://localhost:8000/';
-
+//Get all the Categories of the rooms
 export const getCategories = async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}category/getAllCategory`);
@@ -8,4 +8,13 @@ export const getCategories = async () => {
     } catch (error) {
       throw error.response.data || 'Something went wrong';
     }
-  };
+};
+//Get availability of the rooms on the selected date
+export const  getRoomsAvailability= async (userData) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}booking/available-rooms`, userData);
+    return response.data; 
+  } catch (error) {
+    throw error.response.data || 'Something went wrong';
+  }
+};
