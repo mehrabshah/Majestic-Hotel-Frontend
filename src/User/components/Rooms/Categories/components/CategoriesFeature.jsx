@@ -1,8 +1,7 @@
 import React from "react";
-import "../Accommodation.css";
+import "../Categories.css";
 import { IoIosArrowForward } from "react-icons/io";
-function Feature({features}) {
-
+function CategoriesFeature({features}) {
   return (
     <div class="h-[20.8rem] p-4">
       <h5 class="heading-fonts ft-22 text-uppercase mb-4">Features</h5>
@@ -16,4 +15,4 @@ function Feature({features}) {
   );
 }
 
-export default Feature;
+export default CategoriesFeature;

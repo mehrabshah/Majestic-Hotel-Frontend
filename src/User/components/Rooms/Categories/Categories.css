@@ -21,11 +21,17 @@
 /* -------------------------category Start------------------------------ */
 .category h2{
     font-size: 1.875rem;
-
 }
 .category .category-list{
-
     font-size: 0.8725rem;
+}
+.category .category-image{
+   width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .category .category-image{
+        width: 100%;
+     }
 }
 
 /* -------------------------category End------------------------------ */

@@ -20,7 +20,6 @@ import { useDeleteBooking } from './hooks/useDeleteBooking';
 function BookingRow({ booking }) {
   const { checkout, isCheckingOut } = useCheckout();
   const { deleteBooking, isDeleting } = useDeleteBooking();
-
   const navigate = useNavigate();
 
   const {

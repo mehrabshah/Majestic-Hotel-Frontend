@@ -8,10 +8,11 @@ function Button({
   onClick, 
   text,
   type,
+  hover,
   size
 }) {
 return (
-     <button type={type} className={` ${backgroundColor}  ${size}  ${color}  ${border}  ${padding} text-center uppercase`}  onClick={onClick}>
+     <button type={type} className={` ${hover} ${backgroundColor}  ${size}  ${color}  ${border}  ${padding} text-center uppercase`}  onClick={onClick}>
         {text}
     </button>
  )
