@@ -24,7 +24,6 @@ function Rooms() {
           <div className="mx-auto text-center pt-3  pb-5">
             <button className="border-t-2 border-b-2 border-[#f6d284]   pt-2 pb-2  ps-10 pe-10 hover:border-s-2 hover:border-e-2">
               <span className="text-[#f6d284]    text-2xl  font-extrabold">
-                {" "}
                 DETAILS
               </span>
             </button>

@@ -1,7 +1,6 @@
 import React from "react";
 import "../Rooms.css";
 import RoomsCard from "./RoomsCard";
-
 function RoomsSection() {
   return (
     <div className="pt-5 pb-5 row ms-2 me-2">

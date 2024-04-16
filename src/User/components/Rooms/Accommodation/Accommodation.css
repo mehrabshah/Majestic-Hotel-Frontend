@@ -1,0 +1,31 @@
+.accomodation-banner{
+    background-image: url("../../../../../public//assets/flower-4.png");
+}
+@font-face {
+    font-family: 'Gotham'; 
+    src: url('../../../../../public/fonts/Gotham-Light.ttf') ; 
+}
+.accomodation h2{
+    font-size: 1.0625rem !important;
+    border-color: #000 !important;
+    outline: none;
+    text-transform: uppercase !important;
+    font-family:'Gotham';
+}
+.accomodation h4{
+    font-size: 2.125rem;
+    font-weight: 500;
+
+}
+
+/* -------------------------category Start------------------------------ */
+.category h2{
+    font-size: 1.875rem;
+
+}
+.category .category-list{
+
+    font-size: 0.8725rem;
+}
+
+/* -------------------------category End------------------------------ */

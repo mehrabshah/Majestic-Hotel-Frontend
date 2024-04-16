@@ -1,7 +1,7 @@
 import React from "react";
 import "../Dinning.css"
-
 function SlideCarousal() {
+  
   return (
     <div className="slide-carousal ">
       <div id="carouselExample" className="carousel slide">

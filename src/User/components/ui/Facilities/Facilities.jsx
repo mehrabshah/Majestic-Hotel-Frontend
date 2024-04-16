@@ -1,15 +1,12 @@
 import React from "react";
 import "./Facilities.css";
-
-const   Facilities = () => {
+const Facilities = () => {
   return (
     <>
-      
-        
-        <div class="col-md-12 main-heading-font ft-34 text-uppercase text-center my-4  pb-2 ">
-          Facilities
-        </div>
-        <div className="Facilities-background">
+      <div class="col-md-12 main-heading-font ft-34 text-uppercase text-center my-4  pb-2 ">
+        Facilities
+      </div>
+      <div className="Facilities-background">
         <div className="Facilities">
           <div className="max-w-screen-lg mx-auto pt-5 pb-5 lg:ps-2 sm:ps-[5rem] sm:pe-[5rem] lg:pe-2 p-5">
             <div className="row">
@@ -47,7 +44,6 @@ const   Facilities = () => {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

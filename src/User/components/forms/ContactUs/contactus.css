@@ -5,18 +5,17 @@
     border-color: black !important;
     border-radius: 0px;
     --tw-ring-offset-color:none !important;
-  }
-
-  .focus\:outline-none:focus{
+}
+.focus\:outline-none:focus{
     box-shadow: none !important;
 }
 textarea:focus{
       box-shadow: none !important;
     border-color: black !important;
-  }
-  .intl-tel-input.allow-dropdown input{
+}
+.intl-tel-input.allow-dropdown input{
     margin-left: 40px !important;
-  }
-  .intl-tel-input{
+}
+.intl-tel-input{
     width: 90% !important;
-  }
+}
