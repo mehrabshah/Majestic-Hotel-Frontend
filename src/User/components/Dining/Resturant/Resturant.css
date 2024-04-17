@@ -1,0 +1,84 @@
+/* .resturant__main {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+} */
+.cd-tab-filter-wrapper:before {
+	background-image: url("../../../../../public//assets/flower-4.png");
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.cd-tab-filter-wrapper:before {
+	height: 380px;
+	top: 0;
+	bottom: unset;
+}
+
+.ft-34 {
+	font-size: 2.12rem;
+}
+.cd-gallery img {
+	display: block;
+	width: 100%;
+}
+
+.h-385 {
+	height: 385px;
+	object-fit: cover;
+}
+.find-room figcaption {
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	transition: all 0.5s;
+}
+.v-center {
+	margin-top: 25px !important;
+}
+.ft-17 {
+	font-size: 1.0625rem !important;
+}
+.dining-middle-img {
+	height: 110px;
+	position: relative;
+}
+.mix p {
+	width: 75% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.w-105 {
+	width: 103px;
+}
+.button-hov {
+	display: inline-block;
+	position: relative;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 20px 30px;
+	width: 206px;
+}
+.v-center img {
+	max-width: 30%;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+}

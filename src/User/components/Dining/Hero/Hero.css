@@ -1,0 +1,11 @@
+.carousel-caption {
+	top: 30%;
+}
+@media (max-width: 767px) {
+	.ft-55 {
+		font-size: 2rem;
+	}
+	.slide-carousal .slick-image {
+		height: auto;
+	}
+}
