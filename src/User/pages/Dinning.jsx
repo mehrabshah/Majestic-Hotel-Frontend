@@ -7,7 +7,7 @@ function Dinning() {
     <>
        <Navbar/>
                          
-
+        
        <Footer/>
     </>
   )
