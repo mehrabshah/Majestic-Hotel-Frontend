@@ -9,6 +9,7 @@ function Rooms({ imgSrc, heading, numberOfGuests, price }) {
         <img src={imgSrc} alt="imgSrc" className="side-image" />
       </div>
       <div className="col-md-9 p-0">
+        <div></div>
         <h2 className="p-fair room-heading">{heading}</h2>
         <ul className="room-ul-new row p-3">
           <li className="col-3">

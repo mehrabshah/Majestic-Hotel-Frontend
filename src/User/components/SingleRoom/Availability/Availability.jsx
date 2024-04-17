@@ -24,12 +24,12 @@ const Availability = () => {
   const submitAvailabilityForm = async (data) => {
     try {
       const RoomsData = await getRoomsAvailability(data);
+      console.log("RoomsData",RoomsData)
       setRoomsData(RoomsData);
       setIsLoading(false);
     } catch (error) {
       setError(error);
     }
-
   };
   return (
     <div className="xl:max-w-screen-xl mx-auto ps-4 pe-4 ">

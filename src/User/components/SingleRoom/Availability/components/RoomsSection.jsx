@@ -3,7 +3,6 @@ import "../Availability.css";
 import Booking from "./Booking";
 import Rooms from "../../Availability/components/Rooms";
 function RoomsSection({ RoomsData }) {
-  console.log("Hassan",RoomsData)
   return (
     <div className="ps-8 pe-8 mx-auto mt-16">
       <div className="row">
@@ -14,6 +13,7 @@ function RoomsSection({ RoomsData }) {
                 imgSrc={Room.image}
                 heading={Room.name}
                 price={Room.price}
+                availableRooms={Room.availableRooms}
               />
             </div>
           ))}
