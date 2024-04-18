@@ -28,12 +28,15 @@ function Rooms({
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    console.log(data);
+    //Sending the data to payment page
     
+    localStorage.setItem('categoryId', JSON.stringify(categoryId));
+    localStorage.setItem('startDate', JSON.stringify(checkInOutDate.startDate));
+    localStorage.setItem('endDate', JSON.stringify(checkInOutDate.endDate));
+    localStorage.setItem('numberOfRooms', JSON.stringify(parseInt(data.numberOfRooms)));
     navigate('/payment');
   };
   return (

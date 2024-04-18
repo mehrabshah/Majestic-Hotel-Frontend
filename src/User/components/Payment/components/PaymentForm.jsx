@@ -10,7 +10,15 @@ function PaymentForm() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      categoryId:" ",
+      numberOfRooms:" ",
+      startDate:" ",
+      endDate:" "
+    },
+  });
+
   const onSubmit = async (data) => {
     reset();
     console.log(data);
@@ -26,7 +34,7 @@ function PaymentForm() {
       </div>
       <div className="row">
         <form onSubmit={handleSubmit(onSubmit)} className="p-0">
-            <CustomerInformation register={register} />
+          <CustomerInformation register={register} />
           <div className="d-flex justify-content-end mt-5">
             <Button
               text="Book"
