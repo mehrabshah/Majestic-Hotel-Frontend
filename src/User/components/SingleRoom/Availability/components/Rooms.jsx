@@ -3,8 +3,9 @@ import "../Availability.css";
 import Select from "../../../Shared/Select/Select";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Button from "../../../Shared/Button/Button"
-import { useNavigate } from 'react-router-dom';
+import Button from "../../../Shared/Button/Button";
+import { useNavigate } from "react-router-dom";
+import { formatedDate, getCurrentDate, getDateAfterCurrentDate } from "../../../../utils/helpers";
 function Rooms({
   imgSrc,
   heading,
@@ -12,7 +13,7 @@ function Rooms({
   price,
   availableRooms,
   checkInOutDate,
-  categoryId
+  categoryId,
 }) {
   //No of guests allowed for each category
   const guestArray = Array.from(
@@ -32,12 +33,19 @@ function Rooms({
   } = useForm();
   const onSubmit = async (data) => {
     //Sending the data to payment page
-    
-    localStorage.setItem('categoryId', JSON.stringify(categoryId));
-    localStorage.setItem('startDate', JSON.stringify(checkInOutDate.startDate));
-    localStorage.setItem('endDate', JSON.stringify(checkInOutDate.endDate));
-    localStorage.setItem('numberOfRooms', JSON.stringify(parseInt(data.numberOfRooms)));
-    navigate('/payment');
+
+    localStorage.setItem("categoryId", JSON.stringify(categoryId));
+    if (checkInOutDate) {
+      
+      localStorage.setItem("startDate",JSON.stringify(formatedDate(checkInOutDate.startDate)));
+      localStorage.setItem("endDate", JSON.stringify(formatedDate(checkInOutDate.endDate)));
+    } else {
+      localStorage.setItem("startDate",JSON.stringify(formatedDate(getCurrentDate())));
+      localStorage.setItem("endDate", JSON.stringify(formatedDate(getDateAfterCurrentDate())));
+    }
+    localStorage.setItem("numberOfRooms",JSON.stringify(parseInt(data.numberOfRooms)));
+
+    navigate("/payment");
   };
   return (
     <div className="row room">
@@ -82,16 +90,19 @@ function Rooms({
             <h4 className="guest-heading">No of Room(s)</h4>
             <div className="mt-2">
               <form onSubmit={handleSubmit(onSubmit)} className="p-0">
-                <Select options={roomOptions}  register={register("numberOfRooms")}/>
-               <div className="mt-4">
-                <Button
-                type="submit"
-                text="BOOK NOW"
-                backgroundColor="bg-[#181717]"
-                color="text-[#f6d284]"
-                padding="p-2"
-             />
-             </div>
+                <Select
+                  options={roomOptions}
+                  register={register("numberOfRooms")}
+                />
+                <div className="mt-4">
+                  <Button
+                    type="submit"
+                    text="BOOK NOW"
+                    backgroundColor="bg-[#181717]"
+                    color="text-[#f6d284]"
+                    padding="p-2"
+                  />
+                </div>
               </form>
             </div>
           </li>

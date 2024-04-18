@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { informationSchema } from "../../../components/Shared/Validations/Validations";
 import Button from "../../Shared/Button/Button";
 import CustomerInformation from "./CustomerInformation";
+import { formatedDate } from "../../../utils/helpers";
 function PaymentForm() {
   const {
     register,
@@ -12,16 +13,18 @@ function PaymentForm() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      categoryId:" ",
-      numberOfRooms:" ",
-      startDate:" ",
-      endDate:" "
+      categoryId:JSON.parse(localStorage.getItem('categoryId')),
+      numberOfRooms:JSON.parse(localStorage.getItem('numberOfRooms')),
+      startDate:JSON.parse(localStorage.getItem('startDate')),
+      endDate:JSON.parse(localStorage.getItem('endDate'))
     },
   });
 
   const onSubmit = async (data) => {
     reset();
     console.log(data);
+    localStorage.clear();
+
   };
   return (
     <div className="col-md-12 ps-4">

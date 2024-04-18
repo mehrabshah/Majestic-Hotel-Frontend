@@ -74,3 +74,28 @@ export const calculateNumberOfNights = (startDate, endDate) => {
     const nights = differenceInDays(new Date(endDate), new Date(startDate));
     return nights;
   };
+
+
+  /**
+ * Converts a date from the format "Month Day, Year" to "YYYY-MM-DD" format.
+
+ * @param {string} inputDate - The date string to be converted. Format: "Month Day, Year".
+ * @returns {string} The converted date string in "YYYY-MM-DD" format.
+ */
+export const formatedDate=(inputDate)=> {
+    const monthNames = {
+        January: '01', February: '02', March: '03', April: '04',
+        May: '05', June: '06', July: '07', August: '08',
+        September: '09', October: '10', November: '11', December: '12'
+    };
+    const parts = inputDate.split(' ');
+    const month = parts[0];
+    const day = parseInt(parts[1], 10); 
+    const year = parts[2];
+
+    const formattedDay = day < 10 ? `0${day}` : day;
+    const monthNumber = monthNames[month];
+
+    // Return the formatted date string
+    return `${year}-${monthNumber}-${formattedDay}`;
+}
