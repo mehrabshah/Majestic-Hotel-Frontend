@@ -4,16 +4,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { informationSchema } from "../../../components/Shared/Validations/Validations";
 import Button from "../../Shared/Button/Button";
 import CustomerInformation from "./CustomerInformation";
-
 function PaymentForm() {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(),
-  });
+  } = useForm();
   const onSubmit = async (data) => {
     reset();
     console.log(data);
@@ -29,13 +26,14 @@ function PaymentForm() {
       </div>
       <div className="row">
         <form onSubmit={handleSubmit(onSubmit)} className="p-0">
-            <CustomerInformation />
+            <CustomerInformation register={register} />
           <div className="d-flex justify-content-end mt-5">
             <Button
-              text="Continue"
+              text="Book"
               backgroundColor="bg-[#9b855b]"
               color="text-[white]"
               padding="ps-4 pe-4 pt-2 pb-2"
+              type="submit"
             />
           </div>
         </form>

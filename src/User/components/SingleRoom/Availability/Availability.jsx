@@ -35,7 +35,7 @@ const Availability = () => {
   return (
     <div className="xl:max-w-screen-xl mx-auto ps-4 pe-4 ">
       <div className="row">
-        <AvailabilityForm submitAvailabilityForm={submitAvailabilityForm} />
+        <AvailabilityForm submitAvailabilityForm={submitAvailabilityForm}  />
       </div>
       <div className="row">
         <RoomsSection RoomsData={RoomsData} checkInOutDate={checkInOutDate} />

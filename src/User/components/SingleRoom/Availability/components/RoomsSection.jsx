@@ -10,16 +10,18 @@ function RoomsSection({ RoomsData , checkInOutDate }) {
           {RoomsData.map((Room) => (
             <div key={Room.id} className="mt-4">
               <Rooms
+                categoryId={Room.id}
                 imgSrc={Room.image}
                 heading={Room.name}
                 price={Room.price}
                 availableRooms={Room.availableRooms}
+                checkInOutDate={checkInOutDate}
               />
             </div>
           ))}
         </div>
         <div className="col-md-3">
-          <Booking checkInOutDate={checkInOutDate}/>
+          {/* <Booking checkInOutDate={checkInOutDate}/> */}
         </div>
       </div>
     </div>

@@ -11,7 +11,6 @@ import {
 function Booking({ checkInOutDate }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-
   useEffect(() => {
     if (checkInOutDate) {
       setStartDate(extractLocalDate(checkInOutDate.startDate));
