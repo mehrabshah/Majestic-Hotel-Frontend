@@ -5,6 +5,7 @@ import { informationSchema } from "../../../components/Shared/Validations/Valida
 import Button from "../../Shared/Button/Button";
 import CustomerInformation from "./CustomerInformation";
 import { formatedDate } from "../../../utils/helpers";
+import { Booking } from "../../../Services/Services";
 function PaymentForm() {
   const {
     register,
@@ -22,7 +23,8 @@ function PaymentForm() {
 
   const onSubmit = async (data) => {
     reset();
-    console.log(data);
+    const response=await Booking(data)
+    console.log("final",response);
     localStorage.clear();
 
   };

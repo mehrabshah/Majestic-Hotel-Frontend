@@ -18,3 +18,13 @@ export const  getRoomsAvailability= async (userData) => {
     throw error.response.data || 'Something went wrong';
   }
 };
+
+//Booking of the selected Room
+export const  Booking = async (userData) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}booking/createBookings`, userData);
+    return response.data; 
+  } catch (error) {
+    throw error.response.data || 'Something went wrong';
+  }
+};
