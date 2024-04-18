@@ -1,15 +1,23 @@
 import React from "react";
 import "../Availability.css";
-function Rooms({ imgSrc, heading, numberOfGuests, price }) {
-  const guestArray = Array.from({ length: numberOfGuests },(_, index) => index
+import Select from "../../../Shared/Select/Select";
+function Rooms({ imgSrc, heading, numberOfGuests, price, availableRooms }) {
+  //No of guests allowed for each category
+  const guestArray = Array.from(
+    { length: numberOfGuests },
+    (_, index) => index
   );
+  //No of rooms aray available for the specific category
+  const roomOptions = Array.from({ length: availableRooms }, (_, index) => ({
+    label: (index + 1).toString(),
+    value: (index + 1).toString(),
+  }));
   return (
     <div className="row room">
       <div className="col-md-3 p-0">
         <img src={imgSrc} alt="imgSrc" className="side-image" />
       </div>
       <div className="col-md-9 p-0">
-        <div></div>
         <h2 className="p-fair room-heading">{heading}</h2>
         <ul className="room-ul-new row p-3">
           <li className="col-3">
@@ -29,20 +37,25 @@ function Rooms({ imgSrc, heading, numberOfGuests, price }) {
           </li>
           <li className="col-3">
             <div>
-            <h4 className="guest-heading">Booking Policy</h4>
+              <h4 className="guest-heading">Booking Policy</h4>
             </div>
           </li>
           <li className="col-3">
-              <h1 className="d-prices">
-                <span>
-                <span id="price" className="ft-16 font-bold">{price}</span>
+            <h1 className="d-prices">
+              <span>
+                <span id="price" className="ft-16 font-bold">
+                  {price}
                 </span>
-                <br/>
-                <span>
-                </span>
-              </h1>
+              </span>
+              <br />
+              <span></span>
+            </h1>
           </li>
-          <li>
+          <li className="col-3">
+            <h4 className="guest-heading">No of Room(s)</h4>
+            <div className="mt-2">
+              <Select options={roomOptions} />
+            </div>
           </li>
         </ul>
       </div>

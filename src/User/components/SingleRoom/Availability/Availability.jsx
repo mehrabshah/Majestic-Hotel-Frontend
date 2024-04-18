@@ -7,6 +7,7 @@ const Availability = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [RoomsData, setRoomsData] = useState([]);
+  const [checkInOutDate,setCheckInOutDate]=useState(null);
   useEffect(() => {
     getRooms()
   }, [RoomsData]);
@@ -24,7 +25,7 @@ const Availability = () => {
   const submitAvailabilityForm = async (data) => {
     try {
       const RoomsData = await getRoomsAvailability(data);
-      console.log("RoomsData",RoomsData)
+      setCheckInOutDate(data)
       setRoomsData(RoomsData);
       setIsLoading(false);
     } catch (error) {
@@ -37,7 +38,7 @@ const Availability = () => {
         <AvailabilityForm submitAvailabilityForm={submitAvailabilityForm} />
       </div>
       <div className="row">
-        <RoomsSection RoomsData={RoomsData}/>
+        <RoomsSection RoomsData={RoomsData} checkInOutDate={checkInOutDate} />
       </div>
     </div>
   );

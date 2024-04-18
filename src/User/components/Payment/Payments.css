@@ -1,0 +1,44 @@
+/*----------------------- Sidebar Start ------------------------ */
+.sidebar .border{
+    border: 1px solid #dee2e6 !important;
+}
+.sidebar .info-image{
+   width: 120px;
+   height: 100px;
+}
+.sidebar .star-color{
+    color: #9b855b !important;
+}
+.sidebar .border-right{
+    border: 1px solid #dee2e6 !important;
+}
+.sidebar .border-left{
+    border: 1px solid #dee2e6 !important;
+}
+
+/*----------------------- Sidebar End ------------------------ */
+
+/*----------------------- CustomerInformation Start ------------------------ */
+
+
+
+
+
+/*----------------------- CustomerInformation End ------------------------ */
+
+/*----------------------- PaymentInformation Start ------------------------ */
+
+
+
+
+/*----------------------- PaymentInformation End ------------------------ */
+
+/*----------------------- Payment Form Start ------------------------ */
+.bg-green-light{
+    background-color: #e9f4e4;
+}
+
+
+
+
+/*---------------------- Payment Form End ------------------------ */

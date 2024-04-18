@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Select.css"
-function Select({ label, register, options}) {
+function Select({ label, register, options ,width}) {
   return (
-    <div className="xl:w-52  md:w-full">
-    <label  className="form-label text-[#fff]  mb-0">
+    <div className={`${width}`}>
+    <label  className="form-label text-[#fff] mb-0">
       {label} 
     </label>
     <select

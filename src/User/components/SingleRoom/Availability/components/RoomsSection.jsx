@@ -2,7 +2,7 @@ import React from "react";
 import "../Availability.css";
 import Booking from "./Booking";
 import Rooms from "../../Availability/components/Rooms";
-function RoomsSection({ RoomsData }) {
+function RoomsSection({ RoomsData , checkInOutDate }) {
   return (
     <div className="ps-8 pe-8 mx-auto mt-16">
       <div className="row">
@@ -19,7 +19,7 @@ function RoomsSection({ RoomsData }) {
           ))}
         </div>
         <div className="col-md-3">
-          <Booking />
+          <Booking checkInOutDate={checkInOutDate}/>
         </div>
       </div>
     </div>

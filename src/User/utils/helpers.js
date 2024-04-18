@@ -1,14 +1,20 @@
+import { differenceInDays } from "date-fns";
 /**
- * Format a date object as "YYYY-MM-DD"
+ * Format a date object as "Month Day, Year"
  * @param {Date} date The date to format
- * @returns {string} The formatted date in "YYYY-MM-DD" format
+ * @returns {string} The formatted date in "Month Day, Year" format
  */
 const formatDate = (date) => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
+    const day = date.getDate();
+    const monthIndex = date.getMonth();
+    const year = date.getFullYear(); 
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"];
+    
+    return `${monthNames[monthIndex]} ${day}, ${year}`;
   };
+
+
 /**
  * get current date
  * @param {Date} date
@@ -18,10 +24,11 @@ export const getCurrentDate = () => {
     const currentDate = new Date();
     return formatDate(currentDate);
 };
+
 /**
  * get date after the current date
  * @param {Date} date
- * @returns {string} For example "2024-04-17"
+ * @returns {string} For example "Month Day, Year" format
  */
 export const getDateAfterCurrentDate = () => {
     const currentDate = new Date();
@@ -42,18 +49,28 @@ export const getAvailibilityObject=()=>{
 }
 
 /**
- * Creates a Date object from a string and extracts the local date in "YYYY-MM-DD" format.
+ * Creates a Date object from a string and extracts the local date in "Day Month Year" format.
  * @param {string} dateString - The date string from which to create the Date object.
- * @returns {string} The date in "YYYY-MM-DD" format.
- * @throws {TypeError} If the input is not a valid Date string or Date conversion fails.
+ * @returns {string} The date in "Day Month Year" format
  */
 export const extractLocalDate = (dateString) => {
-    // Attempt to create a Date object from the input string
     const dateObject = new Date(dateString);
-    // Extract the year, month, and day from the Date object
     const year = dateObject.getFullYear();
-    const month = String(dateObject.getMonth() + 1).padStart(2, '0'); 
-    const day = String(dateObject.getDate()).padStart(2, '0');
-    // Return the formatted date as "YYYY-MM-DD"
-    return `${year}-${month}-${day}`;
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+    const month = monthNames[dateObject.getMonth()];
+    const day = dateObject.getDate();
+    // Return the formatted date as "Day Month Year"
+    return `${day} ${month} ${year}`;
 }
+
+/**
+ * Calculates the number of nights between two dates.
+ * @param {Date} startDate - The start date.
+ * @param {Date} endDate - The end date.
+ * @returns {number} The number of nights.
+ */
+export const calculateNumberOfNights = (startDate, endDate) => {
+    const nights = differenceInDays(new Date(endDate), new Date(startDate));
+    return nights;
+  };

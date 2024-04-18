@@ -3,9 +3,7 @@ import { Controller } from "react-hook-form";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DateComponent.css";
-function DateComponent({ control, name, placeholder, label , labelColor }) {
-  // For getting the current date
-  const currentDate = new Date();
+function DateComponent({ control, name, placeholder, label , labelColor ,minDate ,maxDate}) {
   return (
     <div className="date-picker  xl:w-52  md:w-full  ">
       <label htmlFor={name} className={`${labelColor}`}>{label}</label>
@@ -23,7 +21,7 @@ function DateComponent({ control, name, placeholder, label , labelColor }) {
             onChange={(date) => {
               field.onChange(date);
             }}
-            minDate={currentDate}
+            minDate={minDate}
             dateFormat="MMMM d, yyyy"
             placeholderText={placeholder} 
             className="cursor-pointer h-[40px] "

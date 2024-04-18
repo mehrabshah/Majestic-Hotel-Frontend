@@ -46,6 +46,7 @@ function AvailabilityForm({submitAvailabilityForm}) {
                   placeholder={getCurrentDate()}
                   label="Check In"
                   labelColor="text-[#fff]"
+                  minDate={getCurrentDate()}
                 />
               </div>
               <div className="col-md-3 col-6 lg:mt-0 mt-3 xl:px-1">
@@ -55,6 +56,7 @@ function AvailabilityForm({submitAvailabilityForm}) {
                   placeholder={getDateAfterCurrentDate()}
                   label="Check Out"
                   labelColor="text-[#fff]"
+                  minDate={getDateAfterCurrentDate()}
                 />
               </div>
               <div className="col-md-3 col-6 lg:mt-0 mt-3 xl:px-1">
@@ -62,6 +64,7 @@ function AvailabilityForm({submitAvailabilityForm}) {
                   label="Adult(s)"
                   options={adultOptions}
                   register="Adultss"
+                  width="xl:w-52  md:w-full"
                 />
               </div>
               <div className="col-md-3 col-6 lg:mt-0 mt-3 xl:px-1">
@@ -69,6 +72,7 @@ function AvailabilityForm({submitAvailabilityForm}) {
                   label="Child(s)"
                   options={childOptions}
                   register="Adults"
+                  width="xl:w-52  md:w-full"
                 />
               </div>
             </div>
