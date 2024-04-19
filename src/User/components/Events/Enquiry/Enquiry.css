@@ -1,0 +1,41 @@
+h2.enquiry__title {
+	font-size: 2rem !important;
+}
+.enquiry:before {
+	background: url(../../../../../public/assets/flower-4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+h4 {
+	font-size: 1.5rem !important;
+}
+.button-hov {
+	display: inline-block;
+	position: relative;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 20px 30px;
+	width: 206px;
+}
+.ft-22 {
+	font-size: 1.375rem;
+}
+.text-yellow {
+	color: #f6d284 !important;
+}
+.border-color {
+	border-color: #f6d284 !important;
+}
+.cd-tab-filter-wrapper:before {
+	height: 100%;
+}

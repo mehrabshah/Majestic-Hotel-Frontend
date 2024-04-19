@@ -1,0 +1,31 @@
+.hero-image {
+	/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+	background-image: url("../../../../../public/assets/Dinning/interior-8.jpg");
+
+	/* Set a specific height */
+	height: 480px;
+
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center 55%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.ft-55 {
+	font-size: 3rem;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.ft-55 {
+		font-size: 2.0625rem !important;
+	}
+}

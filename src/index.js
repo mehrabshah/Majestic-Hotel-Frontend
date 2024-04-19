@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.js";
 import "./index.css";
 import "animate.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../src/Admin/components/ErrorFallback.jsx";
 

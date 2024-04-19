@@ -1,0 +1,31 @@
+button.slick-prev.slick-arrow {
+	position: absolute;
+	z-index: 9;
+	left: 0;
+	width: 33.33%;
+	background: transparent;
+	border: 0;
+	color: #fff;
+	text-align: left;
+	height: 400px;
+	padding-left: 50px;
+	cursor: pointer;
+	outline: none;
+	font-size: 0px;
+}
+button.slick-next.slick-arrow {
+	position: absolute;
+	z-index: 9;
+	right: 0;
+	width: 33.33%;
+	background: transparent;
+	border: 0;
+	color: #fff;
+	text-align: right;
+	height: 400px;
+	/* top: 0; */
+	padding-right: 50px;
+	cursor: pointer;
+	outline: none;
+	font-size: 0;
+}
