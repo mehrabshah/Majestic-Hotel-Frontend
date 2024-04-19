@@ -2,18 +2,15 @@ import React from "react";
 import "../Availability.css";
 import Select from "../../../Shared/Select/Select";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import Button from "../../../Shared/Button/Button";
-import { useNavigate } from "react-router-dom";
-import { formatedDate, getCurrentDate, getDateAfterCurrentDate } from "../../../../utils/helpers";
 function Rooms({
   imgSrc,
   heading,
   numberOfGuests,
   price,
   availableRooms,
-  checkInOutDate,
   categoryId,
+  setBookingDetails,
+  setPriceDetails,
 }) {
   //No of guests allowed for each category
   const guestArray = Array.from(
@@ -21,64 +18,65 @@ function Rooms({
     (_, index) => index
   );
   //No of rooms aray available for the specific category
-  const roomOptions = Array.from({ length: availableRooms }, (_, index) => ({
-    label: (index + 1).toString(),
-    value: (index + 1).toString(),
+  const roomOptions = Array.from({ length: availableRooms + 1 }, (_, index) => ({
+    label: (index ).toString(),
+    value: (index ).toString(),
   }));
-  const navigate = useNavigate();
   const {
     register,
-    handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = async (data) => {
-    //Sending the data to payment page
-
-    localStorage.setItem("categoryId", JSON.stringify(categoryId));
-    if (checkInOutDate) {
-      
-      localStorage.setItem("startDate",JSON.stringify(formatedDate(checkInOutDate.startDate)));
-      localStorage.setItem("endDate", JSON.stringify(formatedDate(checkInOutDate.endDate)));
-    } else {
-      localStorage.setItem("startDate",JSON.stringify(formatedDate(getCurrentDate())));
-      localStorage.setItem("endDate", JSON.stringify(formatedDate(getDateAfterCurrentDate())));
-    }
-    localStorage.setItem("numberOfRooms",JSON.stringify(parseInt(data.numberOfRooms)));
-
-    navigate("/payment");
+  // Function to update booking details
+  const updateBookingDetails = () => {
+    setBookingDetails(prevBookingDetails => {
+      const updatedBookingDetails = [...prevBookingDetails];
+      updatedBookingDetails[categoryId-1] = {categoryId:categoryId, numberOfRooms: watch("numberOfRooms")};
+      return updatedBookingDetails;
+    });
+    updatePriceDetails();
   };
+  // Function to update price details
+const updatePriceDetails = () => {
+  setPriceDetails(prevPriceDetails => {
+    const updatedPriceDetails = [...prevPriceDetails];
+    updatedPriceDetails[categoryId-1]={categoryId:categoryId, price: watch("numberOfRooms")*price};
+    return updatedPriceDetails;
+  });
+};
+  
   return (
     <div className="row room">
       <div className="col-md-3 p-0">
-        <img src={imgSrc} alt="imgSrc" className="side-image" />
+        <img src = {imgSrc} alt="imgSrc" className = "side-image" />
       </div>
-      <div className="col-md-9 p-0">
-        <h2 className="p-fair room-heading">{heading}</h2>
-        <ul className="room-ul-new row p-3">
-          <li className="col-3">
+      <div className = "col-md-9 p-0">
+        <h2 className = "p-fair room-heading">{heading}</h2>
+        <ul className = "room-ul-new row p-3">
+          <li className = "col-3">
             <div>
-              <h4 className="guest-heading">Guest(s)</h4>
-              <div className="flex flex-row mt-3">
+              <h4 className = "guest-heading">Guest(s)</h4>
+              <div className = "flex flex-row mt-3">
                 {guestArray.map((guest, index) => (
                   <img
-                    key={index}
-                    src="/assets/person.png"
-                    className="img-fluid me-2"
-                    alt={`Guest ${index + 1}`}
+                    key = {index}
+                    src = "/assets/person.png"
+                    className = "img-fluid me-2"
+                    alt = {`Guest ${index + 1}`}
                   />
                 ))}
               </div>
             </div>
           </li>
-          <li className="col-3">
+          <li className = "col-3">
             <div>
-              <h4 className="guest-heading">Booking Policy</h4>
+              <h4 className = "guest-heading">Booking Policy</h4>
             </div>
           </li>
           <li className="col-3">
             <h1 className="d-prices">
               <span>
-                <span id="price" className="ft-16 font-bold">
+                <span id="price" className = "ft-16 font-bold">
                   {price}
                 </span>
               </span>
@@ -86,24 +84,14 @@ function Rooms({
               <span></span>
             </h1>
           </li>
-          <li className="col-3">
-            <h4 className="guest-heading">No of Room(s)</h4>
-            <div className="mt-2">
-              <form onSubmit={handleSubmit(onSubmit)} className="p-0">
+          <li className = "col-3">
+            <h4 className = "guest-heading">No of Room(s)</h4>
+            <div className = "mt-2">
                 <Select
-                  options={roomOptions}
-                  register={register("numberOfRooms")}
+                  options = {roomOptions}
+                  register = {register("numberOfRooms")}
+                  onClick = {updateBookingDetails}
                 />
-                <div className="mt-4">
-                  <Button
-                    type="submit"
-                    text="BOOK NOW"
-                    backgroundColor="bg-[#181717]"
-                    color="text-[#f6d284]"
-                    padding="p-2"
-                  />
-                </div>
-              </form>
             </div>
           </li>
         </ul>

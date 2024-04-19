@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Select.css"
-function Select({ label, register, options ,width}) {
+function Select({ label, register, options ,width, onClick }) {
   return (
     <div className={`${width}`}>
     <label  className="form-label text-[#fff] mb-0">
@@ -9,6 +9,7 @@ function Select({ label, register, options ,width}) {
     <select
       className ="form-select h-[40px]"
       {...register}
+      onClick ={onClick}
     >
       {options.map((option) => (
         <option key ={option.value} value ={option.value}>

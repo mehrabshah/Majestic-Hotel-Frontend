@@ -20,7 +20,7 @@
 @media (max-width: 768px) {
     .room .side-image {
         height: auto; 
-        max-width:inherit; 
+        max-width: inherit; 
     }
 }
 /* -------------------Room End -------------------------- */
@@ -53,6 +53,15 @@
     float: left;
     width: 100%;
     margin-bottom: 10px;
+}
+.bookings .room-type {
+    color: #AF996F !important;
+    font-family: 'apercumedium';
+    padding: 6px 14px;
+    font-size: 17px;
+    margin-top: 0;
+    float: left;
+    width: 100%
 }
 
 /* -------------------Booking End -------------------------- */

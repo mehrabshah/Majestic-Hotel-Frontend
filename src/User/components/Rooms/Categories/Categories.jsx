@@ -17,13 +17,13 @@ function Categories() {
   return (
     <div>
       <div className="accomodation accomodation-banner">
-        <div className="col-md-12 py-0 py-md-5 text-center">
+        <div className="col-md-12 py-0 py-md-5  text-center">
           <h2 className=" ft-17 border-bottom d-inline-block px-3 border-color-dark  mx-auto pt-5 pb-2 text-uppercase">
             Accommodation
           </h2>
           <h4 className=" text-uppercase p-fair pt-2">Rooms Overview</h4>
-          <p className=" pt-2 px-4 col-12 col-md-6 col-lg-6 col-xl-3 mx-auto">
-            Choose from a total of 605 lavishly furnished rooms, with sleek and
+          <p className=" pt-2 pb-16 px-4 col-12 col-md-6 col-lg-6 col-xl-3 mx-auto">
+            Choose from a total of 96 lavishly furnished rooms, with sleek and
             inviting interior perfectly set to create an unforgettable luxury
             experience.
           </p>
