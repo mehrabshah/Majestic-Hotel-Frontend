@@ -3,10 +3,13 @@ import "../Payments.css";
 import { FaStar } from "react-icons/fa";
 import Button from "../../Shared/Button/Button";
 import { useNavigate } from 'react-router-dom';
+import { useBookingContext } from "../../../contexts/BookingContext";
+import {calculateNumberOfNights} from "../../../utils/helpers"
 function Sidebar() {
   const navigate = useNavigate();
+  const { bookingData } = useBookingContext();
+  const { totalPrice, totalRooms,startDate,endDate } = bookingData; 
   const Change=()=>{
-    localStorage.clear();
     navigate('/category/:categoryName');
   }
   return (
@@ -45,7 +48,7 @@ function Sidebar() {
                   Check In:
                 </h1>
                 <p className="text-capitalize checkin-date text-[14px] ft-14-res text-center g-book mt-1">
-                  <b> {JSON.parse(localStorage.getItem('startDate'))} </b>
+                  <b> {startDate} </b>
                 </p>
               </div>
             </div>
@@ -55,7 +58,7 @@ function Sidebar() {
                   Check Out:
                 </h1>
                 <p className="text-capitalize checkout-date text-[14px] ft-14-res text-center g-book mt-1">
-                  <b>{JSON.parse(localStorage.getItem('endDate'))}</b>
+                  <b>{endDate}</b>
                 </p>
               </div>
             </div>
@@ -72,7 +75,7 @@ function Sidebar() {
             </div>
             <div className="col-md-6 col-6 my-auto">
               <p className=" text-[15px]  float-end text-capitalize text-[#9b855b]">
-                1 Nights{" "}
+              {calculateNumberOfNights(startDate, endDate)} 
               </p>
             </div>
           </div>
@@ -80,9 +83,9 @@ function Sidebar() {
             <div className="col-md-12">
               <div className="mt-3">
                 <h1 className="text-capitalize  text-[14px]  text-bold">
-                {JSON.parse(localStorage.getItem('totalRooms'))} Rooms
+                {totalRooms} Rooms
                   <span className="float-right text-[13px]  text-lighter ">
-                    RS {JSON.parse(localStorage.getItem('totalPrice'))}
+                    RS {totalPrice}
                   </span>
                 </h1>
                 <h1 className="text-capitalize loyaltydiscountdiv  ft-[14px]  text-bold  hidden">
@@ -99,10 +102,8 @@ function Sidebar() {
                   </span>
                 </h1>
                 <br />
-
                 <div class="clearfix"></div>
                 <span class="text-capitalize  text-[14px] text-bold"></span>
-               
               </div>
             </div>
           </div>
@@ -110,13 +111,13 @@ function Sidebar() {
             <div className="col-md-12">
               <div className="mt-3 border mb-3 p-3 shadow-sm  float-left w-100">
                 <h1 className="text-capitalize  text-[20px]  text-lighter">
-                  Price <span className="text-[12px] mt-2">(for 3 guests)</span>
+                  Price <span className="text-[12px] mt-2"></span>
                 </h1>
                 <h1 class=" ft-14 ft-14-res text-lighter">
                   <span class="float-right ft-13-res ft-18 text-bold text-main totalprice  linethrough mt-xl-n4">
                     RS
                     <span id="totalprice wwss" class="linethrough">
-                      {JSON.parse(localStorage.getItem('totalPrice'))}
+                      {totalPrice}
                     </span>
                   </span>
                 </h1>

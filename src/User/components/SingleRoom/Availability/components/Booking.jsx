@@ -2,23 +2,30 @@ import React, { useEffect, useState, useMemo } from "react";
 import Button from "../../../Shared/Button/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import {
-  calculateNumberOfNights,
-  extractLocalDate,
-  getCurrentDate,
-  getDateAfterCurrentDate,
-} from "../../../../utils/helpers";
+import { calculateNumberOfNights,extractLocalDate,getCurrentDate,getDateAfterCurrentDate,} from "../../../../utils/helpers";
 import {formatedDate} from "../../../../utils/helpers"
+import { useBookingContext } from "../../../../contexts/BookingContext";
 function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
     if (checkInOutDate) {
-      setStartDate(extractLocalDate(checkInOutDate.startDate));
-      setEndDate(extractLocalDate(checkInOutDate.endDate));
+      const startDate = extractLocalDate(checkInOutDate.startDate)
+      setStartDate(startDate)
+      const endDate = extractLocalDate(checkInOutDate.endDate)
+      setEndDate(endDate)
+    }
+    else
+    {
+      const startDate = getCurrentDate()
+      setStartDate(startDate)      
+      const endDate = getDateAfterCurrentDate()
+      setEndDate(endDate) 
     }
   }, [checkInOutDate]);
+  //For sending the data to payment component
+  const { setBookingData } = useBookingContext();
   // Calculate total price using reduce method
   const totalPrice = useMemo(() => {
     return PrizeDetails.reduce((accumulator, detail) => accumulator + detail.price,0);
@@ -27,66 +34,39 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   const totalRooms = useMemo(() => {
     return bookingDetails.reduce((accumulator, detail) => accumulator + parseInt(detail.numberOfRooms),0);
   }, [bookingDetails]);
-  
   //For sending booking data from one component to other
   const BookNow = () => {
-
-    if (checkInOutDate) {
-      localStorage.setItem(
-        "startDate",
-        JSON.stringify(extractLocalDate(checkInOutDate.startDate))
-      );
-      localStorage.setItem(
-        "endDate",
-        JSON.stringify(extractLocalDate(checkInOutDate.endDate))
-      );
-    } else {
-      localStorage.setItem(
-        "startDate",
-        JSON.stringify(formatedDate(getCurrentDate()))
-      );
-      localStorage.setItem(
-        "endDate",
-        JSON.stringify(formatedDate(getDateAfterCurrentDate()))
-      );
-    }
-      localStorage.setItem(
-        "bookingDetails",
-        JSON.stringify(bookingDetails)
-      );
-      localStorage.setItem(
-        "totalPrice",
-        JSON.stringify(totalPrice)
-      );
-      localStorage.setItem(
-        "totalRooms",
-        JSON.stringify(totalRooms)
-      );
-    
+    setBookingData({
+        bookingDetails,
+        totalPrice,
+        totalRooms,
+        startDate,
+        endDate
+      });
     navigate("/payment");
   };
 
   return (
     <div className="bookings  sm:sticky sm:top-0 flex flex-col">
-      <h4 className="p-fair heading">Pearl Continental Hotel Lahore</h4>
+      <h4 className="p-fair heading">Majestic Hotel England</h4>
       <h6>Check In:</h6>
-      <span className="g-book text-black">{startDate || getCurrentDate()}</span>
+      <span className="g-book text-black">{startDate || formatedDate(getCurrentDate())}</span>
       <h6>Check Out:</h6>
       <span className="g-book text-black">
-        {endDate || getDateAfterCurrentDate()}
+        {endDate || formatedDate(getDateAfterCurrentDate())}
       </span>
       <h6>Total length of stay:</h6>
       <span className="g-book">
         {calculateNumberOfNights(startDate, endDate) || "1"} Night
       </span>
-      <div className="room-type ">
+      {totalRooms != 0  && <div className="room-type ">
         <div id="xhidn-trooms">
           <strong>{totalRooms}</strong> Rooms
         </div>
         <div id="xhidn-tprice" className="green">
           {totalPrice}
         </div>
-      </div>
+      </div>}
       {totalRooms === 0 ? (
         <Button
           text="Please select number of rooms required"
