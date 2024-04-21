@@ -21,6 +21,7 @@ import Rooms from "../User/pages/Rooms";
 import SingleRoom from "../User/pages/SingleRoom";
 import Dinning from "../User/pages/Dinning";
 import Payment from "../User/pages/Payment";
+import Events from "../User/pages/events";
 
 function AppRoutes() {
   return (
@@ -48,6 +49,7 @@ function AppRoutes() {
       <Route path="*" element={<PageNotFound />} />
       <Route path="/home" element={<Home />} />
       <Route path="/contact-us" element={<Contact />} />
+      <Route path="/events-celebrations" element={<Events />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/rooms" element={<Rooms />} />
       <Route path="/dining" element={<Dinning />} />

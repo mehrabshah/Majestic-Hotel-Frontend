@@ -1,0 +1,11 @@
+.fontPlayfair{
+    font-family: 'Playfair Display', serif;
+  }
+  .border-yellow-top-bottom{
+    border-top: 2px solid #f6d284;
+    border-bottom: 2px solid #f6d284;
+  }
+  .svg-img img, .svg-img{
+    width: 70px !important;
+    height: 100px !important;
+  }

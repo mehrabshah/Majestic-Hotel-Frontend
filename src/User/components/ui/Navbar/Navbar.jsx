@@ -67,7 +67,7 @@ function Navbar() {
                 className={({ isActive }) =>
                   "nav-link nav-text" + (isActive ? " active" : "")
                 }
-                to="/events"
+                to="/events-celebrations"
               >
                 EVENTS & CELEBRATIONS
               </NavLink>
