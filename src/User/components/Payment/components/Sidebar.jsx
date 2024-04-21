@@ -75,7 +75,7 @@ function Sidebar() {
             </div>
             <div className="col-md-6 col-6 my-auto">
               <p className=" text-[15px]  float-end text-capitalize text-[#9b855b]">
-              {calculateNumberOfNights(startDate, endDate)} 
+              {calculateNumberOfNights(startDate, endDate)} Night
               </p>
             </div>
           </div>

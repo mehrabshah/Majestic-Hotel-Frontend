@@ -134,3 +134,12 @@
 }
 
 /* -----------------Loader  ------------------------- */
+/* ---------------Modal Start ------------------------*/
+.modal .modal-image{
+  aspect-ratio: 19/10;
+}
+.modal .close-btn{
+   background-color: #000000;
+   color: #f6d284 !important;
+}
+/* ---------------Modal End ------------------------*/

@@ -41,6 +41,7 @@ function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
                 availableRooms={Room.availableRooms}
                 setBookingDetails={setBookingDetails}
                 setPriceDetails={setPriceDetails}
+                description={Room.description}
               />
             </div>
           ))}
