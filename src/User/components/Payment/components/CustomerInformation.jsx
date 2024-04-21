@@ -21,7 +21,6 @@ function CustomerInformation({ register }) {
             placeholder="Last Name"
             register={register("lastName")}
           />
-          
         </div>
       </div>
       <div className="row  mt-2">
@@ -32,15 +31,6 @@ function CustomerInformation({ register }) {
             placeholder="Age"
             register={register("age")}
           />
-        </div>
-        <div className="col-lg-6 col-md-6">
-          <Input
-            label="Status"
-            type="text"
-            placeholder="Status"
-            register={register("status")}
-          />
-          
         </div>
       </div>
       <div className="row  mt-2">
@@ -57,35 +47,7 @@ function CustomerInformation({ register }) {
             label="Email"
             type="text"
             placeholder="Email"
-            register={register("email")}
-          />
-        </div>
-      </div>
-      <div className="row  mt-2">
-        <div className="col-lg-6 col-md-6">
-          <Input
-            label="Address"
-            type="text"
-            placeholder="Address"
-            register={register("address")}
-          />
-        </div>
-        <div className="col-lg-6 col-md-6">
-          <Input
-            label="Zip Code"
-            type="text"
-            placeholder="Zip Code"
-            register={register("zipCode")}
-          />
-        </div>
-      </div>
-      <div className="row  mt-2">
-      <div className="col-lg-6 col-md-6">
-          <Input
-            label="City"
-            type="text"
-            placeholder="City"
-            register={register("city")}
+            register={register("emailAddress")}
           />
         </div>
       </div>

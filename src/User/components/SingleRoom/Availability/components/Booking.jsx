@@ -1,15 +1,18 @@
 import React, { useEffect, useState, useMemo } from "react";
 import Button from "../../../Shared/Button/Button";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   calculateNumberOfNights,
   extractLocalDate,
   getCurrentDate,
   getDateAfterCurrentDate,
 } from "../../../../utils/helpers";
+import {formatedDate} from "../../../../utils/helpers"
 function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     if (checkInOutDate) {
       setStartDate(extractLocalDate(checkInOutDate.startDate));
@@ -18,18 +21,50 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   }, [checkInOutDate]);
   // Calculate total price using reduce method
   const totalPrice = useMemo(() => {
-    return PrizeDetails.reduce(
-      (accumulator, detail) => accumulator + detail.price,
-      0
-    );
+    return PrizeDetails.reduce((accumulator, detail) => accumulator + detail.price,0);
   }, [PrizeDetails]);
   // Calculate total number of rooms using reduce method
   const totalRooms = useMemo(() => {
-    return bookingDetails.reduce(
-      (accumulator, detail) => accumulator + parseInt(detail.numberOfRooms),
-      0
-    );
+    return bookingDetails.reduce((accumulator, detail) => accumulator + parseInt(detail.numberOfRooms),0);
   }, [bookingDetails]);
+  
+  //For sending booking data from one component to other
+  const BookNow = () => {
+
+    if (checkInOutDate) {
+      localStorage.setItem(
+        "startDate",
+        JSON.stringify(extractLocalDate(checkInOutDate.startDate))
+      );
+      localStorage.setItem(
+        "endDate",
+        JSON.stringify(extractLocalDate(checkInOutDate.endDate))
+      );
+    } else {
+      localStorage.setItem(
+        "startDate",
+        JSON.stringify(formatedDate(getCurrentDate()))
+      );
+      localStorage.setItem(
+        "endDate",
+        JSON.stringify(formatedDate(getDateAfterCurrentDate()))
+      );
+    }
+      localStorage.setItem(
+        "bookingDetails",
+        JSON.stringify(bookingDetails)
+      );
+      localStorage.setItem(
+        "totalPrice",
+        JSON.stringify(totalPrice)
+      );
+      localStorage.setItem(
+        "totalRooms",
+        JSON.stringify(totalRooms)
+      );
+    
+    navigate("/payment");
+  };
 
   return (
     <div className="bookings  sm:sticky sm:top-0 flex flex-col">
@@ -66,6 +101,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
             backgroundColor="bg-[#181717] w-full"
             color="text-[#f6d284]"
             padding="p-2"
+            onClick={BookNow}
           />
         </Link>
       )}

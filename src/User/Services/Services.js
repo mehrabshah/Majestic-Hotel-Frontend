@@ -22,7 +22,7 @@ export const  getRoomsAvailability= async (userData) => {
 //Booking of the selected Room
 export const  Booking = async (userData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}booking/createBookings`, userData);
+    const response = await axios.post(`${API_BASE_URL}booking/createMultipleBookings`, userData);
     return response.data; 
   } catch (error) {
     throw error.response.data || 'Something went wrong';

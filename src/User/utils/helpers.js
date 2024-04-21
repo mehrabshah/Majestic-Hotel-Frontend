@@ -75,7 +75,6 @@ export const calculateNumberOfNights = (startDate, endDate) => {
     return nights;
   };
 
-
   /**
  * Converts a date from the format "Month Day, Year" to "YYYY-MM-DD" format.
 
