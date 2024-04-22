@@ -26,6 +26,7 @@ import Events from "../User/pages/events";
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route
         element={
           <ProtectedRoute>
@@ -33,7 +34,7 @@ function AppRoutes() {
           </ProtectedRoute>
         }
       >
-        <Route index element={<Navigate replace to="/dashboard" />} />
+        {/* <Route index element={<Navigate replace to="/dashboard" />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/bookings/:bookingId" element={<BookingDetails />} />

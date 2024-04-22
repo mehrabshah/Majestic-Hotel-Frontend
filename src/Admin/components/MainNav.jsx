@@ -24,7 +24,7 @@ function MainNav() {
     { to: '/contactUs', icon: <SealQuestion  />, label: 'Contact Us' },
     // { to: '/cabins', icon: <Warehouse />, label: 'Cabins' },
     { to: '/users', icon: <Users />, label: 'Users' },
-    { to: '/settings', icon: <Gear />, label: 'Settings' },
+    { to: '/settings', icon: <Gear />, label: 'Prices' },
   ];
 
   return (
