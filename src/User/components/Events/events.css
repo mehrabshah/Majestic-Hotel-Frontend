@@ -5,7 +5,10 @@
     border-top: 2px solid #f6d284;
     border-bottom: 2px solid #f6d284;
   }
-  .svg-img img, .svg-img{
+  .svg-img img{
     width: 70px !important;
     height: 100px !important;
+  }
+  .slick-next:before, .slick-prev:before{
+    display: none !important;
   }
