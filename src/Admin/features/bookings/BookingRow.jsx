@@ -22,18 +22,6 @@ function BookingRow({ booking }) {
   const { deleteBooking, isDeleting } = useDeleteBooking();
   const navigate = useNavigate();
 
-  // const {
-  //   id: bookingId,
-  //   startDate,
-  //   endDate,
-  //   numNights,
-  //   totalPrice,
-  //   status,
-  //   cabins: { cabinName },
-  //   guests: { name: guestName, email: guestEmail },
-  // } = booking;
-
-
   const {
     firstName,
     lastName,
@@ -58,15 +46,12 @@ function BookingRow({ booking }) {
       <Table.Cell>
         <span>{firstName}{" "}{lastName}</span>
       </Table.Cell>
-
       <Table.Cell>
         <span>{emailAddress}</span>
       </Table.Cell>
-
       <Table.Cell>
         <span>{phoneNumber}</span>
       </Table.Cell>
-
       <Table.Cell>
         <span>{city}</span>
       </Table.Cell>    
