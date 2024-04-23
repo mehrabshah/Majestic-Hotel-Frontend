@@ -1,7 +1,7 @@
  export default function EventsHero(){
     return(
         <>
-        <div className="relative  bg-cover bg-center h-96" style={{ backgroundImage: `url(./assets/banner-10.jpg)` }}>
+        <div className="relative  bg-cover bg-center h-[30rem]" style={{ backgroundImage: `url(./assets/banner-10.jpg)` }}>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl fontPlayfair font-bold text-white">Events & Celebrations</h1>
