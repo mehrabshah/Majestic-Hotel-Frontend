@@ -2,7 +2,8 @@ import React,{useState} from "react";
 import "../Availability.css";
 import Booking from "./Booking";
 import Rooms from "../../Availability/components/Rooms";
-function RoomsSection({ RoomsData , checkInOutDate }) {
+import NoRooms from "./NoRooms";
+function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
   //the numbers of rooms select by the user for each category
   const [bookingDetails, setBookingDetails] = useState([
     { categoryId: 1, numberOfRooms: 0 },
@@ -30,7 +31,7 @@ function RoomsSection({ RoomsData , checkInOutDate }) {
     <div className="ps-8 pe-8 mx-auto mt-16">
       <div className="row">
         <div className="col-md-9">
-          {RoomsData.map((Room) => (
+         {RoomsData.map((Room) => (
             <div key={Room.id} className="mt-4">
               <Rooms
                 categoryId={Room.id}
@@ -40,6 +41,7 @@ function RoomsSection({ RoomsData , checkInOutDate }) {
                 availableRooms={Room.availableRooms}
                 setBookingDetails={setBookingDetails}
                 setPriceDetails={setPriceDetails}
+                description={Room.description}
               />
             </div>
           ))}

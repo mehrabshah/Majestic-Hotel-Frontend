@@ -10,12 +10,17 @@ export const getCategories = async () => {
     }
 };
 //Get availability of the rooms on the selected date
-export const  getRoomsAvailability= async (userData) => {
+export const getRoomsAvailability = async (userData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}booking/available-rooms`, userData);
-    return response.data; 
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+
+    const response = await axios.post(
+      `${API_BASE_URL}booking/available-rooms`,
+      userData
+    );
+    return response.data;
   } catch (error) {
-    throw error.response.data || 'Something went wrong';
+    throw error.response?.data || 'Something went wrong';
   }
 };
 

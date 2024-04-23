@@ -48,7 +48,7 @@ function AppRoutes() {
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home />} />      
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/events-celebrations" element={<Events />} />
       <Route path="/about-us" element={<About />} />

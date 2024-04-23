@@ -4,10 +4,12 @@ import Button from "../../Shared/Button/Button";
 import CustomerInformation from "./CustomerInformation";
 import { Booking } from "../../../Services/Services";
 import {formatedDate} from  "../../../utils/helpers"
+import { useBookingContext } from "../../../contexts/BookingContext"
 import CustomerInformationSecond from "./CustomerInformationSecond";
 function PaymentForm() {
   const [step, setStep] = useState(0);
-  const bookingDetails=JSON.parse(localStorage.getItem('bookingDetails'))
+  const { bookingData } = useBookingContext();
+  const { startDate,endDate,bookingDetails } = bookingData;
   const {
     register,
     handleSubmit,
@@ -15,8 +17,8 @@ function PaymentForm() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      startDate: JSON.parse(localStorage.getItem("startDate")),
-      endDate: JSON.parse(localStorage.getItem("endDate")),
+      startDate: formatedDate(startDate),
+      endDate: formatedDate(endDate),
       status: "Confirmed",
     },
   });
@@ -27,8 +29,8 @@ function PaymentForm() {
       bookingDetails:filteredbookingDetails,
       commonDetails:data
     }
+    console.log("details",details)
      const response = await Booking(details);
-    localStorage.clear();
   };
   //For next strp of the Form
   const next = () => {

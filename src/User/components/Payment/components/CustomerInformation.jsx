@@ -4,7 +4,7 @@ import Input from "../../Shared/Input/Input";
 
 function CustomerInformation({ register }) {
   return (
-    <div className="col-md-12 p-4 bg-[#f7f8f9] border shadow-sm mt-4">
+    <div className="col-md-12 p-4 bg-[#f7f8f9] border shadow-sm mt-4 nav-border">
       <div className="row ">
         <div className="col-lg-6 col-md-6">
           <Input
