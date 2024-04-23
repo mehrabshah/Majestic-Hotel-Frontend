@@ -12,6 +12,9 @@ import { useDeleteBooking } from '../hooks/useDeleteBooking';
 
 function BookingDetail() {
   const { booking, isLoading } = useBookingDetail();
+
+  console.log("mehrab")
+
   const { checkout, isCheckingOut } = useCheckout();
   const { deleteBooking, isDeleting } = useDeleteBooking();
 

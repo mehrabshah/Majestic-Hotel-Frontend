@@ -1,10 +1,9 @@
 import axios from 'axios';
+const backendUrl = "http://localhost:8000/"
 
-export async function getBookings({ filter, sortBy, page }) {
+export async function getBookings() {
   try {
-    const response = await axios.get(`${process.env.backendUrl}/bookings`, {
-      params: { filter, sortBy, page },
-    });
+    const response = await axios.get(`${backendUrl}booking/getAllBookingsWithDetails`);
     return response.data;
   } catch (error) {
     throw new Error('We are unable to load bookings at this time.');

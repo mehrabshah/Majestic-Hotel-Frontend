@@ -1,39 +1,40 @@
-import { useBookings } from './hooks/useBookings';
 import Table from '../../components/ui/Table';
 import BookingRow from './BookingRow';
 import Spinner from '../../components/ui/Spinner';
 import Pagination from '../../components/ui/Pagination';
+import { useBookingDetail } from './hooks/useBookingDetail';
 
 function BookingTable() {
-  const { bookings, isLoading, count } = useBookings();
+  const { booking, isLoading, error } = useBookingDetail();
+
+  console.log("Bookings",booking)
 
   if (isLoading) return <Spinner className="mx-auto h-6 w-6" />;
 
-  // If there is no bookings data to show
-  if (!bookings.length) return <div>No data to show at the moment.</div>;
+  //If there is no bookings data to show
+  if (!booking.length) return <div>No data to show at the moment.</div>;
 
   return (
     <>
       <Table>
         <Table.Header>
           <Table.Row>
-            <Table.Head>Cabin</Table.Head>
-            <Table.Head>Guest</Table.Head>
-            <Table.Head>Dates</Table.Head>
-            <Table.Head>Status</Table.Head>
-            <Table.Head>Amount</Table.Head>
+            <Table.Head>Name</Table.Head>
+            <Table.Head>Email</Table.Head>
+            <Table.Head>Phone</Table.Head>
+            <Table.Head>City</Table.Head>
             <Table.Head />
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {bookings.map((booking) => (
+          {booking.map((booking) => (
             <BookingRow booking={booking} key={booking.id} />
           ))}
         </Table.Body>
       </Table>
 
-      <Pagination countRows={count} />
+      {/* <Pagination countRows={count} /> */}
     </>
   );
 }
