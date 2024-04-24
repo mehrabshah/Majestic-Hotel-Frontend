@@ -48,8 +48,8 @@ function PaymentForm() {
       </div>
       <div className="row">
         <form onSubmit={handleSubmit(onSubmit)} className="p-0">
-          {step === 0 && <CustomerInformation register={register} />}
-          {step === 1 && <CustomerInformationSecond register={register} />}
+          {step === 0 && <CustomerInformation register={register} errors={errors } />}
+          {/* {step === 1 && <CustomerInformationSecond register={register} errors={errors } />} */}
           {step === 0 && (
             <div className="d-flex justify-content-end mt-5">
               <Button

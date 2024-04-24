@@ -1,28 +1,20 @@
 import React from "react";
 import "./Input.css";
 
-function Input({ label, type, register, placeholder = "", error }) {
+function Input({  label,  register }) {
   return (
     <>
-    <label htmlFor="exampleFormControlInput1" className="form-label fw-bold mb-0">
-      {label} <span className="text-danger">*</span>
-    </label>
-    <input
-      type ={type}
-      className ="form-control"
-      {...register}
-      placeholder ={placeholder}
-      
-    />
-    {error && <p className="text-danger">{error.message}</p>}
-     {/* <div className="wrapper">
+      <div className="wrapper">
         <div className="input-data">
-           <input type="text"/>
-             <label>Name</label>
-
+          <input type="text" 
+             className ="form-control"
+             ref={register}        
+          />
+          <div className="underline"></div>
+          <label>{label} *</label>
         </div>
-      </div>  */}
-  </>
+      </div>
+    </>
   );
 }
 

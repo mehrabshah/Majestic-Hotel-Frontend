@@ -1,11 +1,11 @@
 import React from "react";
 import Input from "../../Shared/Input/Input"
 
-function CustomerInformationSecond({ register }) {
+function CustomerInformationSecond({ register,errors  }) {
   return (
     <div className="col-md-12 p-4 bg-[#f7f8f9] border shadow-sm mt-4">
       <div className="row">
-        <div className="row ">
+        <div className="row pt-8">
           <div className="col-lg-6 col-md-6">
             <Input
               label="Address"
@@ -23,7 +23,7 @@ function CustomerInformationSecond({ register }) {
             />
           </div>
         </div>
-        <div className="row  mt-2">
+        <div className="row  mt-2 pt-12">
           <div className="col-lg-6 col-md-6">
             <Input
               label="Postal Code"
@@ -33,15 +33,7 @@ function CustomerInformationSecond({ register }) {
             />
           </div>
         </div>
-        <div className="row  mt-2">
-          <div className="col-lg-6 col-md-6">
-            <Input
-              label="Phone Number"
-              type="text"
-              placeholder="Phone Number"
-              register={register("phoneNumber")}
-            />
-          </div>
+        <div className="row  mt-2 pt-12 pb-8">
           <div className="col-lg-6 col-md-6">
             <Input
               label="Country Region Code"

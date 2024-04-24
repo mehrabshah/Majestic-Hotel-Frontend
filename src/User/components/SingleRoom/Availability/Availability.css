@@ -17,6 +17,10 @@
     padding-right: 10px;
     margin-bottom: 0px;
 }
+.room .child-image{
+    max-width: 20px !important;
+    height: 20px;
+}
 @media (max-width: 768px) {
     .room .side-image {
         height: auto; 

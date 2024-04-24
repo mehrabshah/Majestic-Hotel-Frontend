@@ -5,18 +5,24 @@ import { useForm } from "react-hook-form";
 function Rooms({
   imgSrc,
   heading,
-  numberOfGuests,
   price,
   availableRooms,
   categoryId,
   setBookingDetails,
   setPriceDetails,
-  description
+  description,
+  capacityChild,
+  capacity
 }) {
   const [showModal, setShowModal] = useState(false);
-  //No of guests allowed for each category
-  const guestArray = Array.from(
-    { length: numberOfGuests },
+  //No of Adults allowed for each category
+  const capacityArray = Array.from(
+    { length: capacity },
+    (_, index) => index
+  );
+  //No of childs allowed for each cetegory
+  const childCapacityArray = Array.from(
+    { length: capacityChild },
     (_, index) => index
   );
   //No of rooms aray available for the specific category
@@ -71,13 +77,38 @@ function Rooms({
           <li className="col-3">
             <div>
               <h4 className="guest-heading">People Allowed</h4>
-              <div className="flex flex-row mt-3">
-                {guestArray.map((guest, index) => (
+              <div className="flex flex-row mt-3 items-end">
+
+                {capacity!=4 ? capacityArray.map((guest, index) => (
                   <img
                     key={index}
                     src="/assets/person.png"
                     className="img-fluid me-2"
                     alt={`Guest ${index + 1}`}
+                    
+                  />
+                )):(
+                  <>
+                  <img
+                  src="/assets/person.png"
+                  className="img-fluid me-2"
+                  alt="Guest Family"
+                />
+                <span className="">X 3</span>
+                </>
+                )}
+                
+
+
+
+                
+                 {childCapacityArray.map((guest, index) => (
+                  <img
+                    key={index}
+                    src="/assets/person.png"
+                    className="child-image me-2"
+                    alt={`Guest ${index + 1}`}
+                    
                   />
                 ))}
               </div>
