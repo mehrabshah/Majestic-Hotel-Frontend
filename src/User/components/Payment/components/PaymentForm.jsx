@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../../Shared/Button/Button";
 import CustomerInformation from "./CustomerInformation";
 import { Booking } from "../../../Services/Services";
-import {formatedDate} from  "../../../utils/helpers"
-import { useBookingContext } from "../../../contexts/BookingContext"
+import { formatedDate } from "../../../utils/helpers";
+import { useBookingContext } from "../../../contexts/BookingContext";
 import CustomerInformationSecond from "./CustomerInformationSecond";
 function PaymentForm() {
   const [step, setStep] = useState(0);
   const { bookingData } = useBookingContext();
-  const { startDate,endDate,bookingDetails } = bookingData;
+  const { startDate, endDate, bookingDetails } = bookingData;
   //For get count of  errors of the form
   const [showError, setShowError] = useState(0);
   const {
@@ -27,22 +27,35 @@ function PaymentForm() {
   //Error Count of the Form
   const errorKeys = Object.keys(errors);
   const errorCount = errorKeys.length;
-  console.log("error count",errorCount)
-
+  //Registering the fields of CustomerInformationSecond form
+  const address = register("address", { required: "Address  is required" });
+  const city = register("city", { required: "City is required" });
+  const countryRegionCode = register("countryRegionCode", {
+    required: "Country Region is required",
+  });
+  const postalCode = register("postalCode", {
+    required: "Postal Code is required",
+  });
   const onSubmit = async (data) => {
     reset();
-    const filteredbookingDetails = bookingDetails.filter(item => item.numberOfRooms !== 0);
-    const details={
-      bookingDetails:filteredbookingDetails,
-      commonDetails:data
-    }
-     const response = await Booking(details);
+    const filteredbookingDetails = bookingDetails.filter(
+      (item) => item.numberOfRooms !== 0
+    );
+    const details = {
+      bookingDetails: filteredbookingDetails,
+      commonDetails: data,
+    };
+    const response = await Booking(details);
   };
   //For next step of the Form
   const next = () => {
-    setStep((prev) => prev + 1);    
+    if (errorCount === 4) {
+      setStep((prevStep) => prevStep + 1);
+    }
   };
-
+  const showErrors = () => {
+    setShowError(1)
+  };
   return (
     <div className="col-md-12 ps-4">
       <div className="row">
@@ -54,17 +67,28 @@ function PaymentForm() {
       </div>
       <div className="row">
         <form onSubmit={handleSubmit(onSubmit)} className="p-0">
-          {step === 0 && <CustomerInformation register={register} errors={errors} />}
-           <CustomerInformationSecond register={register} errors={errors} />
+          {step === 0 && (
+            <CustomerInformation register={register} errors={errors} />
+          )}
+          {step === 1 && (
+            <CustomerInformationSecond
+              register={register}
+              errors={showError===1 ? errors : {}}
+              address={address}
+              city={city}
+              countryRegionCode={countryRegionCode}
+              postalCode={postalCode}
+            />
+          )}
           {step === 0 && (
             <div className="d-flex justify-content-end mt-5">
               <Button
-                text="Confirm"
+                text="Continue"
                 backgroundColor="bg-[#9b855b]"
                 color="text-[white]"
                 padding="ps-4 pe-4 pt-2 pb-2"
+                onClick={next}
                 type="submit"
-                
               />
             </div>
           )}
@@ -76,6 +100,7 @@ function PaymentForm() {
                 color="text-[white]"
                 padding="ps-4 pe-4 pt-2 pb-2"
                 type="submit"
+                onClick={showErrors}
               />
             </div>
           )}

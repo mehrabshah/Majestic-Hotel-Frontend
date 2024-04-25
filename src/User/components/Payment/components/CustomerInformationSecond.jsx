@@ -1,7 +1,7 @@
 import React from "react";
 import Input from "../../Shared/Input/Input"
 
-function CustomerInformationSecond({ register,errors  }) {
+function CustomerInformationSecond({ register,errors ,address,city,countryRegionCode,postalCode }) {
   return (
     <div className="col-md-12 p-4 bg-[#f7f8f9] border shadow-sm mt-4">
       <div className="row">
@@ -11,7 +11,7 @@ function CustomerInformationSecond({ register,errors  }) {
               label="Address"
               type="text"
               placeholder="Address"
-              register={register("address",{ required: "Address  is required" })}
+              register={address}
             />
             {errors.address && <span className="text-red-700">{errors.address.message}</span>}
           </div>
@@ -20,7 +20,7 @@ function CustomerInformationSecond({ register,errors  }) {
               label="City"
               type="text"
               placeholder="City"
-              register={register("city",{ required: "City is required" })}              
+              register={city}              
             />
             {errors.city && <span className="text-red-700">{errors.city.message}</span>}
 
@@ -32,7 +32,7 @@ function CustomerInformationSecond({ register,errors  }) {
               label="Postal Code"
               type="text"
               placeholder="Postal Code"
-              register={register("postalCode",{ required: "Postal Code is required" })}              
+              register={countryRegionCode}              
             />
             {errors.postalCode && <span className="text-red-700">{errors.postalCode.message}</span>}
 
@@ -44,7 +44,7 @@ function CustomerInformationSecond({ register,errors  }) {
               label="Country Region Code"
               type="text"
               placeholder="country Region Code"
-              register={register("countryRegionCode",{ required: "Country Region is required" })}              
+              register={postalCode}          
             />
             {errors.countryRegionCode && <span className="text-red-700">{errors.countryRegionCode.message}</span>}
 
