@@ -49,7 +49,7 @@ function Hero() {
           </button>
         </div>
       </div>
-      <BookingSectionOuter />
+      {/* <BookingSectionOuter /> */}
     </>
   );
 }
