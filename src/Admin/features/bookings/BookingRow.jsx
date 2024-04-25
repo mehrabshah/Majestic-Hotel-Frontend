@@ -55,6 +55,7 @@ function BookingRow({ booking }) {
       <Table.Cell>
         <span>{city}</span>
       </Table.Cell>    
+      
     </Table.Row>
    
   );
