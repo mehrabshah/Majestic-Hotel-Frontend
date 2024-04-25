@@ -11,16 +11,19 @@ function CustomerInformationSecond({ register,errors  }) {
               label="Address"
               type="text"
               placeholder="Address"
-              register={register("address")}
+              register={register("address",{ required: "Address  is required" })}
             />
+            {errors.address && <span className="text-red-700">{errors.address.message}</span>}
           </div>
           <div className="col-lg-6 col-md-6">
             <Input
               label="City"
               type="text"
               placeholder="City"
-              register={register("city")}
+              register={register("city",{ required: "City is required" })}              
             />
+            {errors.city && <span className="text-red-700">{errors.city.message}</span>}
+
           </div>
         </div>
         <div className="row  mt-2 pt-12">
@@ -29,8 +32,10 @@ function CustomerInformationSecond({ register,errors  }) {
               label="Postal Code"
               type="text"
               placeholder="Postal Code"
-              register={register("postalCode")}
+              register={register("postalCode",{ required: "Postal Code is required" })}              
             />
+            {errors.postalCode && <span className="text-red-700">{errors.postalCode.message}</span>}
+
           </div>
         </div>
         <div className="row  mt-2 pt-12 pb-8">
@@ -39,8 +44,10 @@ function CustomerInformationSecond({ register,errors  }) {
               label="Country Region Code"
               type="text"
               placeholder="country Region Code"
-              register={register("countryRegionCode")}
+              register={register("countryRegionCode",{ required: "Country Region is required" })}              
             />
+            {errors.countryRegionCode && <span className="text-red-700">{errors.countryRegionCode.message}</span>}
+
           </div>
         </div>
       </div>

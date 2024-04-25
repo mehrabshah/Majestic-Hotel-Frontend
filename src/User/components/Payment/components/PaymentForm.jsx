@@ -10,6 +10,8 @@ function PaymentForm() {
   const [step, setStep] = useState(0);
   const { bookingData } = useBookingContext();
   const { startDate,endDate,bookingDetails } = bookingData;
+  //For get count of  errors of the form
+  const [showError, setShowError] = useState(0);
   const {
     register,
     handleSubmit,
@@ -22,6 +24,11 @@ function PaymentForm() {
       status: "Confirmed",
     },
   });
+  //Error Count of the Form
+  const errorKeys = Object.keys(errors);
+  const errorCount = errorKeys.length;
+  console.log("error count",errorCount)
+
   const onSubmit = async (data) => {
     reset();
     const filteredbookingDetails = bookingDetails.filter(item => item.numberOfRooms !== 0);
@@ -29,12 +36,11 @@ function PaymentForm() {
       bookingDetails:filteredbookingDetails,
       commonDetails:data
     }
-    console.log("details",details)
      const response = await Booking(details);
   };
-  //For next strp of the Form
+  //For next step of the Form
   const next = () => {
-    setStep((prev) => prev + 1);
+    setStep((prev) => prev + 1);    
   };
 
   return (
@@ -48,17 +54,17 @@ function PaymentForm() {
       </div>
       <div className="row">
         <form onSubmit={handleSubmit(onSubmit)} className="p-0">
-          {step === 0 && <CustomerInformation register={register} errors={errors } />}
-          {/* {step === 1 && <CustomerInformationSecond register={register} errors={errors } />} */}
+          {step === 0 && <CustomerInformation register={register} errors={errors} />}
+           <CustomerInformationSecond register={register} errors={errors} />
           {step === 0 && (
             <div className="d-flex justify-content-end mt-5">
               <Button
-                text="Continue"
+                text="Confirm"
                 backgroundColor="bg-[#9b855b]"
                 color="text-[white]"
                 padding="ps-4 pe-4 pt-2 pb-2"
-                type="button"
-                onClick={next}
+                type="submit"
+                
               />
             </div>
           )}

@@ -8,7 +8,7 @@ function Input({  label,  register }) {
         <div className="input-data">
           <input type="text" 
              className ="form-control"
-             ref={register}        
+             {...register}      
           />
           <div className="underline"></div>
           <label>{label} *</label>
