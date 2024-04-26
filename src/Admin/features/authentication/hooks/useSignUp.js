@@ -12,7 +12,7 @@ export function useSignUp() {
     try {
       if (isAdmin) {
         await signUpApi(data);
-        toast.success('Please verify email address for Oasis Resort');
+        toast.success('Please verify email address for Majestic Resort');
       } else {
         throw new Error("You don't have permission.");
       }

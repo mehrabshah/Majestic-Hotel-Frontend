@@ -9,7 +9,7 @@ function Sidebar() {
   return (
     <div className="row-span-full flex flex-col gap-12 border-r border-r-gray-100 bg-gray-0 p-10">
       <Link to="/">
-      <img src="./assets/logo.png" alt="Logo" className="logo img-fluid py-2 h-[100px] w-auto" />
+      <img src="./assets/Logo.png" alt="Logo" className="logo img-fluid py-2 h-[100px] w-auto" />
       </Link>
       <MainNav />
     </div>

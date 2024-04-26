@@ -15,7 +15,7 @@ function Login() {
         <div className="w-[400px]">
           <img src="/favicon.png" alt="" className="mx-auto h-10 w-auto" />
           <h2 className="mb-10 mt-6 text-center text-2xl font-bold leading-9">
-            Welcome to Oasis Resort
+            Welcome to Majestic Hotel
           </h2>
 
           <LoginForm />
