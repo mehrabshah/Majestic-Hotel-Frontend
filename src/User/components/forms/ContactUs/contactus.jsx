@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './contactus.css';
 import ContactUsInfo from './ContactUsInfo';
-import IntlTelInput from 'react-intl-tel-input';
-import 'react-intl-tel-input/dist/main.css';
+// import IntlTelInput from 'react-intl-tel-input';
+// import 'react-intl-tel-input/dist/main.css';
 import { useContactUs } from './hooks/useCreateContactUs';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import Footer from '../../ui/Footer/Footer';
@@ -65,7 +65,7 @@ const ContactUs = () => {
                 )}
               </div>
               <div className="mb-4 col-md-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="telephone">Telephone</label>
+                {/* <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="telephone">Telephone</label>
                 <IntlTelInput
                   {...register('telephone', { required: true })}
                   containerClassName="intl-tel-input"
@@ -73,7 +73,11 @@ const ContactUs = () => {
                   value={telephone}
                   onPhoneNumberChange={onTelephoneChange}
                 />
-                {errors.telephone && <span className="text-red-500 text-xs italic">Telephone is required</span>}
+                {errors.telephone && <span className="text-red-500 text-xs italic">Telephone is required</span>} */}
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="telephone">telephone</label>
+                <input {...register('telephone', { required: true })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
+                {errors.telephone && <span className="text-red-500 text-xs italic">telephone is required</span>}
+
               </div>
             </div>
             <div className="mb-4">
