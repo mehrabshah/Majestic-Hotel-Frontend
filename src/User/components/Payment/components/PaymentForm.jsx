@@ -4,14 +4,17 @@ import Button from "../../Shared/Button/Button";
 import CustomerInformation from "./CustomerInformation";
 import { Booking } from "../../../Services/Services";
 import { formatedDate } from "../../../utils/helpers";
-import { useBookingContext } from "../../../contexts/BookingContext";
 import CustomerInformationSecond from "./CustomerInformationSecond";
+import useLocalStorage from "../../../hooks/useLoacalStorage";
+import { useNavigate } from "react-router-dom";
 function PaymentForm() {
   const [step, setStep] = useState(0);
-  const { bookingData } = useBookingContext();
-  const { startDate, endDate, bookingDetails } = bookingData;
+  const navigate = useNavigate();
   //For get count of  errors of the form
   const [showError, setShowError] = useState(0);
+  const {  removeValue,getValue }=useLocalStorage()
+  const bookingData = getValue("Add-to-cart");
+  const {  bookingDetails , startDate , endDate } = bookingData;
   const {
     register,
     handleSubmit,
@@ -44,8 +47,11 @@ function PaymentForm() {
     const details = {
       bookingDetails: filteredbookingDetails,
       commonDetails: data,
-    };
+    };    
+    console.log("booking details",details)
     const response = await Booking(details);
+    removeValue()
+    navigate('/category/:categoryName');
   };
   //For next step of the Form
   const next = () => {
@@ -53,6 +59,7 @@ function PaymentForm() {
       setStep((prevStep) => prevStep + 1);
     }
   };
+  //When to show the error in the second page of multi-Form
   const showErrors = () => {
     setShowError(1)
   };

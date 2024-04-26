@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { calculateNumberOfNights,extractLocalDate,getCurrentDate,getDateAfterCurrentDate,} from "../../../../utils/helpers";
 import {formatedDate} from "../../../../utils/helpers"
 import { useBookingContext } from "../../../../contexts/BookingContext";
+import useLocalStorage from "../../../../hooks/useLoacalStorage";
 function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -25,7 +26,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
     }
   }, [checkInOutDate]);
   //For sending the data to payment component
-  const { setBookingData } = useBookingContext();
+  const  { setValue } =useLocalStorage()
   // Calculate total price using reduce method
   const totalPrice = useMemo(() => {
     return PrizeDetails.reduce((accumulator, detail) => accumulator + detail.price,0);
@@ -36,7 +37,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   }, [bookingDetails]);
   //For sending booking data from one component to other
   const BookNow = () => {
-    setBookingData({
+    setValue("Add-to-cart",{
         bookingDetails,
         totalPrice,
         totalRooms,

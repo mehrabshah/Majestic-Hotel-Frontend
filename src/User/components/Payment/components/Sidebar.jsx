@@ -3,14 +3,16 @@ import "../Payments.css";
 import { FaStar } from "react-icons/fa";
 import Button from "../../Shared/Button/Button";
 import { useNavigate } from 'react-router-dom';
-import { useBookingContext } from "../../../contexts/BookingContext";
 import {calculateNumberOfNights} from "../../../utils/helpers"
+import useLocalStorage from "../../../hooks/useLoacalStorage";
 function Sidebar() {
   const navigate = useNavigate();
-  const { bookingData } = useBookingContext();
-  const { totalPrice, totalRooms,startDate,endDate } = bookingData; 
+  const { getValue , removeValue }=useLocalStorage()
+  const bookingData = getValue("Add-to-cart");
+  const { totalPrice, totalRooms,startDate,endDate } = bookingData;
   const Change=()=>{
     navigate('/category/:categoryName');
+    removeValue() 
   }
   return (
     <div className="col-md-12 sidebar">
@@ -127,6 +129,7 @@ function Sidebar() {
         </div>
       </div>
     </div>
+   
   );
 }
 
