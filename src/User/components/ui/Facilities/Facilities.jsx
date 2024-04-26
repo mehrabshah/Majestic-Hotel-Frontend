@@ -3,7 +3,7 @@ import "./Facilities.css";
 const Facilities = () => {
   return (
     <>
-      <div class="col-md-12 main-heading-font ft-34 text-uppercase text-center my-4  pb-2 ">
+      <div className="col-md-12 main-heading-font ft-34 text-uppercase text-center my-4  pb-2 ">
         Facilities
       </div>
       <div className="Facilities-background">
@@ -30,13 +30,13 @@ const Facilities = () => {
                 <img src="./assets/interior-2.jpg"></img>
               </div>
               <div className="col-md-6 align-self-center text-center order-4 order-md-4 ps-2 pe-2">
-                <h5 class="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
+                <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
                   Spa &amp; Wellness
                 </h5>
-                <h2 class="main-heading-facilities ft-30 mb-4">
+                <h2 className="main-heading-facilities ft-30 mb-4">
                   Relax &amp; Recover
                 </h2>
-                <p class="main-paragraph-facilities px-0 px-lg-5 lg:w-75 mx-auto mb-4 g-light">
+                <p className="main-paragraph-facilities px-0 px-lg-5 lg:w-75 mx-auto mb-4 g-light">
                   Embark on a soul-soothing journey in our Spa with a variety of
                   treatments and massages.
                 </p>

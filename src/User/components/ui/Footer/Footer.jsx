@@ -60,7 +60,7 @@ function Footer() {
                       <a
                         key={index}
                         href={link.url}
-                        class="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
+                        className="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
                       >
                         {link.label}
                       </a>
@@ -69,14 +69,14 @@ function Footer() {
                 </div>
                 <div className="col-md-3 col-6">
                   <div className="flex flex-col">
-                    <h2 class="text-base font-semibold leading-4 text-brand-600 bg-black p-3 py-2 w-fit dark:text-white">
+                    <h2 className="text-base font-semibold leading-4 text-brand-600 bg-black p-3 py-2 w-fit dark:text-white">
                       Support
                     </h2>
                     {supportLinks.map((link, index) => (
                       <a
                         key={index}
                         href={link.url}
-                        class="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
+                        className="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
                       >
                         {link.label}
                       </a>
@@ -85,10 +85,10 @@ function Footer() {
                 </div>
                 <div className="col-md-6">
                   <div className="mt-10 lg:block">
-                    <label class="text-xl font-medium leading-5 text-gray-800 dark:text-white">
+                    <label className="text-xl font-medium leading-5 text-gray-800 dark:text-white">
                       Get updates
                     </label>
-                    <div class="cursor-pointer flex items-center justify-between border border-gray-800 dark:border-white mt-4">
+                    <div className="cursor-pointer flex items-center justify-between border border-gray-800 dark:border-white mt-4">
                       <input
                         type="text"
                         className="text-base leading-4 p-4 w-full border-0 focus:outline-none text-gray-800 dark:text-white dark:placeholder-white dark:bg-gray-900 dark:border-white placeholder-gray-800"
@@ -96,7 +96,7 @@ function Footer() {
                       />
                       <button
                         aria-label="send"
-                        class="mr-4 fill-current text-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                        className="mr-4 fill-current text-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
                       >
                         <PaperPlaneRight size={32} color="#f6d284" />
                       </button>
@@ -108,7 +108,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
-          <p class="mb-6 text-sm text-left text-gray-600 md:mb-0">
+          <p className="mb-6 text-sm text-left text-gray-600 md:mb-0">
             © Copyright 2024 Majestic Hotel. All Rights Reserved.
           </p>
           <div className="flex items-start justify-start space-x-6 md:items-center md:justify-center">

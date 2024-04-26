@@ -8,7 +8,7 @@ function Navbar() {
       <div className="container-lg container-fluid nav-padding">
         <NavLink to="/home">
           <img
-            src="/assets/logo.png"
+            src="./assets/logo.png"
             alt="Logo"
             className="logo img-fluid py-2 w-auto"
           />

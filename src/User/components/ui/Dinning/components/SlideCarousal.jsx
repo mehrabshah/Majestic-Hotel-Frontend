@@ -12,10 +12,10 @@ function SlideCarousal() {
               className="d-block w-100  slick-image"
               alt="banner-2"
             />
-            <div class="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]   ">
+            <div className="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]   ">
               <div className="  pt-20">
-                <h1 class=" light-color main-heading-dinning ft-55">NADIA</h1>
-                <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
+                <h1 className=" light-color main-heading-dinning ft-55">NADIA</h1>
+                <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
                   BAR & RESTAURENT
                 </h2>
               </div>
@@ -27,7 +27,7 @@ function SlideCarousal() {
                     delicious options in Pakistani and Continental cuisines to
                     cater to every taste and mood.
                   </p>
-                  <div class="mx-auto w-25 mt-3">
+                  <div className="mx-auto w-25 mt-3">
                     <a
                     
                       className="text-uppercase ft-14 g-bold border-top border-bottom border-yellow py-2 mb-0 mb-md-0 text-center text-yellow d-block btn-1"
@@ -47,12 +47,12 @@ function SlideCarousal() {
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
-            <div class="carousel-caption d-flex  justify-center pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
+            <div className="carousel-caption d-flex  justify-center pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
               <div  className="  pt-20">
-                <h1 class=" light-color main-heading-dinning ft-55">
+                <h1 className=" light-color main-heading-dinning ft-55">
                   MARCO POLO{" "}
                 </h1>
-                <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
+                <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
                   BAR & RESTAURENT
                 </h2>
               </div>
@@ -65,7 +65,7 @@ function SlideCarousal() {
                     and let our chefs serve you a myriad of meals sure to
                     tantalise your taste buds.
                   </p>
-                  <div class="mx-auto w-25 mt-3">
+                  <div className="mx-auto w-25 mt-3">
                     <a
                     
                       className="text-uppercase ft-14 g-bold border-top border-bottom border-yellow py-2 mb-0 mb-md-0 text-center text-yellow d-block btn-1"
@@ -85,12 +85,12 @@ function SlideCarousal() {
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
-            <div class="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
+            <div className="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
               <div  className="pt-20">
-                <h1 class=" light-color main-heading-dinning ft-55">
+                <h1 className=" light-color main-heading-dinning ft-55">
                   TAI-PAN
                 </h1>
-                <h2 class="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
+                <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
                   BAR & RESTAURENT
                 </h2>
               </div>
@@ -102,7 +102,7 @@ function SlideCarousal() {
                     prepared using the four Chinese cooking methods: steamed,
                     braised, baked and fried. 
                   </p>
-                  <div class="mx-auto w-25 mt-3">
+                  <div className="mx-auto w-25 mt-3">
                     <a
                     
                       className="text-uppercase ft-14 g-bold border-top border-bottom border-yellow py-2 mb-0 mb-md-0 text-center text-yellow d-block btn-1"
