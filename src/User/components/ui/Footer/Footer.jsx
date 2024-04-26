@@ -35,7 +35,7 @@ function Footer() {
               <div className="flex flex-col  items-center lg:items-start flex-shrink-0">
                 <div className="dark:text-white">
                   <img
-                    src="./assets/logo.png"
+                    src="./assets/Logo.png"
                     alt="Logo"
                     className="logo img-fluid py-2 h-[150px] w-auto"
                   />
