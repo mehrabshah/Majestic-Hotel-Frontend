@@ -1,5 +1,4 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import "./aboutus.css";
 import { Bed, Champagne, ForkKnife } from "@phosphor-icons/react";
 const AboutUs = () => {
