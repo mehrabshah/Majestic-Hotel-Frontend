@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../Payments.css";
 import { FaStar } from "react-icons/fa";
 import Button from "../../Shared/Button/Button";
@@ -8,6 +8,11 @@ import useLocalStorage from "../../../hooks/useLoacalStorage";
 function Sidebar() {
   const navigate = useNavigate();
   const { getValue , removeValue }=useLocalStorage()
+  const [currency,setCurrency]=useState({})
+  useEffect(()=>{
+    const currencyRate = getValue("currency-rate")
+    setCurrency(currencyRate)
+  },[currency])
   const bookingData = getValue("Add-to-cart");
   const { totalPrice, totalRooms,startDate,endDate } = bookingData;
   const Change=()=>{
@@ -87,7 +92,7 @@ function Sidebar() {
                 <h1 className="text-capitalize  text-[14px]  text-bold">
                 {totalRooms} Rooms
                   <span className="float-right text-[13px]  text-lighter ">
-                    RS {totalPrice}
+                  {currency.code} {" "} {totalPrice*currency.rate}
                   </span>
                 </h1>
                 <h1 className="text-capitalize loyaltydiscountdiv  ft-[14px]  text-bold  hidden">
@@ -117,9 +122,9 @@ function Sidebar() {
                 </h1>
                 <h1 class=" ft-14 ft-14-res text-lighter">
                   <span class="float-right ft-13-res ft-18 text-bold text-main totalprice  linethrough mt-xl-n4">
-                    RS
+                  {currency.code} 
                     <span id="totalprice wwss" class="linethrough">
-                      {totalPrice}
+                      {totalPrice*currency.rate}
                     </span>
                   </span>
                 </h1>

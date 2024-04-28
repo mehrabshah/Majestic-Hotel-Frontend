@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "../Availability.css";
 import Select from "../../../Shared/Select/Select";
 import { useForm } from "react-hook-form";
+import useLocalStorage from "../../../../hooks/useLoacalStorage";
 function Rooms({
   imgSrc,
   heading,
@@ -14,6 +15,15 @@ function Rooms({
   capacityChild,
   capacity
 }) {
+  const [currency,setCurrency]=useState({})
+  const  {getValue} = useLocalStorage()
+
+  useEffect(()=>{
+    const currencyRate = getValue("currency-rate")
+    setCurrency(currencyRate)
+  },[currency])
+
+ 
   const [showModal, setShowModal] = useState(false);
   //No of Adults allowed for each category
   const capacityArray = Array.from(
@@ -78,7 +88,6 @@ function Rooms({
             <div>
               <h4 className="guest-heading">People Allowed</h4>
               <div className="flex flex-row mt-3 items-end">
-
                 {capacity!=4 ? capacityArray.map((guest, index) => (
                   <img
                     key={index}
@@ -97,11 +106,6 @@ function Rooms({
                 <span className="">X 3</span>
                 </>
                 )}
-                
-
-
-
-                
                  {childCapacityArray.map((guest, index) => (
                   <img
                     key={index}
@@ -128,8 +132,8 @@ function Rooms({
           <li className="col-3">
             <h1 className="d-prices">
               <span>
-                <span id="price" className="ft-16 font-bold">
-                  {price}
+                <span id="price" className="ft-16  capitalize">
+               {currency.code} {" "} {price*currency.rate}
                 </span>
               </span>
               <br />
