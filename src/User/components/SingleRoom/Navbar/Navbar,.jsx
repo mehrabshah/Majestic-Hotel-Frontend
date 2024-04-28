@@ -132,7 +132,7 @@ function Navbar() {
               onClick={toggleModal}
               className="navbar-nav ms-auto mb-2 mb-lg-0  cursor-pointer"
             >
-              Currency <span className="ms-2 underline   capitalize">{code}</span>
+              Currency <span className="ms-2 underline uppercase">{code}</span>
             </button>
           </div>
         </div>

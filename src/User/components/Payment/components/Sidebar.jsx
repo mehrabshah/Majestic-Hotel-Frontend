@@ -91,7 +91,7 @@ function Sidebar() {
               <div className="mt-3">
                 <h1 className="text-capitalize  text-[14px]  text-bold">
                 {totalRooms} Rooms
-                  <span className="float-right text-[13px]  text-lighter ">
+                  <span className="float-right text-[13px] uppercase  text-lighter ">
                   {currency.code} {" "} {totalPrice*currency.rate}
                   </span>
                 </h1>
@@ -121,8 +121,8 @@ function Sidebar() {
                   Price <span className="text-[12px] mt-2"></span>
                 </h1>
                 <h1 class=" ft-14 ft-14-res text-lighter">
-                  <span class="float-right ft-13-res ft-18 text-bold text-main totalprice  linethrough mt-xl-n4">
-                  {currency.code} 
+                  <span class="float-right ft-13-res ft-18 text-bold text-main totalprice uppercase  linethrough mt-xl-n4">
+                  {currency.code} {" "}
                     <span id="totalprice wwss" class="linethrough">
                       {totalPrice*currency.rate}
                     </span>

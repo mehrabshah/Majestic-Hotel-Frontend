@@ -132,7 +132,7 @@ function Rooms({
           <li className="col-3">
             <h1 className="d-prices">
               <span>
-                <span id="price" className="ft-16  capitalize">
+                <span id="price" className="ft-16  uppercase">
                {currency.code} {" "} {price*currency.rate}
                 </span>
               </span>

@@ -72,7 +72,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
         <div id="xhidn-trooms">
           <strong>{totalRooms}</strong> Rooms
         </div>
-        <div id="xhidn-tprice" className="green capitalize">
+        <div id="xhidn-tprice" className="green uppercase">
          {currency.code} {" "} {totalPrice*currency.rate}
         </div>
       </div>}
