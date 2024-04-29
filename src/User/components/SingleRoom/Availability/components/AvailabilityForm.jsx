@@ -36,10 +36,28 @@ function AvailabilityForm({ submitAvailabilityForm }) {
     const currentDate = new Date();
     const dateAfterCurrentDate = new Date(currentDate);
     dateAfterCurrentDate.setDate(currentDate.getDate() + 1);
-    setValue("startDate", data.startDate != null ? extractLocalDate(data.startDate) : currentDate);
-    setValue("endDate", data.endDate != null ? extractLocalDate(data.endDate) : dateAfterCurrentDate);
+
+    const startDateValue = data.startDate ? extractLocalDate(data.startDate) : extractLocalDate(currentDate);
+    const endDateValue = data.endDate ? extractLocalDate(data.endDate) : extractLocalDate(dateAfterCurrentDate);
+
+    if (!data.startDate || !data.endDate) {
+      const newData = { ...data }; 
+      if (!data.startDate) {
+          newData.startDate = startDateValue;
+      }
+      if (!data.endDate) {
+          newData.endDate = endDateValue;
+      }
+      data = newData; 
+  }
+
+    setValue("startDate", startDateValue);
+    setValue("endDate", endDateValue);
+
+    console.log("start date", startDateValue);
+
     submitAvailabilityForm(data);
-  };
+};
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
