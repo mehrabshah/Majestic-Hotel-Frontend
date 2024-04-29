@@ -55,7 +55,7 @@ function AppRoutes() {
       <Route path="/rooms" element={<Rooms />} />
       <Route path="/dining" element={<Dinning />} />
       <Route path="/payment" element={<Payment />} />
-      <Route path="/category/:categoryName" element={<SingleRoom />} />
+      <Route path="/single-room" element={<SingleRoom />} />
     </Routes>
   );
 }

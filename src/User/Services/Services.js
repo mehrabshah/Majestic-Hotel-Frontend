@@ -12,7 +12,7 @@ export const getCategories = async () => {
 //Get availability of the rooms on the selected date
 export const getRoomsAvailability = async (userData) => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const response = await axios.post(
       `${API_BASE_URL}booking/available-rooms`,

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Welcome.css";
 function Welcome() {
   return (
@@ -15,21 +16,23 @@ function Welcome() {
                 </span>
                 of your weekend
               </h3>
-              <p className="pt-4 main-paragraph-font">
+              <p className="pt-4 main-paragraph-font-welcome">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Distinctio eligendi odit, impedit voluptas aliquam quidem
                 explicabo dolor nesciunt quibusdam reiciendis labore cum quod
                 assumenda blanditiis illum! Accusamus ipsum molestiae, a nisi
                 laudantium quia? Suscipit, quidem!
               </p>
-              <p className="pt-4 main-paragraph-font">
+              <p className="pt-4 main-paragraph-font-welcome">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt numquam corporis sequi fuga recusandae labore eveniet
                 illo, ratione placeat temporibus!
               </p>
-              <button className="mt-4 border-2 border-[#f6d284] pt-2 pb-2 ps-4 pe-4 text-[#f6d284] font-bold rounded-3xl">
-                Explore
-              </button>
+              <Link to="/about-us">
+                <button className="mt-4 border-2 border-[#f6d284] pt-2 pb-2 ps-4 pe-4 text-[#f6d284] font-bold rounded-3xl">
+                  Explore
+                </button>
+              </Link>
             </div>
             <div className="col-lg-6  d-flex justify-center p-lg-4">
               <img src="./assets/sofa.jpg" alt="side-image"></img>
