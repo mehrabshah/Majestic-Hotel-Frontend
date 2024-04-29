@@ -49,7 +49,7 @@ const EventsSlider = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} absolute top-[150px] right-[20px] z-10 text-white`}
+        className={`${className} absolute top-[150px] right-[40px] z-10 text-white`}
         style={{ ...style, zIndex: 10 }}
         onClick={onClick}
       >
@@ -70,6 +70,15 @@ const EventsSlider = () => {
         autoplaySpeed: 3000,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
     
 
