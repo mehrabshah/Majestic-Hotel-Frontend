@@ -49,9 +49,9 @@ export const getAvailibilityObject=()=>{
 }
 
 /**
- * Creates a Date object from a string and extracts the local date in "Day Month Year" format.
+ * Creates a Date object from a string and extracts the local date in "Month Day, Year" format.
  * @param {string} dateString - The date string from which to create the Date object.
- * @returns {string} The date in "Day Month Year" format
+ * @returns {string} The date in "Month Day, Year" format
  */
 export const extractLocalDate = (dateString) => {
     const dateObject = new Date(dateString);
@@ -60,8 +60,8 @@ export const extractLocalDate = (dateString) => {
         "July", "August", "September", "October", "November", "December"];
     const month = monthNames[dateObject.getMonth()];
     const day = dateObject.getDate();
-    // Return the formatted date as "Day Month Year"
-    return `${day} ${month} ${year}`;
+    // Return the formatted date as "Month Day, Year"
+    return `${month} ${day}, ${year}`;
 }
 
 /**

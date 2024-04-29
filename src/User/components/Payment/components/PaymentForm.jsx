@@ -15,6 +15,10 @@ function PaymentForm() {
   const {  removeValue,getValue }=useLocalStorage()
   const bookingData = getValue("Add-to-cart");
   const {  bookingDetails , startDate , endDate } = bookingData;
+
+ console.log("start date local storage",startDate)
+ console.log("end date local storage",endDate)
+
   const {
     register,
     handleSubmit,
@@ -44,6 +48,9 @@ function PaymentForm() {
     const filteredbookingDetails = bookingDetails.filter(
       (item) => item.numberOfRooms !== 0
     );
+     
+    console.log("Common details azab",data)
+
     const details = {
       bookingDetails: filteredbookingDetails,
       commonDetails: data,
@@ -51,7 +58,7 @@ function PaymentForm() {
     console.log("booking details",details)
     const response = await Booking(details);
     removeValue()
-    navigate('/category/:categoryName');
+    navigate('/rooms');
   };
   //For next step of the Form
   const next = () => {

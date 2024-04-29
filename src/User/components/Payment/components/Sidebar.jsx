@@ -16,7 +16,7 @@ function Sidebar() {
   const bookingData = getValue("Add-to-cart");
   const { totalPrice, totalRooms,startDate,endDate } = bookingData;
   const Change=()=>{
-    navigate('/category/:categoryName');
+    navigate('/rooms');
     removeValue() 
   }
   return (
