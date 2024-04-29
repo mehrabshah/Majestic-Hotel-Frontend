@@ -1,9 +1,13 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../../../Shared/Button/Button";
 import Select from "../../../Shared/Select/Select";
-import DateComponent from "../../../Shared/Date/DateComponent" 
-import { extractLocalDate, getCurrentDate, getDateAfterCurrentDate } from "../../../../utils/helpers";
+import DateComponent from "../../../Shared/Date/DateComponent";
+import {
+  extractLocalDate,
+  getCurrentDate,
+  getDateAfterCurrentDate,
+} from "../../../../utils/helpers";
 const childOptions = [
   { label: "1", value: "1" },
   { label: "2", value: "2" },
@@ -20,7 +24,7 @@ const adultOptions = [
   { label: "5", value: "5" },
   { label: "6", value: "6" },
 ];
-function AvailabilityForm({submitAvailabilityForm}) {
+function AvailabilityForm({ submitAvailabilityForm }) {
   const {
     handleSubmit,
     setValue,
@@ -29,9 +33,12 @@ function AvailabilityForm({submitAvailabilityForm}) {
   } = useForm();
   //Check that which rooms are available on the selected date
   const onSubmit = async (data) => {
-    setValue("startDate",extractLocalDate(data.startDate))
-    setValue("endDate",extractLocalDate(data.endDate))
-    submitAvailabilityForm(data)
+    const currentDate = new Date();
+    const dateAfterCurrentDate = new Date(currentDate);
+    dateAfterCurrentDate.setDate(currentDate.getDate() + 1);
+    setValue("startDate", data.startDate != null ? extractLocalDate(data.startDate) : currentDate);
+    setValue("endDate", data.endDate != null ? extractLocalDate(data.endDate) : dateAfterCurrentDate);
+    submitAvailabilityForm(data);
   };
   return (
     <>

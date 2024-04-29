@@ -4,8 +4,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DateComponent.css";
 function DateComponent({ control, name, placeholder, label , labelColor ,minDate ,maxDate}) {
+
   return (
-    <div className="date-picker  xl:w-52  md:w-full  ">
+    <div className="date-picker  xl:w-52  md:w-full  ">    
       <label htmlFor={name} className={`${labelColor}`}>{label}</label>
       <Controller
         name={name}
