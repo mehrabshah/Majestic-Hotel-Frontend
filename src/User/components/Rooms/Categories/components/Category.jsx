@@ -23,7 +23,7 @@ function Category({
           <p className="px-0 px-md-4  mx-auto mb-4 text-center">{paragraph}</p>
           <div className="rooms-btn d-flex flex-row ">
             <div className="ms-2">
-              <Link  to={`/category/${id}`}>
+              <Link  to="/single-room">
                 <Button
                   text="RESERVE"
                   backgroundColor="bg-[#000]"

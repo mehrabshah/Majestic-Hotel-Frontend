@@ -1,9 +1,13 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../../../Shared/Button/Button";
 import Select from "../../../Shared/Select/Select";
-import DateComponent from "../../../Shared/Date/DateComponent" 
-import { extractLocalDate, getCurrentDate, getDateAfterCurrentDate } from "../../../../utils/helpers";
+import DateComponent from "../../../Shared/Date/DateComponent";
+import {
+  extractLocalDate,
+  getCurrentDate,
+  getDateAfterCurrentDate,
+} from "../../../../utils/helpers";
 const childOptions = [
   { label: "1", value: "1" },
   { label: "2", value: "2" },
@@ -20,7 +24,7 @@ const adultOptions = [
   { label: "5", value: "5" },
   { label: "6", value: "6" },
 ];
-function AvailabilityForm({submitAvailabilityForm}) {
+function AvailabilityForm({ submitAvailabilityForm }) {
   const {
     handleSubmit,
     setValue,
@@ -29,10 +33,31 @@ function AvailabilityForm({submitAvailabilityForm}) {
   } = useForm();
   //Check that which rooms are available on the selected date
   const onSubmit = async (data) => {
-    setValue("startDate",extractLocalDate(data.startDate))
-    setValue("endDate",extractLocalDate(data.endDate))
-    submitAvailabilityForm(data)
-  };
+    const currentDate = new Date();
+    const dateAfterCurrentDate = new Date(currentDate);
+    dateAfterCurrentDate.setDate(currentDate.getDate() + 1);
+
+    const startDateValue = data.startDate ? extractLocalDate(data.startDate) : extractLocalDate(currentDate);
+    const endDateValue = data.endDate ? extractLocalDate(data.endDate) : extractLocalDate(dateAfterCurrentDate);
+
+    if (!data.startDate || !data.endDate) {
+      const newData = { ...data }; 
+      if (!data.startDate) {
+          newData.startDate = startDateValue;
+      }
+      if (!data.endDate) {
+          newData.endDate = endDateValue;
+      }
+      data = newData; 
+  }
+
+    setValue("startDate", startDateValue);
+    setValue("endDate", endDateValue);
+
+    console.log("start date", startDateValue);
+
+    submitAvailabilityForm(data);
+};
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>

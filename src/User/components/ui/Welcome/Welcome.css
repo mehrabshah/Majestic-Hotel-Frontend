@@ -9,10 +9,9 @@
     font-weight: 600;
     color: black;
 }
-.main-paragraph-font{
-    font-family:'Gotham';
+.main-paragraph-font-welcome{
     font-size: 1rem;
-    font-weight: 100;
+
 }
 .g-book{
     font-family:'Gotham';

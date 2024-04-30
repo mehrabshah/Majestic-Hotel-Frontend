@@ -10,6 +10,14 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
+
+  const [currency,setCurrency]=useState({})
+  const  {getValue} = useLocalStorage()
+  useEffect(()=>{
+    const currencyRate = getValue("currency-rate")
+    setCurrency(currencyRate)
+  },[currency])
+
   useEffect(() => {
     if (checkInOutDate) {
       const startDate = extractLocalDate(checkInOutDate.startDate)
@@ -64,8 +72,8 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
         <div id="xhidn-trooms">
           <strong>{totalRooms}</strong> Rooms
         </div>
-        <div id="xhidn-tprice" className="green">
-          {totalPrice}
+        <div id="xhidn-tprice" className="green uppercase">
+         {currency.code} {" "} {totalPrice*currency.rate}
         </div>
       </div>}
       {totalRooms === 0 ? (

@@ -98,7 +98,7 @@ function Navbar() {
                   "nav-link bg-dark ml-0 ml-xl-4 text-center book-now-btn d-flex align-items-center ps-4 pe-5" +
                   (isActive ? " active" : "")
                 }
-                to="/booking"
+                to="/single-room"
               >
                 <span className="nav-text-book-now pe-4"> BOOK NOW </span>
                 <IoIosArrowForward size={20} color="#f6d284" />
