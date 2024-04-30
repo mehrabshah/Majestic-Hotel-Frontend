@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const backendUrl = "http://localhost:8000/"
-// const backendUrl = process.env.backendUrl;
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 /**
  * Sign up user

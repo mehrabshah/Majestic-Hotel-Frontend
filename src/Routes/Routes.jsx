@@ -22,6 +22,9 @@ import SingleRoom from "../User/pages/SingleRoom";
 import Dinning from "../User/pages/Dinning";
 import Payment from "../User/pages/Payment";
 import Events from "../User/pages/events";
+import Return from "../Admin/features/payment/Return";
+import CheckoutForm from "../Admin/features/payment/CheckOutForm";
+import Checkout from "../Admin/features/payment/Checkout";
 
 function AppRoutes() {
   return (
@@ -37,6 +40,8 @@ function AppRoutes() {
         {/* <Route index element={<Navigate replace to="/dashboard" />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bookings" element={<Bookings />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/return" element={<Return />} />
         <Route path="/bookings/:bookingId" element={<BookingDetails />} />
         <Route path="/checkin/:bookingId" element={<BookingCheckin />} />
         <Route path="/contactUs" element={<ContactUsAdmin />} />

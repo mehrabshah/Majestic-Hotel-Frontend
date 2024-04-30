@@ -11,6 +11,7 @@ function Bookings() {
       </div>
 
       <BookingTable />
+      {/* <CheckoutForm /> */}
     </>
   );
 }

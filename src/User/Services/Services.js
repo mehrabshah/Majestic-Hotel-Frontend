@@ -1,5 +1,6 @@
 import axios from 'axios';
-const API_BASE_URL = 'http://localhost:8000/';
+const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 //Get all the Categories of the rooms
 export const getCategories = async () => {
     try {
@@ -28,6 +29,14 @@ export const getRoomsAvailability = async (userData) => {
 export const  Booking = async (userData) => {
   try {
     const response = await axios.post(`${API_BASE_URL}booking/createMultipleBookings`, userData);
+    return response.data; 
+  } catch (error) {
+    throw error.response.data || 'Something went wrong';
+  }
+};
+export const  createPaymentLink = async (data) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}booking/create-checkout-session`, data);
     return response.data; 
   } catch (error) {
     throw error.response.data || 'Something went wrong';

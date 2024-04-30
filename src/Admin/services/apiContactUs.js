@@ -1,6 +1,5 @@
 import axios from 'axios';
-const backendUrl = "http://localhost:8000/"
-// const backendUrl = process.env.backendUrl;
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 export async function createContactUs(contactUsData) {
   try {
     const response = await axios.post(`${backendUrl}contactUs/createContactUs`, contactUsData);
