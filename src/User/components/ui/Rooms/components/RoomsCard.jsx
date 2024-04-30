@@ -1,5 +1,6 @@
 import React from "react";
 import "../Rooms.css";
+import { Link } from "react-router-dom";
 const iconPaths = [
   "./assets/room-icons1.png",
   "./assets/room-icons2.png",
@@ -16,7 +17,9 @@ function RoomsCard({ imageSrc, title, description, price, bookText }) {
         <div className="day-book p">
           <ul className="d-flex day-book-inner row p-4 ">
             <li className="col-6">{price}</li>
-            <li className="col-6">{bookText}</li>
+         <li className="col-6"><Link to="/single-room" className="cursor-pointer">{bookText}</Link> 
+         </li> 
+         
           </ul>
         </div>
         <div className="p-3">

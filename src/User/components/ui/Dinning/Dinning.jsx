@@ -7,7 +7,7 @@ function Dinning() {
     <div className="Dinning pt-lg-2 ">
       <div className="container-fluid mb-3">
         <div className="row">
-          <div className="col-md-12 main-heading-font ft-34 text-uppercase text-center mb-3">
+          <div className="col-md-12 main-heading-font ft-34  leading-9 md:leading-0 text-uppercase text-center mb-3">
             EVENTS & CELEBRATIONS
           </div>
         </div>

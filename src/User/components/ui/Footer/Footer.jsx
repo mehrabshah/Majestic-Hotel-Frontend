@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 import {
   FacebookLogo,
   InstagramLogo,
@@ -9,11 +10,10 @@ import {
   PaperPlaneRight,
 } from "@phosphor-icons/react";
 const companyLinks = [
-  { label: "Rooms", url: "#" },
-  { label: "Services", url: "#" },
-  { label: "Gallery", url: "#" },
-  { label: "Events", url: "#" },
-  { label: "Special Offers", url: "#" },
+  { label: "About", url: "/about-us" },
+  { label: "Rooms", url: "/rooms" },
+  { label: "Events", url: "/events-celebrations" },
+  { label: "Contact US", url: "/contact-us" },
 ];
 const supportLinks = [
   { label: "Reservation Policy", url: "#" },
@@ -26,7 +26,7 @@ function Footer() {
   return (
     <>
       <div
-        className="mx-auto max-w-screen-xl py-16 xl:px-20 lg:px-12 sm:px-6 px-4 bg-auto bg-center"
+        className="footer-home mx-auto max-w-screen-xl py-16 xl:px-20 lg:px-12 sm:px-6 px-4 bg-auto bg-center"
         style={{ backgroundImage: "url(assets/ONLY_DECOR1.png)" }}
       >
         <div className="grid ">
@@ -35,17 +35,23 @@ function Footer() {
               <div className="flex flex-col  items-center lg:items-start flex-shrink-0">
                 <div className="dark:text-white">
                   <img
-                    src="./assets/Logo.png"
+                    src="./assets/Logo.jpeg"
                     alt="Logo"
                     className="logo img-fluid py-2 h-[150px] w-auto"
                   />
                 </div>
                 <div className="flex items-center gap-x-4 mt-2 lg:mt-12">
-                  <FacebookLogo size={32} color="#f6d284" />
-                  <InstagramLogo size={32} color="#f6d284" />
-                  <LinkedinLogo size={32} color="#f6d284" />
-                  <XLogo size={32} color="#f6d284" />
-                  <YoutubeLogo size={32} color="#f6d284" />
+                  <a href="https://www.facebook.com/profile.php?id=61557894159466" className="cursor-pointer">
+                    <FacebookLogo size={32} color="#f6d284" />
+                  </a>
+                  <a href="https://www.instagram.com/majestichotel.eastbourne?igsh=MjkzdmM5NjdicG5h&utm_source=qr" className="cursor-pointer">
+                    <InstagramLogo size={32} color="#f6d284" />
+                  </a>
+                 
+                  <a href="https://twitter.com/MajesticHotel_E" className="cursor-pointer">
+                    <XLogo size={32} color="#f6d284" />
+                  </a>
+                 
                 </div>
               </div>
             </div>
@@ -73,13 +79,13 @@ function Footer() {
                       Support
                     </h2>
                     {supportLinks.map((link, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href={link.url}
+                        to={companyLinks.url}
                         className="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

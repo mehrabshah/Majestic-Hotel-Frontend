@@ -17,16 +17,17 @@ function Welcome() {
                 of your weekend
               </h3>
               <p className="pt-4 main-paragraph-font-welcome">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Distinctio eligendi odit, impedit voluptas aliquam quidem
-                explicabo dolor nesciunt quibusdam reiciendis labore cum quod
-                assumenda blanditiis illum! Accusamus ipsum molestiae, a nisi
-                laudantium quia? Suscipit, quidem!
+                Located along the picturesque beachfront of Eastbourne lies The
+                Majestic Hotel, a charming haven boasting 3-star accommodations
+                that promise a delightful retreat. With a splendid terrace
+                overlooking the glistening waters, a cozy restaurant, and a
+                stylish bar, this hotel invites guests to indulge in leisure and
+                relaxation.
               </p>
               <p className="pt-4 main-paragraph-font-welcome">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt numquam corporis sequi fuga recusandae labore eveniet
-                illo, ratione placeat temporibus!
+                Experience seaside serenity and hospitality at its finest at The
+                Majestic Hotel, where every moment is infused with charm and
+                relaxation.
               </p>
               <Link to="/about-us">
                 <button className="mt-4 border-2 border-[#f6d284] pt-2 pb-2 ps-4 pe-4 text-[#f6d284] font-bold rounded-3xl">

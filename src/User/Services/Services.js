@@ -10,6 +10,7 @@ export const getCategories = async () => {
       throw error.response.data || 'Something went wrong';
     }
 };
+
 //Get availability of the rooms on the selected date
 export const getRoomsAvailability = async (userData) => {
   try {
@@ -34,6 +35,7 @@ export const  Booking = async (userData) => {
     throw error.response.data || 'Something went wrong';
   }
 };
+
 export const  createPaymentLink = async (data) => {
   try {
     const response = await axios.post(`${API_BASE_URL}booking/create-checkout-session`, data);
@@ -42,3 +44,17 @@ export const  createPaymentLink = async (data) => {
     throw error.response.data || 'Something went wrong';
   }
 };
+
+//Get rooms prices
+export const getRoomsPrices = async (userData) => {
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}booking/available-rooms`,
+      userData
+    );
+    return response.data;
+  } catch (error) {
+    throw error.response?.data || 'We are unable to fetch the rooms prices';
+  }
+};
+

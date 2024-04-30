@@ -15,21 +15,22 @@ function Rooms() {
               Luxury Rooms
             </h2>
             <p className="main-paragraph-room text-center  ps-[2rem] pe-[2rem] sm:ps-[3rem] sm:pe-[3rem]    lg:ps-[19rem] lg:pe-[19rem]  xl:ps-[26rem] xl:pe-[26rem]">
-              Our hotel rooms offer absolute comfort and a design sensibility
-              inspired by soft, muted colour tones. Whether you choose any one
-              of our suites or opt for a room, you can always be sure of a
-              fantastic sleep to leave you feeling refreshed and revitalized.
+              Our hotel offers a variety of accommodation options to suit every traveler's
+              needs. Choose from our comfortable and inviting standard rooms,
+              perfect for a relaxing stay by the sea, or upgrade to one of our
+              coveted sea view rooms for breathtaking vistas of the sparkling
+              waters.
             </p>
           </div>
           <RoomsSection />
           <div className="mx-auto text-center pt-3  pb-5">
-          <Link  to="/rooms">
-            <button className="border-t-2 border-b-2 border-[#f6d284]   pt-2 pb-2  ps-10 pe-10 hover:border-s-2 hover:border-e-2">
-              <span className="text-[#f6d284]    text-2xl  font-extrabold">
-                VIEW ALL
-              </span>
-            </button>
-          </Link>
+            <Link to="/rooms">
+              <button className="border-t-2 border-b-2 border-[#f6d284]   pt-2 pb-2  ps-10 pe-10 hover:border-s-2 hover:border-e-2">
+                <span className="text-[#f6d284]    text-2xl  font-extrabold">
+                  VIEW ALL
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

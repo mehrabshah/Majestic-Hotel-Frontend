@@ -121,7 +121,7 @@ function Navbar() {
         <div className="container-lg container-fluid nav-padding">
           <NavLink to="/home">
             <img
-              src="/assets/Logo.png"
+              src="/assets/Logo.jpeg"
               alt="Logo"
               className="logo img-fluid py-2 w-auto"
             />

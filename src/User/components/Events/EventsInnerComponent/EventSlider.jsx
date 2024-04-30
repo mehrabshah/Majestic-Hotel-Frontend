@@ -18,7 +18,7 @@ const EventsSlider = () => {
     {
         imageSrc: "assets/b-day.jpg",
         title: "Birthday Parties",
-        description: "Celebrate your loved ones' birthdays at Pearl-Continental Lahore in a magical outdoor or indoor setting."
+        description: "Celebrate your loved ones' birthdays at Magestic Hotel England in a magical outdoor or indoor setting."
     },
     {
       imageSrc: "assets/Anniversaries_Nights.jpg",

@@ -1,84 +1,69 @@
 import React from "react";
-import "../Dinning.css"
+import "../Dinning.css";
 function SlideCarousal() {
-  
   return (
     <div className="slide-carousal ">
       <div id="carouselExample" className="carousel slide">
         <div className="carousel-inner h-50">
-          <div className="carousel-item active ">
-            <img
-              src="./assets/banner-11.jpg"
-              className="d-block w-100  slick-image"
-              alt="banner-2"
-            />
-            <div className="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]   ">
-              <div className="  pt-20">
-                <h1 className=" light-color main-heading-dinning ft-55">NADIA</h1>
-                <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
-                  BAR & RESTAURENT
-                </h2>
-              </div>
-              <div className="menu hidden lg:block">
-                <div className="menu-inner p-12 ">
-                  <p className="text-start">
-                    Nadia offers a diverse combination of food and beverages in
-                    a relaxed and comfortable environment. The restaurant serves
-                    delicious options in Pakistani and Continental cuisines to
-                    cater to every taste and mood.
-                  </p>
-                  <div className="mx-auto w-25 mt-3">
-                    <a
-                    
-                      className="text-uppercase ft-14 g-bold border-top border-bottom border-yellow py-2 mb-0 mb-md-0 text-center text-yellow d-block btn-1"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <span>menu</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item">
+          <div className="carousel-item active">
             <img
               src="./assets/interior-4.jpg"
               className="d-block w-100  slick-image"
               alt="banner-3"
             />
             <div className="carousel-caption d-flex  justify-center pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
-              <div  className="  pt-20">
+              <div className="  pt-20">
                 <h1 className=" light-color main-heading-dinning ft-55">
-                  MARCO POLO{" "}
+                  {" "}
+                  Events
                 </h1>
                 <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
-                  BAR & RESTAURENT
+                  Corporate Events
                 </h2>
               </div>
               <div className="menu hidden lg:block">
-                <div className="menu-inner ps-12 pe-12 pb-4 pt-12 ">
+                <div className="menu-inner p-12 ">
                   <p className="text-start">
-                    Offering an all-day international dining experience, Marco
-                    Polo is perfect for business luncheons and relaxed Sunday
-                    brunches with friends and family.Relax in a classic ambience
-                    and let our chefs serve you a myriad of meals sure to
-                    tantalise your taste buds.
+                    Impress clients and colleagues with our sophisticated venues
+                    ideal for meetings, conferences, and retreats. Our
+                    customizable packages ensure a seamless and productive event
+                    experience.Our spaces are meticulously designed to exude
+                    professionalism and sophistication.
                   </p>
-                  <div className="mx-auto w-25 mt-3">
-                    <a
-                    
-                      className="text-uppercase ft-14 g-bold border-top border-bottom border-yellow py-2 mb-0 mb-md-0 text-center text-yellow d-block btn-1"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <span>menu</span>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="carousel-item  ">
+            <img
+              src="./assets/b-day.jpg"
+              className="d-block w-100  slick-image"
+              alt="banner-2"
+            />
+            <div className="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]   ">
+              <div className="  pt-20">
+                <h1 className=" light-color main-heading-dinning ft-55">
+                  {" "}
+                  BIRTHDAYS
+                </h1>
+                <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
+                  Birthdays & Parties
+                </h2>
+              </div>
+              <div className="menu hidden lg:block">
+                <div className="menu-inner p-12 ">
+                  <p className="text-start">
+                    Our venue offers a variety of adaptable event spaces that
+                    are perfect for hosting gatherings of up to 200 guests in
+                    each space. Designed with flexibility in mind, our
+                    facilities can easily accommodate large parties, ensuring
+                    that each event is both unique and memorable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="carousel-item">
             <img
               src="./assets/interior-6.jpg"
@@ -86,32 +71,22 @@ function SlideCarousal() {
               alt="banner-3"
             />
             <div className="carousel-caption d-flex  justify-center  pb-12  lg:justify-between lg:pb-0  lg:bottom-[-0.75rem]">
-              <div  className="pt-20">
+              <div className="pt-20">
                 <h1 className=" light-color main-heading-dinning ft-55">
-                  TAI-PAN
+                  Occasions
                 </h1>
                 <h2 className="fadeInUp-2 text-start text-white mx-auto mt-3 main-paragraph-dinning text-uppercase border-bottom d-inline-block px-3 pb-2">
-                  BAR & RESTAURENT
+                  Special Occasions
                 </h2>
               </div>
               <div className="menu hidden lg:block">
                 <div className="menu-inner p-12 ">
                   <p className="text-start">
-                    Serving authentic Chinese cuisine with an essence of the
-                    Canton and Shanghai provinces, Tai-Pan specialities are
-                    prepared using the four Chinese cooking methods: steamed,
-                    braised, baked and fried. 
+                    From anniversaries, graduation parties, or baby showers, our
+                    dedicated team will make every moment memorable, tailored to
+                    your unique preferences.We understand that each celebration is as unique as the individuals being honored, which is why we take the time to tailor every detail to your specific preferences and vision. 
                   </p>
-                  <div className="mx-auto w-25 mt-3">
-                    <a
-                    
-                      className="text-uppercase ft-14 g-bold border-top border-bottom border-yellow py-2 mb-0 mb-md-0 text-center text-yellow d-block btn-1"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <span>menu</span>
-                    </a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
