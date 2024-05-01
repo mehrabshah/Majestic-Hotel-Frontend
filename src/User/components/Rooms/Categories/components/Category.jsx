@@ -10,18 +10,36 @@ function Category({
   imgSrc,
   heading,
   paragraph,
+  features
 }) {
+  const [feature, showFeature] = useState(true);
+  //Show or hide the Feature Section
+  const onFeatureShow = () => {
+    showFeature(!feature);
+  };
+
   
   return (
     <div className="row category">
       <div className={`col-md-6   ${orderFirst}  p-0 m-0`}>
-        <img src={imgSrc}  alt="bed image" className="category-image" /> 
+      {feature ? <img src={imgSrc}  alt="bed image" className="category-image"  /> : <Feature features={features} />}
       </div>
       <div className={`col-md-6  ${orderSecond}  flex items-center`}>
         <div className="d-flex  items-center  justify-center flex-column px-3">
           <h2 className="p-fair mt-4 mt-md-0 mb-4 text-uppercase text-center">{heading}</h2>
           <p className="px-0 px-md-4  mx-auto mb-4 text-center">{paragraph}</p>
           <div className="rooms-btn d-flex flex-row ">
+          <div className="me-2">
+              <Button
+                text={feature ? "SHOW DETAILS" : "Hide DETAILS"}
+                backgroundColor="bg-[#fff]"
+                color="text-[#f6d284]"
+                padding="pt-2 pb-2 ps-2 pe-2"
+                border="border-t-[#f6d284] border-b-[#f6d284] border-t-2 border-b-2"
+                hover="hover:border-s-[#f6d284] hover:border-e-[#f6d284] hover:border-s-2 hover:border-e-2"
+                onClick={onFeatureShow}
+              />
+            </div>
             <div className="ms-2">
               <Link  to="/single-room">
                 <Button

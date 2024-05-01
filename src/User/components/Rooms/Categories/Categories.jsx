@@ -3,14 +3,94 @@ import "./Categories.css";
 import Category from "./components/Category";
 import { useCategories } from "./hooks/useCategories";
 const features = [
-  "Air-conditioning",
-  "Bathroom amenities",
-  "Hair dryer",
-  "Safe in room",
-  "Writing Desk and chair",
-  "Iron and ironing board on request",
-  "Room service",
-  "Complimentary bottled water",
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
+  [
+    "Spacious work desk",
+    "Flat screen Television",
+    "Hospitality tray with Tea/Coffee",
+    "Telephone",
+    "Hair Dryer",
+    "Non Smoking Rooms",
+    "Wireless Internet",
+    "Lift to all flowers",
+    "Multi-lingual Staff",
+  ],
 ];
 function Categories() {
   const { Categories, isLoading, error } = useCategories();
@@ -31,17 +111,21 @@ function Categories() {
       </div>
       <div>
         <div className="lg:max-w-screen-lg  ps-4 pe-4 mx-auto">
-          {Categories.map((category) => (
+          {Categories.map((category,index) => (
             <div key={category.id} className="mt-4 mt-lg-0">
-                <Category
-                    orderFirst={`${category.id % 2 === 0 ? 'order-lg-1' : 'order-lg-2'} `}
-                    orderSecond={`${category.id % 2 === 0 ? 'order-lg-2' : 'order-lg-1'} `}
-                    id={category.id}
-                    imgSrc={category.image}
-                    heading={category.name}
-                    paragraph={category.description}
-                    features={features}                 
-                />
+              <Category
+                orderFirst={`${
+                  category.id % 2 === 0 ? "order-lg-1" : "order-lg-2"
+                } `}
+                orderSecond={`${
+                  category.id % 2 === 0 ? "order-lg-2" : "order-lg-1"
+                } `}
+                id={category.id}
+                imgSrc={category.image}
+                heading={category.name}
+                paragraph={category.description}
+                features={features[index]}
+              />
             </div>
           ))}
         </div>

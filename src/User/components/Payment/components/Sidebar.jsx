@@ -40,7 +40,7 @@ function Sidebar() {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-12 border  shadow-sm mt-8 mt-md-4 mx-4 mx-md-0">
+        <div className="col-md-12 border  shadow-sm mt-8 mt-md-4  mx-md-0">
           <div className="row">
             <div class="col-lg-6 col-md-12 p-0 d-none d-md-block">
               <div class="bg-[#000] text-uppercase text-center  ft-13 mt-n3 shadow py-2 text-white">

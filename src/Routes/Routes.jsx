@@ -29,7 +29,6 @@ import JoinTeam from "../User/pages/JoinTeam";
 import PrivacyPolicy from "../User/pages/PrivacyPolicy";
 import TermsCondition from "../User/pages/TermsCondition";
 
-
 function AppRoutes() {
   return (
     <Routes>

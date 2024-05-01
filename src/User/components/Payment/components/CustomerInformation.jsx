@@ -19,7 +19,7 @@ function CustomerInformation({ register, errors }) {
             <span className="text-red-700">{errors.firstName.message}</span>
           )}
         </div>
-        <div className="col-lg-6 col-md-6">
+        <div className="col-lg-6 col-md-6 mt-10 sm:mt-0">
           <Input
             label="Last Name"
             type="text"
