@@ -52,7 +52,7 @@ function PaymentForm() {
     };
     const response = await Booking(details);
     removeValue()
-    navigate('/rooms');
+   
   };
   //For next step of the Form
   const next = () => {
