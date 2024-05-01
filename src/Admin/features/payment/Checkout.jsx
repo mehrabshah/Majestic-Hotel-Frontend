@@ -5,7 +5,7 @@ import CheckoutForm from "./CheckOutForm";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHED_KEY);
 
-export default function Checkout() {
+export default function Checkout({amount,currency}) {
   const [clientSecret, setClientSecret] = useState("");
   // const
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Checkout() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ amount:100, currency:"USD" })
+      body: JSON.stringify({ amount:amount, currency:currency })
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));

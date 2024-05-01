@@ -3,16 +3,15 @@ import { useCurrentUser } from './hooks/useCurrentUser';
 
 function UserAvatar() {
   const { user } = useCurrentUser();
-  const { name } = user;
 
   // Show first name only
-  const firstName = name?.split(' ').at(0);
+  const firstName = user?.name?.split(' ').at(0);
 
   return (
     <div className="ml-3 flex h-9 cursor-pointer items-center text-sm font-medium capitalize text-gray-700">
       <img
         src={'https://www.w3schools.com/w3images/avatar2.png'}
-        alt={name}
+        alt={firstName}
         className="mr-2 h-9 w-9 overflow-hidden rounded-full object-cover"
       />
       <div className="flex items-center">
