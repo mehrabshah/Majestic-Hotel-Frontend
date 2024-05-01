@@ -20,7 +20,7 @@ function HeaderMenu() {
         onClick={toggleDarkMode}
         className="rounded-md p-2 text-brand-600 transition-all hover:bg-gray-100 disabled:cursor-not-allowed"
       >
-        {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+        {/* {isDarkMode ? <Sun size={20} /> : <Moon size={20} />} */}
       </button>
     </>
   );

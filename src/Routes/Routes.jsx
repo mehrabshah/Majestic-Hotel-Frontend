@@ -28,6 +28,8 @@ import Accessibility from "../User/pages/Accessibility";
 import JoinTeam from "../User/pages/JoinTeam";
 import PrivacyPolicy from "../User/pages/PrivacyPolicy";
 import TermsCondition from "../User/pages/TermsCondition";
+import ConfirmDelete from "../Admin/components/ui/ConfirmDelete";
+import Confirmation from "../User/pages/Confirmation";
 
 function AppRoutes() {
   return (
@@ -68,6 +70,8 @@ function AppRoutes() {
       <Route path="/joinTeam"  element={<JoinTeam/>} />
       <Route path="/privacypolicy"  element={<PrivacyPolicy/>} />
       <Route path="/termsCondition"  element={<TermsCondition/>} />    
+      <Route path="/confirmation"  element={<Confirmation/>} />    
+
     </Routes>
   );
 }

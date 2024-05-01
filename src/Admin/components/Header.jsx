@@ -23,12 +23,12 @@ function Header() {
         </DropdownMenu.Toggle>
 
         <DropdownMenu.Content windowName="user-menu">
-          <DropdownMenu.Item
+          {/* <DropdownMenu.Item
             icon={<User size={20} />}
             onClick={() => navigate('/account')}
           >
             Profile
-          </DropdownMenu.Item>
+          </DropdownMenu.Item> */}
 
           {/* Logout */}
           <DropdownMenu.Item
