@@ -4,6 +4,7 @@ import {
   useStripe,
   useElements
 } from "@stripe/react-stripe-js";
+import { Booking } from "../../../User/Services/Services";
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -25,10 +26,15 @@ export default function CheckoutForm() {
       return;
     }
 
-    stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
+    stripe.retrievePaymentIntent(clientSecret).then(async({ paymentIntent }) => {
       switch (paymentIntent.status) {
         case "succeeded":
           setMessage("Payment succeeded!");
+          const pendingBooking = JSON.parse(
+            localStorage.getItem("pendingBooking")
+          );
+          const response = await Booking(pendingBooking);
+          console.log(response,"----------------------------------------------------")
           break;
         case "processing":
           setMessage("Your payment is processing.");

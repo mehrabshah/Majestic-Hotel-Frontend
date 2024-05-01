@@ -33,8 +33,12 @@ function PaymentForm() {
   const errorKeys = Object.keys(errors);
   const errorCount = errorKeys.length;
   //Registering the fields of CustomerInformationSecond form
-  const address = register("address", { required: "Address  is required" });
-  const city = register("city", { required: "City is required" });
+  const address = register("address", 
+  { required: "Address  is required" }
+);
+  const city = register("city", 
+  { required: "City is required" }
+);
   const countryRegionCode = register("countryRegionCode", {
     required: "Country Region is required",
   });
@@ -42,7 +46,7 @@ function PaymentForm() {
     required: "Postal Code is required",
   });
   const onSubmit = async (data) => {
-    setStep(2)
+    setStep(2);
     reset();
     const filteredbookingDetails = bookingDetails.filter(
       (item) => item.numberOfRooms !== 0
@@ -51,11 +55,7 @@ function PaymentForm() {
       bookingDetails: filteredbookingDetails,
       commonDetails: data,
     };
-    localStorage.setItem("pendingBooking", JSON.stringify(details));
-    console.log("000000000000000000000000000000000000000000000000")
-    // const response = await Booking(details);
-    // removeValue()
-    // navigate('/rooms');
+    localStorage.setItem("pendingBooking", JSON.stringify(details));;
   };
   //For next step of the Form
   const next = () => {
@@ -70,6 +70,20 @@ function PaymentForm() {
   const showErrors = () => {
     setShowError(1);
   };
+  const [clientSecret, setClientSecret] = useState("");
+  // const
+  useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    fetch(`${process.env.REACT_APP_BACKEND_URL}booking/create-checkout-session`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ amount:totalPrice, currency:"USD" })
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.clientSecret));
+  }, []);
   return (
     <div className="col-md-12 sm:ps-4">
       <div className="row">
@@ -94,9 +108,8 @@ function PaymentForm() {
               postalCode={postalCode}
             />
           )}
-          {step === 2 && <Checkout amount={totalPrice} currency={"USD"} />}
           <div className="d-flex justify-content-between mt-5">
-            {step <= 2 && step > 0 && (
+            {step <= 1 && step > 0 && (
               <div className="d-flex justify-content-end">
                 <Button
                   text="Back"
@@ -104,8 +117,7 @@ function PaymentForm() {
                   color="text-[white]"
                   padding="ps-4 pe-4 pt-2 pb-2"
                   onClick={back}
-                  type="submit"
-                />
+                  />
               </div>
             )}
             {step < 1 && (
@@ -116,8 +128,7 @@ function PaymentForm() {
                   color="text-[white]"
                   padding="ps-4 pe-4 pt-2 pb-2"
                   onClick={next}
-                  type="submit"
-                />
+                  />
               </div>
             )}
             {step === 1 && (
@@ -128,12 +139,13 @@ function PaymentForm() {
                   color="text-[white]"
                   padding="ps-4 pe-4 pt-2 pb-2"
                   type="submit"
-                  onClick={showErrors}
-                />
+                  // onClick={showErrors}
+                  />
               </div>
             )}
           </div>
         </form>
+      {step === 2 && <Checkout clientSecret={clientSecret}/>}
       </div>
     </div>
   );

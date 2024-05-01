@@ -12,7 +12,7 @@ function CustomerInformation({ register, errors }) {
             type="text"
             placeholder="First Name"
             register={register("firstName", {
-              // required: "First name is required",
+              required: "First name is required",
             })}
           />
           {errors.firstName && (
@@ -25,7 +25,7 @@ function CustomerInformation({ register, errors }) {
             type="text"
             placeholder="Last Name"
             register={register("lastName", {
-              // required: "Last name is required",
+              required: "Last name is required",
             })}
           />
           {errors.lastName && (
@@ -41,7 +41,7 @@ function CustomerInformation({ register, errors }) {
             type="text"
             placeholder="Phone Number"
             register={register("phoneNumber", {
-              // required: "Phone number is required",
+              required: "Phone number is required",
             })}
           />
           {errors.phoneNumber && (
@@ -56,7 +56,7 @@ function CustomerInformation({ register, errors }) {
             type="text"
             placeholder="Email"
             register={register("emailAddress", {
-              // required: "Email address is required",
+              required: "Email address is required",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 message: "Invalid email address",
@@ -76,7 +76,7 @@ function CustomerInformation({ register, errors }) {
             type="text"
             placeholder="Age"
             register={register("age",
-            //  { required: "Age is required" }
+             { required: "Age is required" }
             )}
           />
           {errors.age && (
