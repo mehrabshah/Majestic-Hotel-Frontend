@@ -13,9 +13,9 @@ function PaymentForm() {
   const navigate = useNavigate();
   //For get count of  errors of the form
   const [showError, setShowError] = useState(0);
-  const {  removeValue,getValue }=useLocalStorage()
+  const { removeValue, getValue } = useLocalStorage();
   const bookingData = getValue("Add-to-cart");
-  const {  totalPrice, bookingDetails , startDate , endDate } = bookingData;
+  const { totalPrice, bookingDetails, startDate, endDate } = bookingData;
 
   const {
     register,
@@ -42,6 +42,7 @@ function PaymentForm() {
     required: "Postal Code is required",
   });
   const onSubmit = async (data) => {
+    setStep(2)
     reset();
     const filteredbookingDetails = bookingDetails.filter(
       (item) => item.numberOfRooms !== 0
@@ -50,9 +51,11 @@ function PaymentForm() {
       bookingDetails: filteredbookingDetails,
       commonDetails: data,
     };
-    const response = await Booking(details);
-    removeValue()
-    navigate('/rooms');
+    localStorage.setItem("pendingBooking", JSON.stringify(details));
+    console.log("000000000000000000000000000000000000000000000000")
+    // const response = await Booking(details);
+    // removeValue()
+    // navigate('/rooms');
   };
   //For next step of the Form
   const next = () => {
@@ -60,9 +63,12 @@ function PaymentForm() {
       setStep((prevStep) => prevStep + 1);
     }
   };
+  const back = () => {
+    setStep((prevStep) => prevStep - 1);
+  };
   //When to show the error in the second page of multi-Form
   const showErrors = () => {
-    setShowError(1)
+    setShowError(1);
   };
   return (
     <div className="col-md-12 sm:ps-4">
@@ -81,40 +87,52 @@ function PaymentForm() {
           {step === 1 && (
             <CustomerInformationSecond
               register={register}
-              errors={showError===1 ? errors : {}}
+              errors={showError === 1 ? errors : {}}
               address={address}
               city={city}
               countryRegionCode={countryRegionCode}
               postalCode={postalCode}
             />
           )}
-          {step === 2 && (
-            <Checkout amount={totalPrice} currency={"USD"}/>
-          )}
-          {step < 2 && (
-            <div className="d-flex justify-content-end mt-5">
-              <Button
-                text="Continue"
-                backgroundColor="bg-[#9b855b]"
-                color="text-[white]"
-                padding="ps-4 pe-4 pt-2 pb-2"
-                onClick={next}
-                type="submit"
-              />
-            </div>
-          )}
-          {step === 2 && (
-            <div className="d-flex justify-content-end mt-5">
-              <Button
-                text="Confirm"
-                backgroundColor="bg-[#9b855b]"
-                color="text-[white]"
-                padding="ps-4 pe-4 pt-2 pb-2"
-                type="submit"
-                onClick={showErrors}
-              />
-            </div>
-          )}
+          {step === 2 && <Checkout amount={totalPrice} currency={"USD"} />}
+          <div className="d-flex justify-content-between mt-5">
+            {step <= 2 && step > 0 && (
+              <div className="d-flex justify-content-end">
+                <Button
+                  text="Back"
+                  backgroundColor="bg-[#9b855b]"
+                  color="text-[white]"
+                  padding="ps-4 pe-4 pt-2 pb-2"
+                  onClick={back}
+                  type="submit"
+                />
+              </div>
+            )}
+            {step < 1 && (
+              <div className="d-flex justify-content-end align-self-end ">
+                <Button
+                  text="Continue"
+                  backgroundColor="bg-[#9b855b]"
+                  color="text-[white]"
+                  padding="ps-4 pe-4 pt-2 pb-2"
+                  onClick={next}
+                  type="submit"
+                />
+              </div>
+            )}
+            {step === 1 && (
+              <div className="d-flex justify-content-end">
+                <Button
+                  text="Continue To Payment"
+                  backgroundColor="bg-[#9b855b]"
+                  color="text-[white]"
+                  padding="ps-4 pe-4 pt-2 pb-2"
+                  type="submit"
+                  onClick={showErrors}
+                />
+              </div>
+            )}
+          </div>
         </form>
       </div>
     </div>
