@@ -12,7 +12,7 @@ function Sidebar() {
   useEffect(()=>{
     const currencyRate = getValue("currency-rate")
     setCurrency(currencyRate)
-  },[currency])
+  },[])
   const bookingData = getValue("Add-to-cart");
   const { totalPrice, totalRooms,startDate,endDate } = bookingData;
   const Change=()=>{

@@ -7,6 +7,7 @@ import { formatedDate } from "../../../utils/helpers";
 import CustomerInformationSecond from "./CustomerInformationSecond";
 import useLocalStorage from "../../../hooks/useLoacalStorage";
 import { useNavigate } from "react-router-dom";
+import Checkout from "../../../../Admin/features/payment/Checkout";
 function PaymentForm() {
   const [step, setStep] = useState(0);
   const navigate = useNavigate();
@@ -14,9 +15,9 @@ function PaymentForm() {
   const [showError, setShowError] = useState(0);
   const {  removeValue,getValue }=useLocalStorage()
   const bookingData = getValue("Add-to-cart");
-  const {  bookingDetails , startDate , endDate } = bookingData;
+  const {  totalPrice, bookingDetails , startDate , endDate } = bookingData;
 
- console.log("start date local storage",startDate)
+ console.log("start date local storage",totalPrice)
  console.log("end date local storage",endDate)
 
   const {
@@ -54,8 +55,7 @@ function PaymentForm() {
     const details = {
       bookingDetails: filteredbookingDetails,
       commonDetails: data,
-    };    
-    console.log("booking details",details)
+    };
     const response = await Booking(details);
     removeValue()
     navigate('/rooms');
@@ -94,7 +94,10 @@ function PaymentForm() {
               postalCode={postalCode}
             />
           )}
-          {step === 0 && (
+          {step === 2 && (
+            <Checkout amount={totalPrice} currency={"USD"}/>
+          )}
+          {step < 2 && (
             <div className="d-flex justify-content-end mt-5">
               <Button
                 text="Continue"
@@ -106,7 +109,7 @@ function PaymentForm() {
               />
             </div>
           )}
-          {step === 1 && (
+          {step === 2 && (
             <div className="d-flex justify-content-end mt-5">
               <Button
                 text="Confirm"
