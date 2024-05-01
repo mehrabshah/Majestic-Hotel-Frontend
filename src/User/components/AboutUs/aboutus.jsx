@@ -22,16 +22,16 @@ const AboutUs = () => {
               </div>
             </div>
             <p className="text-white">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Located along the picturesque beachfront of Eastbourne lies The
+              Majestic Hotel, a charming haven boasting 3-star accommodations
+              that promise a delightful retreat. With a splendid terrace
+              overlooking the glistening waters, a cozy restaurant, and a
+              stylish bar, this hotel invites guests to indulge in leisure and
+              relaxation.Just a stone's throw away, lies the inviting Eastbourne
+              Beach, while the iconic Eastbourne Pier beckons from a mere 600
+              meters away, promising endless seaside adventures. And with
+              complimentary WiFi throughout the premises, staying connected is
+              effortless
             </p>
           </div>
           <div className="col-md-6 p-md-5 p-3">
@@ -45,38 +45,38 @@ const AboutUs = () => {
           Our <span className="text-brand-600">History</span>
         </h2>
         <div className="flex flex-wrap align-items-center justify-content-around">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
               <Bed size={32} color="white" />
             </div>
             <div className="flex-grow  pb-2">
               <h3 className="text-lg font-bold border-b border-brand-50 px-3 mt-2">
-                Text 1
+               Dining
               </h3>
             </div>
-            <p className="text-gray-700">It's the closest planet to the Sun</p>
+            <p className="text-gray-700">Exceptional dining & impeccable hospitality</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mt-4 lg:mt-0">
             <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
               <Champagne size={32} color="white" />
             </div>
             <div className="flex-grow  pb-2">
               <h3 className="text-lg font-bold border-b border-brand-50 px-3 mt-2">
-                Text 2
+                 Drinks
               </h3>
             </div>
-            <p className="text-gray-700">Venus has a beautiful name</p>
+            <p className="text-gray-700">Sea views, exquisite bar service</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mt-4 lg:mt-0">
             <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
               <ForkKnife size={32} color="white" />
             </div>
             <div className="flex-grow  pb-2">
               <h3 className="text-lg font-bold border-b border-brand-50 px-3 mt-2 ">
-                Text 3
+               Rooms
               </h3>
             </div>
-            <p className="text-gray-700">Mars is actually a very cold place</p>
+            <p className="text-gray-700">Luxury comfort & elegant rooms</p>
           </div>
         </div>
       </div>
@@ -96,19 +96,23 @@ const AboutUs = () => {
           </div>
           <div className="flex flex-col items-center">
             <div className="flex text-center justify-center items-baseline">
-              <p className="font-bold text-4xl text-white md:text-8xl">
-                Some Text
+              <p className="font-bold text-4xl text-white md:text-8xl ps-3">
+                 Heritage
               </p>
-              <p className="ms-3 font-bold text-3xl text-brand-600 md:text-4xl">
-                Some other Text
+              <p className="ms-3 font-bold text-3xl text-brand-600 md:text-4xl pe-3">
+                Coastal Elegance awaits
               </p>
             </div>
-            <p className="text-white w-full md:w-1/2 mt-3">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centurie
+            <p className="text-white w-full md:w-1/2 mt-3  ps-3 pe-3">
+              Welcome to The Majestic Hotel, a historic landmark nestled in the
+              heart of Eastbourne, UK. Established in the late 1800s, our hotel
+              boasts a rich heritage and a prime location on Royal Parade,
+              overlooking the picturesque beachfront and offering stunning views
+              of the sea.Perched against the backdrop of the magnificent South
+              Downs, The Majestic Hotel exudes charm and elegance. Whether
+              you're seeking a tranquil retreat or an adventure-filled getaway,
+              our hotel provides the perfect setting for an unforgettable
+              experience.
             </p>
           </div>
           <div class="flex justify-center items-center mb-4 sm:mb-8 md:mb-12 lg:mb-16">

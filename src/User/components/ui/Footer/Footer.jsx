@@ -16,11 +16,10 @@ const companyLinks = [
   { label: "Contact US", url: "/contact-us" },
 ];
 const supportLinks = [
-  { label: "Reservation Policy", url: "#" },
-  { label: "Cancellation Policy", url: "#" },
-  { label: "Privacy Policy", url: "#" },
-  { label: "Terms and Conditions", url: "#" },
-  { label: "Blogs", url: "#" },
+  { label: "Accessibility", url: "/accessibility" },
+  { label: "Join Team", url: "/joinTeam" },
+  { label: "Privacy Policy", url: "/privacypolicy" },
+  { label: "Terms and Conditions", url: "/termsCondition" },
 ];
 function Footer() {
   return (
@@ -41,17 +40,25 @@ function Footer() {
                   />
                 </div>
                 <div className="flex items-center gap-x-4 mt-2 lg:mt-12">
-                  <a href="https://www.facebook.com/profile.php?id=61557894159466" className="cursor-pointer">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61557894159466"
+                    className="cursor-pointer"
+                  >
                     <FacebookLogo size={32} color="#f6d284" />
                   </a>
-                  <a href="https://www.instagram.com/majestichotel.eastbourne?igsh=MjkzdmM5NjdicG5h&utm_source=qr" className="cursor-pointer">
+                  <a
+                    href="https://www.instagram.com/majestichotel.eastbourne?igsh=MjkzdmM5NjdicG5h&utm_source=qr"
+                    className="cursor-pointer"
+                  >
                     <InstagramLogo size={32} color="#f6d284" />
                   </a>
-                 
-                  <a href="https://twitter.com/MajesticHotel_E" className="cursor-pointer">
+
+                  <a
+                    href="https://twitter.com/MajesticHotel_E"
+                    className="cursor-pointer"
+                  >
                     <XLogo size={32} color="#f6d284" />
                   </a>
-                 
                 </div>
               </div>
             </div>
@@ -63,13 +70,13 @@ function Footer() {
                       Company
                     </h2>
                     {companyLinks.map((link, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href={link.url}
+                        to={link.url}
                         className="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -81,7 +88,7 @@ function Footer() {
                     {supportLinks.map((link, index) => (
                       <Link
                         key={index}
-                        to={companyLinks.url}
+                        to={link.url}
                         className="focus:outline-none focus:underline  hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer"
                       >
                         {link.label}
@@ -118,18 +125,18 @@ function Footer() {
             © Copyright 2024 Majestic Hotel. All Rights Reserved.
           </p>
           <div className="flex items-start justify-start space-x-6 md:items-center md:justify-center">
-            <a
-              href="#_"
+            <Link
+              to="/termsCondition"
               class="text-sm text-gray-600 transition hover:text-primary"
             >
               Terms
-            </a>
-            <a
-              href="#_"
+            </Link>
+            <Link
+              to="/privacypolicy"
               className="text-sm text-gray-600 transition hover:text-primary"
             >
               Privacy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

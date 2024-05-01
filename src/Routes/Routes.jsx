@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import Dashboard from "../Admin/pages/Dashboard";
 import Bookings from "../Admin/pages/Bookings";
 import Cabins from "../Admin/pages/Cabins";
@@ -23,8 +23,12 @@ import Dinning from "../User/pages/Dinning";
 import Payment from "../User/pages/Payment";
 import Events from "../User/pages/events";
 import Return from "../Admin/features/payment/Return";
-import CheckoutForm from "../Admin/features/payment/CheckOutForm";
 import Checkout from "../Admin/features/payment/Checkout";
+import Accessibility from "../User/pages/Accessibility";
+import JoinTeam from "../User/pages/JoinTeam";
+import PrivacyPolicy from "../User/pages/PrivacyPolicy";
+import TermsCondition from "../User/pages/TermsCondition";
+
 
 function AppRoutes() {
   return (
@@ -61,6 +65,10 @@ function AppRoutes() {
       <Route path="/dining" element={<Dinning />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/single-room" element={<SingleRoom />} />
+      <Route path="/accessibility"  element={<Accessibility/>}/>
+      <Route path="/joinTeam"  element={<JoinTeam/>} />
+      <Route path="/privacypolicy"  element={<PrivacyPolicy/>} />
+      <Route path="/termsCondition"  element={<TermsCondition/>} />    
     </Routes>
   );
 }
