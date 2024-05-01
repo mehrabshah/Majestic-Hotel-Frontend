@@ -18,7 +18,6 @@ const ContactUs = () => {
     setTelephone(phoneNumber); // Update local state for telephone
   };
   const onSubmit = (data) => {
-    console.log(data);
     submitContactUs(data);
     // Handle form submission here (e.g., send data to server)
   };

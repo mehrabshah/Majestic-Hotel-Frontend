@@ -72,16 +72,6 @@ function Navbar() {
                 EVENTS & CELEBRATIONS
               </NavLink>
             </li>
-            {/* <li className="nav-item ms-2 mt-lg-5">
-              <NavLink
-                className={({ isActive }) =>
-                  "nav-link nav-text" + (isActive ? " active" : "")
-                }
-                to="/dining"
-              >
-                DINING
-              </NavLink>
-            </li> */}
             <li className="nav-item me-lg-5 mt-lg-5">
               <NavLink
                 className={({ isActive }) =>

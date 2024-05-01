@@ -17,9 +17,6 @@ function PaymentForm() {
   const bookingData = getValue("Add-to-cart");
   const {  totalPrice, bookingDetails , startDate , endDate } = bookingData;
 
- console.log("start date local storage",totalPrice)
- console.log("end date local storage",endDate)
-
   const {
     register,
     handleSubmit,
@@ -49,9 +46,6 @@ function PaymentForm() {
     const filteredbookingDetails = bookingDetails.filter(
       (item) => item.numberOfRooms !== 0
     );
-     
-    console.log("Common details azab",data)
-
     const details = {
       bookingDetails: filteredbookingDetails,
       commonDetails: data,

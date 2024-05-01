@@ -14,7 +14,6 @@ function RoomsSection() {
    const getRooms = async () => {
     try {
       const RoomsData = await getRoomsPrices(getAvailibilityObject());
-      console.log(RoomsData)
       setSingleRoomPrice(RoomsData[2].price)
       setDoubleRoomPrice(RoomsData[0].price)
       setTwimRoomPrice(RoomsData[1].price)
