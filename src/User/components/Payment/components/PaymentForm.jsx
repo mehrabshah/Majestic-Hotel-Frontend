@@ -108,7 +108,7 @@ function PaymentForm() {
               postalCode={postalCode}
             />
           )}
-          <div className="d-flex justify-content-between mt-5">
+          <div className="flex justify-end w-full mt-3">
             {step <= 1 && step > 0 && (
               <div className="d-flex justify-content-end">
                 <Button
@@ -121,7 +121,7 @@ function PaymentForm() {
               </div>
             )}
             {step < 1 && (
-              <div className="d-flex justify-content-end align-self-end ">
+              <div className="flex w-full flex-row justify-end">
                 <Button
                   text="Continue"
                   backgroundColor="bg-[#9b855b]"
@@ -132,14 +132,14 @@ function PaymentForm() {
               </div>
             )}
             {step === 1 && (
-              <div className="d-flex justify-content-end">
+              <div className="flex w-full  justify-end">
                 <Button
-                  text="Continue To Payment"
+                  text="Payment"
                   backgroundColor="bg-[#9b855b]"
                   color="text-[white]"
-                  padding="ps-4 pe-4 pt-2 pb-2"
+                  padding="ps-4 ms-4  pe-4 pt-2 pb-2 "
                   type="submit"
-                  // onClick={showErrors}
+                  onClick={showErrors}
                   />
               </div>
             )}

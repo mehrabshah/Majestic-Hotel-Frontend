@@ -32,7 +32,7 @@ function CustomerInformationSecond({ register,errors ,address,city,countryRegion
               label="Postal Code"
               type="text"
               placeholder="Postal Code"
-              register={countryRegionCode}              
+              register={postalCode}              
             />
             {errors.postalCode && <span className="text-red-700">{errors.postalCode.message}</span>}
 
@@ -44,7 +44,7 @@ function CustomerInformationSecond({ register,errors ,address,city,countryRegion
               label="Country Region Code"
               type="text"
               placeholder="country Region Code"
-              register={postalCode}          
+              register={countryRegionCode}          
             />
             {errors.countryRegionCode && <span className="text-red-700">{errors.countryRegionCode.message}</span>}
 

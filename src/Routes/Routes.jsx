@@ -56,7 +56,7 @@ function AppRoutes() {
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
-      {/* <Route path="/checkout" element={<Checkout amount={100} currency={"USD"}/>} /> */}
+     {/* <Route path="/checkout" element={<Checkout amount={100} currency={"USD"}/>} /> */}
       <Route path="/return" element={<Return />} />
       <Route path="/home" element={<Home />} />      
       <Route path="/contact-us" element={<Contact />} />
