@@ -1,8 +1,10 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import "../Confirmation.css";
+import {extractLocalDate} from "../../../utils/helpers"
 
-function Success() {
+function Success({ response }) {
+
   return (
     <div className="xl:max-w-screen-xl lg:max-w-screen-lg  ps-4 pe-4 mx-auto mt-24">
       <div className="row">
@@ -32,48 +34,25 @@ function Success() {
             Booking Details
           </h1>
           <div className="flex flex-row mt-4">
-            <div className="flex flex-col justify-between pe-5 ">
-              <span>Booking:</span>
-              <span className="font-bold">1011</span>
+            <div className="flex flex-col justify-between pe-5">
+              <span>Order No:</span>
+              <span className="font-bold">{response?.order?.id}</span>
             </div>
-            <div className="flex flex-col justify-between px-5">
-              <span>Check-in:</span>
-              <span className="font-bold">September 26,2019</span>
+            <div className="flex flex-col justify-between pe-5">
+              <span>User Details:</span>
+              <span className="font-bold">{response?.order?.firstName} {response?.order?.lastName}, {response?.order?.emailAddress}</span>
             </div>
-            <div className="flex flex-col justify-between px-5">
-              <span>Checkout:</span>
-              <span className="font-bold">September 27,2019</span>
+            <div className="flex flex-col justify-between pe-5">
+              <span>Number of Rooms Booked:</span>
+              <span className="font-bold">{response?.bookings?.length}</span>
             </div>
-            <div className="flex flex-col justify-between px-5">
-              <span>Total:</span>
-              <span className="font-bold">$129</span>
+            <div className="flex flex-col justify-between pe-5">
+              <span>Start Date:</span>
+              <span className="font-bold">{extractLocalDate(response?.bookings[0].startDate)}</span>
             </div>
-            <div className="flex flex-col justify-between ps-5">
-              <span>Status:</span>
-              <span className="font-bold">Confirmed</span>
-            </div>
-          </div>
-        </div>
-        <div className="row mb-24">
-          <h1 className="text-3xl text-[#000000] font-bold mt-10 p-fair">Details</h1>
-          <div className="row">
-            <div className="col-6">
-              <span className="font-bold">Category:</span>
-              <span className="ms-1">Double Room With Sea View</span>
-            </div>
-            <div className="col-6">
-              <span className="font-bold">Number of Rooms:</span>
-              <span className="ms-1">7</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <span className="font-bold">Category:</span>
-              <span className="ms-1">Double Room</span>
-            </div>
-            <div className="col-6">
-              <span className="font-bold">Number of Rooms:</span>
-              <span className="ms-1">9</span>
+            <div className="flex flex-col justify-between pe-5">
+              <span>End Date:</span>
+              <span className="font-bold">{extractLocalDate(response?.bookings[0].endDate)}</span>
             </div>
           </div>
         </div>

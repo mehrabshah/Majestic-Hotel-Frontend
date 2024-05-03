@@ -4,11 +4,11 @@ import Failure from "./ConfirmationComponents/Failure";
 import usePaymentStatus from "./ConfirmationHooks/usePaymentStatus";
 
 function ConfirmationStatus() {
- const status = usePaymentStatus();
+ const {status,response} = usePaymentStatus();
 
   return (
     <>
-       {status=="succeeded" ? <Success/> :  <Failure/> } 
+       {status=="succeeded" ? <Success response={response}/> :  <Failure/> } 
     </>
   );
 }
