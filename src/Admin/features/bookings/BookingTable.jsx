@@ -7,7 +7,6 @@ import { useBookings } from './hooks/useBookings';
 function BookingTable() {
   const { booking, isLoading, error } = useBookings()
 
-
   if (isLoading) return <Spinner className="mx-auto h-6 w-6" />;
 
   //If there is no bookings data to show
@@ -22,6 +21,8 @@ function BookingTable() {
             <Table.Head>Email</Table.Head>
             <Table.Head>Phone</Table.Head>
             <Table.Head>City</Table.Head>
+            <Table.Head>Postal Code</Table.Head>
+            <Table.Head>Country Region code</Table.Head>
             <Table.Head />
           </Table.Row>
         </Table.Header>

@@ -13,8 +13,6 @@ import { useDeleteBooking } from '../hooks/useDeleteBooking';
 function BookingDetail() {
   const { booking, isLoading } = useBookingDetail();
 
-
-  const { checkout, isCheckingOut } = useCheckout();
   const { deleteBooking, isDeleting } = useDeleteBooking();
 
   const moveBack = useMoveBack();
@@ -25,7 +23,6 @@ function BookingDetail() {
   // // If there is no booking data to show
   if (!booking) return <div>No data to show at the moment.</div>;
 
-  const { id: bookingId, status } = booking;
 
   const statusBadge = {
     unconfirmed: 'blue',
@@ -65,7 +62,7 @@ function BookingDetail() {
             <ConfirmDelete
               resourceName="booking"
               disabled={isDeleting}
-              onConfirm={() => deleteBooking(bookingId)}
+              onConfirm={() => deleteBooking(booking.orderId)}
             />
           </Modal.Window>
         </Modal>

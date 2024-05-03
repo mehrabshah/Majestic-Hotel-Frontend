@@ -53,7 +53,13 @@ function BookingRow({ booking }) {
       </Table.Cell>
       <Table.Cell>
         <span>{city}</span>
-      </Table.Cell>    
+      </Table.Cell>
+      <Table.Cell>
+        <span>{ postalCode}</span>
+      </Table.Cell>  
+      <Table.Cell>
+        <span>{countryRegionCode}</span>
+      </Table.Cell>  
       <Table.Cell>
       <DropdownMenu>
           <Modal>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getBookingDetail } from '../../../services/apiBookings';
+import {getBookings}  from '../../../services/apiBookings';
 
 export function useBookingDetail() {
   const { bookingId } = useParams();
@@ -11,8 +11,9 @@ export function useBookingDetail() {
   useEffect(() => {
     const fetchBookingDetail = async () => {
       try {
-        const bookingData = await getBookingDetail(bookingId);
-        setBooking(bookingData);
+        const bookingData = await getBookings();
+        const filteredBooking = bookingData.find(booking => booking.orderId == bookingId);
+        setBooking(filteredBooking);
         setIsLoading(false);
       } catch (error) {
         setError(error);
