@@ -13,7 +13,7 @@ export async function getBookings() {
 
 export async function getBookingDetail(id) {
   try {
-    const response = await axios.get(`${process.env.backendUrl}/bookings/${id}`);
+    const response = await axios.get(`${backendUrl}bookings/${id}`);
     return response.data;
   } catch (error) {
     throw new Error('We are unable to find booking at this time.');

@@ -2,12 +2,11 @@ import Table from '../../components/ui/Table';
 import BookingRow from './BookingRow';
 import Spinner from '../../components/ui/Spinner';
 import Pagination from '../../components/ui/Pagination';
-import { useBookingDetail } from './hooks/useBookingDetail';
+import { useBookings } from './hooks/useBookings';
 
 function BookingTable() {
-  const { booking, isLoading, error } = useBookingDetail();
+  const { booking, isLoading, error } = useBookings()
 
-  console.log("Bookings",booking)
 
   if (isLoading) return <Spinner className="mx-auto h-6 w-6" />;
 

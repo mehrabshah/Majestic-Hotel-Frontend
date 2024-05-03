@@ -18,7 +18,6 @@ import ConfirmDelete from '../../components/ui/ConfirmDelete';
 import { useDeleteBooking } from './hooks/useDeleteBooking';
 
 function BookingRow({ booking }) {
-  const { checkout, isCheckingOut } = useCheckout();
   const { deleteBooking, isDeleting } = useDeleteBooking();
   const navigate = useNavigate();
 
@@ -55,6 +54,40 @@ function BookingRow({ booking }) {
       <Table.Cell>
         <span>{city}</span>
       </Table.Cell>    
+      <Table.Cell>
+      <DropdownMenu>
+          <Modal>
+            <DropdownMenu.Toggle toggleName={orderId}>
+              <DotsThreeOutline size={20} weight="fill" />
+            </DropdownMenu.Toggle>
+
+            <DropdownMenu.Content windowName={orderId}>
+              {/* See details */}
+              <DropdownMenu.Item
+                icon={<Eye size={20} />}
+                onClick={() => navigate(`/bookings/${orderId}`)}
+              >
+                See details 
+              </DropdownMenu.Item>
+
+              {/* Delete contactUs */}
+              <Modal.Toggle toggleName="delete-booking">
+                <DropdownMenu.Item icon={<Trash size={20} />}>
+                  Delete Booking
+                </DropdownMenu.Item>
+              </Modal.Toggle>
+            </DropdownMenu.Content>
+
+            <Modal.Window windowName="delete-booking">
+              <ConfirmDelete
+                resourceName="contactUs"
+                disabled={isDeleting}
+                onConfirm={() => deleteBooking(orderId)}
+              />
+            </Modal.Window>
+          </Modal>
+        </DropdownMenu>
+      </Table.Cell>
       
     </Table.Row>
    
