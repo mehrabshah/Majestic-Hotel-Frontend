@@ -95,7 +95,7 @@ function Navbar() {
   //Set the initial currency
   useEffect(()=>{
   setValue("currency-rate",{"code":"Usd","rate":1})
-},[])
+},[setValue])
   // Filter the currencies that we need to show on the screen
   const filteredCurrencies = Object.entries(currenciesData)
   .filter(([key]) => keysToKeep.includes(key))

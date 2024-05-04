@@ -12,7 +12,7 @@ const iconPaths = [
 function RoomsCard({ imageSrc, title, description, price, bookText }) {
   return (
     <div className="card roomscard">
-      <img className="card-img-top" src={imageSrc} alt="Card image cap" />
+      <img className="card-img-top" src={imageSrc} alt="Card  cap" />
       <div className="card-body pt-0 p-4">
         <div className="day-book p">
           <ul className="d-flex day-book-inner row p-4 ">

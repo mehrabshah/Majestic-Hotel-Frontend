@@ -13,19 +13,19 @@ function Accessibility() {
           Accessibility
         </h1>
       </div>
-      <div class="max-w-7xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-6">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">
           Accessibility at The Majestic Hotel
         </h1>
-        <p class="mb-6">
+        <p className="mb-6">
           Welcome to The Majestic Hotel, where we strive to ensure all our
           guests have a comfortable and accessible stay. Our commitment to
           accessibility extends throughout our premises, from our accommodations
           to our amenities and services.
         </p>
 
-        <h2 class="text-2xl font-bold my-4">Accommodations:</h2>
-        <ul class="list-disc list-inside mb-6">
+        <h2 className="text-2xl font-bold my-4">Accommodations:</h2>
+        <ul className="list-disc list-inside mb-6">
           <li>
             Our hotel offers a variety of room types to suit your needs,
             including single, double, family, and twin rooms.
@@ -40,8 +40,8 @@ function Accessibility() {
           </li>
         </ul>
 
-        <h2 class="text-2xl font-bold my-4">Facilities:</h2>
-        <ul class="list-disc list-inside mb-6">
+        <h2 className="text-2xl font-bold my-4">Facilities:</h2>
+        <ul className="list-disc list-inside mb-6">
           <li>
             The Majestic Hotel features a lift for convenient access to all
             floors.
@@ -60,8 +60,8 @@ function Accessibility() {
           </li>
         </ul>
 
-        <h2 class="text-2xl font-bold my-4">Services:</h2>
-        <ul class="list-disc list-inside mb-6">
+        <h2 className="text-2xl font-bold my-4">Services:</h2>
+        <ul className="list-disc list-inside mb-6">
           <li>Service animals are welcome at our hotel.</li>
           <li>
             Our dedicated staff are available 24/7 at the front desk to assist
@@ -74,8 +74,8 @@ function Accessibility() {
           </li>
         </ul>
 
-        <h2 class="text-2xl font-bold my-4">Location:</h2>
-        <ul class="list-disc list-inside mb-6">
+        <h2 className="text-2xl font-bold my-4">Location:</h2>
+        <ul className="list-disc list-inside mb-6">
           <li>
             Nestled just 200 meters from Eastbourne Beach and 700 meters from
             Eastbourne Pier, The Majestic Hotel offers easy access to the
@@ -96,7 +96,7 @@ function Accessibility() {
           </li>
         </ul>
 
-        <p class="mb-6">
+        <p className="mb-6">
           At The Majestic Hotel, we're committed to providing a welcoming and
           inclusive environment for all our guests. If you have any specific
           accessibility requirements or questions, please don't hesitate to

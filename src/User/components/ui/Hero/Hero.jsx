@@ -1,7 +1,6 @@
 import React from "react";
 import "./Hero.css";
 import CarouselItem from "./components/CarousalItem";
-import BookingSectionOuter from "./components/BookingSectionOuter";
 function Hero() {
   return (
     <>

@@ -23,12 +23,10 @@ import Dinning from "../User/pages/Dinning";
 import Payment from "../User/pages/Payment";
 import Events from "../User/pages/events";
 import Return from "../Admin/features/payment/Return";
-import Checkout from "../Admin/features/payment/Checkout";
 import Accessibility from "../User/pages/Accessibility";
 import JoinTeam from "../User/pages/JoinTeam";
 import PrivacyPolicy from "../User/pages/PrivacyPolicy";
 import TermsCondition from "../User/pages/TermsCondition";
-import ConfirmDelete from "../Admin/components/ui/ConfirmDelete";
 import Confirmation from "../User/pages/Confirmation";
 
 function AppRoutes() {
@@ -56,7 +54,6 @@ function AppRoutes() {
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
-     {/* <Route path="/checkout" element={<Checkout amount={100} currency={"USD"}/>} /> */}
       <Route path="/return" element={<Return />} />
       <Route path="/home" element={<Home />} />      
       <Route path="/contact-us" element={<Contact />} />

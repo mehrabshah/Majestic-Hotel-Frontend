@@ -22,7 +22,7 @@ function Category({
   return (
     <div className="row category">
       <div className={`col-md-6   ${orderFirst}  p-0 m-0`}>
-      {feature ? <img src={imgSrc}  alt="bed image" className="category-image"  /> : <Feature features={features} />}
+      {feature ? <img src={imgSrc}  alt="bed" className="category-image"  /> : <Feature features={features} />}
       </div>
       <div className={`col-md-6  ${orderSecond}  flex items-center`}>
         <div className="d-flex  items-center  justify-center flex-column px-3">

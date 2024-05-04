@@ -13,7 +13,6 @@ import {
 function BookingDataBox({ booking }) {
   
 
-  console.log("categories new ",booking)
 
   return (
     <div className="flex min-w-full flex-col overflow-hidden rounded-md bg-gray-0 shadow-sm">

@@ -35,7 +35,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="col-md-6 p-md-5 p-3">
-            <img src="assets/345694611.jpg" className="img-fluid" />
+            <img src="assets/345694611.jpg" alt="345694611"  className="img-fluid" />
           </div>
         </div>
       </div>
@@ -89,10 +89,10 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
         <div className="absolute inset-0 w-full flex flex-col justify-between text-center">
-          <div class="flex justify-center items-center mt-4 sm:mt-8 md:mt-12 lg:mt-16">
-            <span class="w-1/3 h-px bg-white"></span>
-            <span class="ml-2 mr-2 text-white text-lg">★</span>
-            <span class="w-1/3 h-px bg-white"></span>
+          <div className="flex justify-center items-center mt-4 sm:mt-8 md:mt-12 lg:mt-16">
+            <span className="w-1/3 h-px bg-white"></span>
+            <span className="ml-2 mr-2 text-white text-lg">★</span>
+            <span className="w-1/3 h-px bg-white"></span>
           </div>
           <div className="flex flex-col items-center">
             <div className="flex text-center justify-center items-baseline">
@@ -115,10 +115,10 @@ const AboutUs = () => {
               experience.
             </p>
           </div>
-          <div class="flex justify-center items-center mb-4 sm:mb-8 md:mb-12 lg:mb-16">
-            <span class="w-1/3 h-px bg-white"></span>
-            <span class="ml-2 mr-2 text-white text-lg">★</span>
-            <span class="w-1/3 h-px bg-white"></span>
+          <div className="flex justify-center items-center mb-4 sm:mb-8 md:mb-12 lg:mb-16">
+            <span className="w-1/3 h-px bg-white"></span>
+            <span className="ml-2 mr-2 text-white text-lg">★</span>
+            <span className="w-1/3 h-px bg-white"></span>
           </div>
         </div>
       </div>

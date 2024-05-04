@@ -12,23 +12,23 @@ function JoinTeam() {
           Join Team
         </h1>
       </div>
-      <div class="max-w-7xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-6">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">
           Join Our Team at The Majestic Hotel
         </h1>
-        <p class="mb-6">
+        <p className="mb-6">
           Are you passionate about hospitality and dedicated to providing
           exceptional service? Join the team at The Majestic Hotel, where we're
           committed to creating memorable experiences for our guests against the
           breathtaking backdrop of the South Downs coast.
         </p>
 
-        <h2 class="text-2xl font-bold my-4">Why Choose The Majestic Hotel?</h2>
-        <p class="mb-6">
+        <h2 className="text-2xl font-bold my-4">Why Choose The Majestic Hotel?</h2>
+        <p className="mb-6">
           At The Majestic Hotel, we believe our greatest asset is our team. Here
           are a few reasons why you should consider joining us:
         </p>
-        <ol class="list-decimal list-inside mb-6">
+        <ol className="list-decimal list-inside mb-6">
           <li>
             <strong>Warm and Inclusive Culture:</strong> We foster a supportive
             and inclusive work environment where every team member is valued and
@@ -58,8 +58,8 @@ function JoinTeam() {
           </li>
         </ol>
 
-        <h2 class="text-2xl font-bold my-4">Opportunities:</h2>
-        <ul class="list-disc list-inside mb-6">
+        <h2 className="text-2xl font-bold my-4">Opportunities:</h2>
+        <ul className="list-disc list-inside mb-6">
           <li>Front Desk Receptionist</li>
           <li>Housekeeping Assistant</li>
           <li>Restaurant Server</li>
@@ -68,16 +68,16 @@ function JoinTeam() {
           <li>Maintenance Technician</li>
         </ul>
 
-        <h2 class="text-2xl font-bold my-4">How to Apply:</h2>
-        <p class="mb-6">
+        <h2 className="text-2xl font-bold my-4">How to Apply:</h2>
+        <p className="mb-6">
           If you're ready to embark on an exciting career journey with us, we'd
           love to hear from you! To apply for a position at The Majestic Hotel,
           please send your resume and a cover letter outlining your relevant
           experience and why you'd be a great fit for our team to{" "}
-          <span class="text-blue-500">[email address]</span>.
+          <span className="text-blue-500">[email address]</span>.
         </p>
 
-        <p class="mb-6">
+        <p className="mb-6">
           Join us at The Majestic Hotel and be part of a team dedicated to
           delivering exceptional service and creating unforgettable experiences
           for our guests. We can't wait to welcome you aboard!

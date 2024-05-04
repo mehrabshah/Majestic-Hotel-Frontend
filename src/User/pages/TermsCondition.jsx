@@ -12,19 +12,19 @@ function TermsCondition() {
           Terms & Conditions
         </h1>
       </div>
-      <div class="max-w-7xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-6">Terms and Conditions</h1>
-        <p class="mb-6">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Terms and Conditions</h1>
+        <p className="mb-6">
           Welcome to The Majestic Hotel. We're delighted to have you as our
           guest and want to ensure your stay with us is as smooth and enjoyable
           as possible. Please take a moment to review our terms and conditions
           outlined below:
         </p>
 
-        <h2 class="text-2xl font-bold my-4">
+        <h2 className="text-2xl font-bold my-4">
           1. Booking and Reservation Policies:
         </h2>
-        <ul class="list-disc list-inside mb-6">
+        <ul className="list-disc list-inside mb-6">
           <li>All bookings are subject to availability.</li>
           <li>
             Guests must be at least 18 years of age to make a reservation.
@@ -42,8 +42,8 @@ function TermsCondition() {
           </li>
         </ul>
 
-        <h2 class="text-2xl font-bold my-4">2. Check-in and Check-out:</h2>
-        <ul class="list-disc list-inside mb-6">
+        <h2 className="text-2xl font-bold my-4">2. Check-in and Check-out:</h2>
+        <ul className="list-disc list-inside mb-6">
           <li>Check-in time is at 3:00 PM local time.</li>
           <li>Check-out time is at 11:00 AM local time.</li>
           <li>
@@ -52,19 +52,19 @@ function TermsCondition() {
           </li>
         </ul>
 
-        <h2 class="text-2xl font-bold my-4">
+        <h2 className="text-2xl font-bold my-4">
           8. Changes to Terms and Conditions:
         </h2>
-        <p class="mb-6">
+        <p className="mb-6">
           The Majestic Hotel reserves the right to update or modify these terms
           and conditions at any time without prior notice. Any changes will be
           effective immediately upon posting on our website.
         </p>
 
-        <p class="mb-6">
+        <p className="mb-6">
           By making a reservation at The Majestic Hotel, you agree to abide by
           these terms and conditions. If you have any questions or concerns,
-          please don't hesitate to <span class="text-blue-500">contact us</span>
+          please don't hesitate to <span className="text-blue-500">contact us</span>
           . Thank you for choosing The Majestic Hotel for your stay. We look
           forward to welcoming you soon!
         </p>

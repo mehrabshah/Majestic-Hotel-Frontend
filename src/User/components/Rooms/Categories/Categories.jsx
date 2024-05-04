@@ -93,7 +93,7 @@ const features = [
   ],
 ];
 function Categories() {
-  const { Categories, isLoading, error } = useCategories();
+  const { Categories } = useCategories();
   return (
     <div>
       <div className="accomodation accomodation-banner">

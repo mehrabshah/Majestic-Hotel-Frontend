@@ -36,7 +36,7 @@ function Welcome() {
               </Link>
             </div>
             <div className="col-lg-6  d-flex justify-center p-lg-4">
-              <img src="./assets/sofa.jpg" alt="side-image"></img>
+              <img src="./assets/sofa.jpg" alt="sofa"></img>
             </div>
           </div>
         </div>

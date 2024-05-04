@@ -24,10 +24,10 @@ const Facilities = () => {
                 </p>
               </div>
               <div className="col-md-6 align-self-center order-1 order-md-2 lg:p-0">
-                <img src="./assets/interior-3.jpg"></img>
+                <img src="./assets/interior-3.jpg" alt="interior"></img>
               </div>
               <div className="col-md-6 align-self-center order-3 order-md-3 lg:p-0">
-                <img src="./assets/interior-2.jpg"></img>
+                <img src="./assets/interior-2.jpg" alt="interior"></img>
               </div>
               <div className="col-md-6 align-self-center text-center order-4 order-md-4 ps-2 pe-2">
                 <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">

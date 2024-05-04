@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import {
   FacebookLogo,
   InstagramLogo,
-  LinkedinLogo,
   XLogo,
-  YoutubeLogo,
   PaperPlaneRight,
 } from "@phosphor-icons/react";
 const companyLinks = [
@@ -127,7 +125,7 @@ function Footer() {
           <div className="flex items-start justify-start space-x-6 md:items-center md:justify-center">
             <Link
               to="/termsCondition"
-              class="text-sm text-gray-600 transition hover:text-primary"
+              className="text-sm text-gray-600 transition hover:text-primary"
             >
               Terms
             </Link>
