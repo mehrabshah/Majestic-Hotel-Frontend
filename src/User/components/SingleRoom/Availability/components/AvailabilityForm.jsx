@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../../../Shared/Button/Button";
 import Select from "../../../Shared/Select/Select";
@@ -8,6 +8,7 @@ import {
   getCurrentDate,
   getDateAfterCurrentDate,
 } from "../../../../utils/helpers";
+
 const childOptions = [
   { label: "1", value: "1" },
   { label: "2", value: "2" },
@@ -24,34 +25,43 @@ const adultOptions = [
   { label: "5", value: "5" },
   { label: "6", value: "6" },
 ];
+
 function AvailabilityForm({ submitAvailabilityForm }) {
   const {
     handleSubmit,
     setValue,
     control,
+    formState: { errors },
   } = useForm();
-  //Check that which rooms are available on the selected date
+
+  //Check which rooms are available on the selected date
   const onSubmit = async (data) => {
     const currentDate = new Date();
     const dateAfterCurrentDate = new Date(currentDate);
     dateAfterCurrentDate.setDate(currentDate.getDate() + 1);
+
     const startDateValue = data.startDate ? extractLocalDate(data.startDate) : extractLocalDate(currentDate);
     const endDateValue = data.endDate ? extractLocalDate(data.endDate) : extractLocalDate(dateAfterCurrentDate);
 
     if (!data.startDate || !data.endDate) {
       const newData = { ...data }; 
       if (!data.startDate) {
-          newData.startDate = startDateValue;
+        newData.startDate = startDateValue;
       }
       if (!data.endDate) {
-          newData.endDate = endDateValue;
+        newData.endDate = endDateValue;
       }
       data = newData; 
-  }
+    }
+
     setValue("startDate", startDateValue);
     setValue("endDate", endDateValue);
+
+    console.log("start date", startDateValue);
+
     submitAvailabilityForm(data);
-};
+  };
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -82,7 +92,7 @@ function AvailabilityForm({ submitAvailabilityForm }) {
                 <Select
                   label="Adult(s)"
                   options={adultOptions}
-                  register="Adultss"
+                  name="adults"
                   width="xl:w-52  md:w-full"
                 />
               </div>
@@ -90,7 +100,7 @@ function AvailabilityForm({ submitAvailabilityForm }) {
                 <Select
                   label="Child(s)"
                   options={childOptions}
-                  register="Adults"
+                  name="children"
                   width="xl:w-52  md:w-full"
                 />
               </div>
