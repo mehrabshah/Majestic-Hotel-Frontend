@@ -5,17 +5,11 @@ import { useNavigate } from "react-router-dom";
 import { calculateNumberOfNights,extractLocalDate,getCurrentDate,getDateAfterCurrentDate,} from "../../../../utils/helpers";
 import {formatedDate} from "../../../../utils/helpers"
 import useLocalStorage from "../../../../hooks/useLoacalStorage";
-function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
+import {formatNumber} from "../../../../utils/helpers"
+function Booking({ checkInOutDate, bookingDetails, PrizeDetails,  currency }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
-  const [currency,setCurrency]=useState({})
-  const  {getValue} = useLocalStorage()
-  useEffect(()=>{
-    const currencyRate = getValue("currency-rate")
-    setCurrency(currencyRate)
-  },[])
-
   useEffect(() => {
     if (checkInOutDate) {
       const startDate = extractLocalDate(checkInOutDate.startDate)
@@ -71,7 +65,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
           <strong>{totalRooms}</strong> Rooms
         </div>
         <div id="xhidn-tprice" className="green uppercase">
-         {currency.code} {" "} {totalPrice*currency.rate}
+         {currency.code} {" "} {formatNumber(totalPrice*currency.rate)}
         </div>
       </div>}
       {totalRooms === 0 ? (

@@ -25,8 +25,8 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-24">
+        <div className="collapse navbar-collapse hidden sm:block" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-24  ">
             <ul className=" mb-0 flex flex-row">
               <li className="text-[12px] text-[#737373] relative ms-4 me-4   progressbar-active flex flex-col items-center">
                 <AiOutlineUser size={30} />

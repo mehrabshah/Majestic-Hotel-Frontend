@@ -57,8 +57,6 @@ function AvailabilityForm({ submitAvailabilityForm }) {
     setValue("startDate", startDateValue);
     setValue("endDate", endDateValue);
 
-    console.log("start date", startDateValue);
-
     submitAvailabilityForm(data);
   };
 

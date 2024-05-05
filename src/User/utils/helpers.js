@@ -103,3 +103,20 @@ export const formatedDate=(inputDate)=> {
     // Return the formatted date string
     return `${year}-${monthNumber}-${formattedDay}`;
 }
+
+/**
+ * Formats a number to have only two decimal places.
+ * @param {number} number - The number to be formatted.
+ * @returns {number} The formatted number with only two decimal places.
+ */
+export const formatNumber = (number) => {
+    // Ensure the input is a number
+    if (typeof number !== 'number') {
+        return NaN; // Return NaN for invalid input
+    }
+
+    // Round the number to two decimal places and parse it back to a number
+    const formattedNumber = parseFloat(number.toFixed(2));
+
+    return formattedNumber;
+};

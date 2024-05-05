@@ -5,7 +5,7 @@ import Navbar from "../components/Payment/components/Navbar/Navbar"
 function Payment() {
   return (
     <>
-         <Navbar/>   
+         <Navbar />   
          <Payments/>
          <Footer/>
     </>

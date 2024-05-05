@@ -5,6 +5,7 @@ import CurrencyItem from "./Components/CurrencyItem";
 import useLocalStorage from "../../../hooks/useLoacalStorage";
 //Currency that we need to show on the screen
 const keysToKeep = [
+  "usd",
   "eur",
   "ar",
   "aud",
@@ -46,6 +47,7 @@ const keysToKeep = [
   "zar",
 ];
 const currenciesFullName = [
+  "United States Dollar",
   "Euro",
   "Argentine Peso",
   "Australian Dollar",
@@ -86,16 +88,15 @@ const currenciesFullName = [
   "Kenyan Shilling",
   "South African Rand"
 ];
-function Navbar() {
-  const [showModal, setShowModal] = useState(false);
-  const { currencyRate } = useCurrency("usd");
-  const currenciesData = currencyRate?.usd || {};
-  const [code,setCode]=useState("Usd")
+function Navbar({showModal,setShowModal}) {
+  const { currencyRate } = useCurrency("eur");
+  const currenciesData = currencyRate?.eur || {};
+  const [code,setCode]=useState("eur")
   const { setValue } = useLocalStorage();
   //Set the initial currency
   useEffect(()=>{
-  setValue("currency-rate",{"code":"Usd","rate":1})
-},[setValue])
+  setValue("currency-rate",{"code":"eur","rate":1})
+},[])
   // Filter the currencies that we need to show on the screen
   const filteredCurrencies = Object.entries(currenciesData)
   .filter(([key]) => keysToKeep.includes(key))
@@ -112,7 +113,7 @@ function Navbar() {
   const onCurrency = ( rate,code) => {
     setShowModal(false)
     setCode(code)
-    setValue("currency-rate",{"code":code,"rate":rate})
+    setValue("currency-rate", { "code": code, "rate": rate });
   };
 
   return (

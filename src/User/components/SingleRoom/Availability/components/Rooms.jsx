@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import "../Availability.css";
 import Select from "../../../Shared/Select/Select";
 import { useForm } from "react-hook-form";
-import useLocalStorage from "../../../../hooks/useLoacalStorage";
+import {formatNumber} from "../../../../utils/helpers"
 function Rooms({
   imgSrc,
   heading,
@@ -13,16 +13,9 @@ function Rooms({
   setPriceDetails,
   description,
   capacityChild,
-  capacity
+  capacity,
+  currency
 }) {
-  const [currency,setCurrency]=useState({})
-  const  {getValue} = useLocalStorage()
-
-  useEffect(()=>{
-    const currencyRate = getValue("currency-rate")
-    setCurrency(currencyRate)
-  },[])
- 
   const [showModal, setShowModal] = useState(false);
   //No of Adults allowed for each category
   const capacityArray = Array.from(
@@ -93,7 +86,6 @@ function Rooms({
                     src="/assets/person.png"
                     className="img-fluid me-2"
                     alt={`Guest ${index + 1}`}
-                    
                   />
                 )):(
                   <>
@@ -132,7 +124,7 @@ function Rooms({
             <h1 className="d-prices">
               <span>
                 <span id="price" className="ft-16  uppercase">
-               {currency.code} {" "} {price*currency.rate}
+               {currency.code} {" "} {formatNumber(price*currency.rate)}
                 </span>
               </span>
               <br />
@@ -187,7 +179,7 @@ function Rooms({
         </div>
       )}
       {showModal && <div className="modal-backdrop fade show"></div>}
-      {/*------------------- Modal End -------------------*/}
+      {/*------------------------- Modal End ----------------------*/}
     </div>
   );
 }

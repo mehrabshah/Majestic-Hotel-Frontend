@@ -1,9 +1,11 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import "../Availability.css";
 import Booking from "./Booking";
 import Rooms from "../../Availability/components/Rooms";
 import NoRooms from "./NoRooms";
+import useLocalStorage from "../../../../hooks/useLoacalStorage"
 function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
+  // const [currency,setCurrency]=useState(null)
   //the numbers of rooms select by the user for each category
   const [bookingDetails, setBookingDetails] = useState([
     { categoryId: 1, numberOfRooms: 0 },
@@ -26,6 +28,12 @@ function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
     { categoryId: 7, price: 0 },
     { categoryId: 8, price: 0 },  
   ]);
+
+  const  {getValue} = useLocalStorage() 
+  const currencyRate = getValue("currency-rate")
+ 
+
+
   
   return (
     <div className="ps-8 pe-8 mx-auto mt-16">
@@ -44,12 +52,13 @@ function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
                 description={Room.description}
                 capacity={Room.capacity}
                 capacityChild={Room.capacityChild}
+                currency={currencyRate}
               />
             </div>
           ))}
         </div>
         <div className="col-md-3 ps-4 mt-4 ">
-           <Booking checkInOutDate={checkInOutDate}  bookingDetails={bookingDetails} PrizeDetails={PrizeDetails}/> 
+           <Booking checkInOutDate={checkInOutDate}  bookingDetails={bookingDetails} PrizeDetails={PrizeDetails} currency={currencyRate}/> 
         </div>
       </div>
     </div>
