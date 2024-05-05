@@ -11,8 +11,9 @@ const Availability = () => {
   const [RoomsData, setRoomsData] = useState([]);
   const [checkInOutDate, setCheckInOutDate] = useState(null);
   useEffect(() => {
-    getRooms();
-  }, []);
+  getRooms();
+}, []);
+ 
   //Function for get the rooms on current date
   const getRooms = async () => {
     try {

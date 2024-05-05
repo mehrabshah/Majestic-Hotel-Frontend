@@ -42,8 +42,8 @@ function Sidebar() {
       <div className="row">
         <div className="col-md-12 border  shadow-sm mt-8 mt-md-4  mx-md-0">
           <div className="row">
-            <div class="col-lg-6 col-md-12 p-0 d-none d-md-block">
-              <div class="bg-[#000] text-uppercase text-center  ft-13 mt-n3 shadow py-2 text-white">
+            <div className="col-lg-6 col-md-12 p-0 d-none d-md-block">
+              <div className="bg-[#000] text-uppercase text-center  ft-13 mt-n3 shadow py-2 text-white">
                 Booking Details
               </div>
             </div>
@@ -97,20 +97,20 @@ function Sidebar() {
                 </h1>
                 <h1 className="text-capitalize loyaltydiscountdiv  ft-[14px]  text-bold  hidden">
                   Loyalty Discount
-                  <span class="float-right text-[13px]  text-lighter">
-                    USD -<span class="discountamount"></span>
+                  <span className="float-right text-[13px]  text-lighter">
+                    USD -<span className="discountamount"></span>
                   </span>
                 </h1>
-                <h1 class="text-capitalize loyaltydiscountdiv pb-4 text-[14px] text-bold hidden">
+                <h1 className="text-capitalize loyaltydiscountdiv pb-4 text-[14px] text-bold hidden">
                   Room Price After Discount
-                  <span class="float-right text-[13px] text-lighter">
+                  <span className="float-right text-[13px] text-lighter">
                     USD
-                    <span class="afterdiscountamount"></span>
+                    <span className="afterdiscountamount"></span>
                   </span>
                 </h1>
                 <br />
-                <div class="clearfix"></div>
-                <span class="text-capitalize  text-[14px] text-bold"></span>
+                <div className="clearfix"></div>
+                <span className="text-capitalize  text-[14px] text-bold"></span>
               </div>
             </div>
           </div>
@@ -120,10 +120,10 @@ function Sidebar() {
                 <h1 className="text-capitalize  text-[20px]  text-lighter">
                   Price <span className="text-[12px] mt-2"></span>
                 </h1>
-                <h1 class=" ft-14 ft-14-res text-lighter">
-                  <span class="float-right ft-13-res ft-18 text-bold text-main totalprice uppercase  linethrough mt-xl-n4">
+                <h1 className=" ft-14 ft-14-res text-lighter">
+                  <span className="float-right ft-13-res ft-18 text-bold text-main totalprice uppercase  linethrough mt-xl-n4">
                   {currency.code} {" "}
-                    <span id="totalprice wwss" class="linethrough">
+                    <span id="totalprice wwss" className="linethrough">
                       {totalPrice*currency.rate}
                     </span>
                   </span>

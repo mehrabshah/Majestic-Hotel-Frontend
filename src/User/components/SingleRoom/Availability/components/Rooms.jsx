@@ -21,8 +21,7 @@ function Rooms({
   useEffect(()=>{
     const currencyRate = getValue("currency-rate")
     setCurrency(currencyRate)
-  },[currency])
-
+  },[])
  
   const [showModal, setShowModal] = useState(false);
   //No of Adults allowed for each category
@@ -88,7 +87,7 @@ function Rooms({
             <div>
               <h4 className="guest-heading">People Allowed</h4>
               <div className="flex flex-row mt-3 items-end">
-                {capacity!=4 ? capacityArray.map((guest, index) => (
+                {capacity!==4 ? capacityArray.map((guest, index) => (
                   <img
                     key={index}
                     src="/assets/person.png"

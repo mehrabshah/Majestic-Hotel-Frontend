@@ -87,8 +87,8 @@ function PaymentForm() {
   return (
     <div className="col-md-12 sm:ps-4">
       <div className="row">
-        <div class="col-md-12 border shadow-sm mt-4 mt-sm bg-green-light">
-          <div class="green text-[13px] pt-3 pb-3 mb-0 ">
+        <div className="col-md-12 border shadow-sm mt-4 mt-sm bg-green-light">
+          <div className="green text-[13px] pt-3 pb-3 mb-0 ">
             Please complete the below data to secure your booking
           </div>
         </div>

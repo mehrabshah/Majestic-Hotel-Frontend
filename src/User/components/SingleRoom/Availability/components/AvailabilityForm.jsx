@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import Button from "../../../Shared/Button/Button";
 import Select from "../../../Shared/Select/Select";
@@ -29,14 +29,12 @@ function AvailabilityForm({ submitAvailabilityForm }) {
     handleSubmit,
     setValue,
     control,
-    formState: { errors },
   } = useForm();
   //Check that which rooms are available on the selected date
   const onSubmit = async (data) => {
     const currentDate = new Date();
     const dateAfterCurrentDate = new Date(currentDate);
     dateAfterCurrentDate.setDate(currentDate.getDate() + 1);
-
     const startDateValue = data.startDate ? extractLocalDate(data.startDate) : extractLocalDate(currentDate);
     const endDateValue = data.endDate ? extractLocalDate(data.endDate) : extractLocalDate(dateAfterCurrentDate);
 
@@ -50,12 +48,8 @@ function AvailabilityForm({ submitAvailabilityForm }) {
       }
       data = newData; 
   }
-
     setValue("startDate", startDateValue);
     setValue("endDate", endDateValue);
-
-    console.log("start date", startDateValue);
-
     submitAvailabilityForm(data);
 };
   return (

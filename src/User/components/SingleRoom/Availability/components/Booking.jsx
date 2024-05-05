@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { calculateNumberOfNights,extractLocalDate,getCurrentDate,getDateAfterCurrentDate,} from "../../../../utils/helpers";
 import {formatedDate} from "../../../../utils/helpers"
-import { useBookingContext } from "../../../../contexts/BookingContext";
 import useLocalStorage from "../../../../hooks/useLoacalStorage";
 function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
-
   const [currency,setCurrency]=useState({})
   const  {getValue} = useLocalStorage()
   useEffect(()=>{
     const currencyRate = getValue("currency-rate")
     setCurrency(currencyRate)
-  },[currency])
+  },[])
 
   useEffect(() => {
     if (checkInOutDate) {
@@ -68,7 +66,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails }) {
       <span className="g-book">
         {calculateNumberOfNights(startDate, endDate) || "1"} Night
       </span>
-      {totalRooms != 0  && <div className="room-type ">
+      {totalRooms !== 0  && <div className="room-type ">
         <div id="xhidn-trooms">
           <strong>{totalRooms}</strong> Rooms
         </div>
