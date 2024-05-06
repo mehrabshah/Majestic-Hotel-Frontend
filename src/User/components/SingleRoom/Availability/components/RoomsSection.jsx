@@ -31,10 +31,7 @@ function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
 
   const  {getValue} = useLocalStorage() 
   const currencyRate = getValue("currency-rate")
- 
 
-
-  
   return (
     <div className="ps-8 pe-8 mx-auto mt-16">
       <div className="row">
