@@ -79,7 +79,6 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails, currency }) {
           </div>
         </div>
       )}
-      <div>{console.log(totalRooms)}</div>
       {totalRooms > 0 ? (
         <Link to="/payment">
           <Button
