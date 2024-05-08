@@ -11,7 +11,6 @@ import {
 import { formatedDate } from "../../../../utils/helpers";
 import useLocalStorage from "../../../../hooks/useLoacalStorage";
 import { formatNumber } from "../../../../utils/helpers";
-
 function Booking({ checkInOutDate, bookingDetails, PrizeDetails, currency }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);

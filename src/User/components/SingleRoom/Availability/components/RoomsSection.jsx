@@ -4,7 +4,7 @@ import Booking from "./Booking";
 import Rooms from "../../Availability/components/Rooms";
 import NoRooms from "./NoRooms";
 import useLocalStorage from "../../../../hooks/useLoacalStorage"
-function RoomsSection({ RoomsData , checkInOutDate , isLoading }) {
+function RoomsSection({ RoomsData , checkInOutDate}) {
   // const [currency,setCurrency]=useState(null)
   //the numbers of rooms select by the user for each category
   const [bookingDetails, setBookingDetails] = useState([

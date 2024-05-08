@@ -30,7 +30,7 @@ function Navbar() {
               className="d-none ms-3 d-xl-block position-absolute text-uppercase heading-fonts"
               style={{ top: 10 }}
             >
-              Majestic-Continental Hotel England
+              The Majestic Hotel
             </h4>
             <li className="nav-item ms-2 mt-lg-5">
               <NavLink
