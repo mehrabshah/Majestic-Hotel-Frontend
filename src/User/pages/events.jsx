@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/ui/Navbar/Navbar";
 import EventNCelebrations from "../components/Events/EventsNCelebrations";
+import NavbarShared from "../components/ui/NavbarShared/NavbarShared";
 function Events() {
   return (
     <>
-      <Navbar />
+      <NavbarShared/>
       <EventNCelebrations/>
     </>
   );

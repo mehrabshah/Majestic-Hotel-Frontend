@@ -4,7 +4,7 @@ import CarouselItem from "./components/CarousalItem";
 function Hero() {
   return (
     <>
-      <div className="hero relative pb-lg-5 ">
+      <div className="hero   pb-lg-5 ">
         <div
           id="carouselExampleFade"
           className="carousel slide carousel-fade "

@@ -11,7 +11,7 @@ const companyLinks = [
   { label: "About", url: "/about-us" },
   { label: "Rooms", url: "/rooms" },
   { label: "Events", url: "/events-celebrations" },
-  { label: "Contact US", url: "/contact-us" },
+  { label: "Contact Us", url: "/contact-us" },
 ];
 const supportLinks = [
   { label: "Accessibility", url: "/accessibility" },
@@ -42,20 +42,20 @@ function Footer() {
                     href="https://www.facebook.com/profile.php?id=61557894159466"
                     className="cursor-pointer"
                   >
-                    <FacebookLogo size={32} color="#f6d284" />
+                    <FacebookLogo size={32} color="#d0902e" />
                   </a>
                   <a
                     href="https://www.instagram.com/majestichotel.eastbourne?igsh=MjkzdmM5NjdicG5h&utm_source=qr"
                     className="cursor-pointer"
                   >
-                    <InstagramLogo size={32} color="#f6d284" />
+                    <InstagramLogo size={32} color="#d0902e" />
                   </a>
 
                   <a
                     href="https://twitter.com/MajesticHotel_E"
                     className="cursor-pointer"
                   >
-                    <XLogo size={32} color="#f6d284" />
+                    <XLogo size={32} color="#d0902e" />
                   </a>
                 </div>
               </div>
@@ -64,7 +64,7 @@ function Footer() {
               <div className="row">
                 <div className="col-md-3 col-6">
                   <div className="sm:ml-0 ml-8 flex flex-col">
-                    <h2 className="text-base font-semibold leading-4 text-brand-600 bg-black p-3 py-2 w-fit dark:text-white">
+                    <h2 className="text-base font-semibold leading-4 text-[#d0902e] bg-black p-3 py-2 w-fit dark:text-white">
                       Company
                     </h2>
                     {companyLinks.map((link, index) => (
@@ -80,7 +80,7 @@ function Footer() {
                 </div>
                 <div className="col-md-3 col-6">
                   <div className="flex flex-col">
-                    <h2 className="text-base font-semibold leading-4 text-brand-600 bg-black p-3 py-2 w-fit dark:text-white">
+                    <h2 className="text-base font-semibold leading-4 text-[#d0902e] bg-black p-3 py-2 w-fit dark:text-white">
                       Support
                     </h2>
                     {supportLinks.map((link, index) => (
@@ -109,7 +109,7 @@ function Footer() {
                         aria-label="send"
                         className="mr-4 fill-current text-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
                       >
-                        <PaperPlaneRight size={32} color="#f6d284" />
+                        <PaperPlaneRight size={32} color="#d0902e" />
                       </button>
                     </div>
                   </div>

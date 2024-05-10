@@ -1,13 +1,14 @@
 import React from "react";
 import Hero from "../components/Rooms/Hero/Hero";
-import Navbar from "../components/ui/Navbar/Navbar";
 import Footer from "../components/ui/Footer/Footer";
 import Facilities from "../components/ui/Facilities/Facilities";
 import Categories from "../components/Rooms/Categories/Categories";
+import NavbarShared from "../components/ui/NavbarShared/NavbarShared"
 function Rooms() {
   return (
     <>
-      <Navbar />
+
+      <NavbarShared/>
       <Hero />
       <Categories />
       <div className="mt-36">

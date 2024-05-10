@@ -34,7 +34,7 @@ export default function EventsHero() {
               </p>
               <button
                 type="submit"
-                className="border-yellow-top-bottom  mt-3 text-brand-600 font-bold py-2 px-4 focus:outline-none"
+                className="border-[#d0902e] border-2  mt-3 text-[#d0902e] font-bold py-2 px-4 focus:outline-none"
               >
                 ENQUIRE NOW
               </button>

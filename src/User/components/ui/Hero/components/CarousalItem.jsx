@@ -5,7 +5,7 @@ function CarouselItem({ image, title, subtitle, active }) {
     <div className={`carousel-item  ${active ? "active" : ""}`}>
       <img
         src={image}
-        className="d-block w-100 img-fluid hero-image-shadow md:h-[65vh] h-[50vh]"
+        className="d-block w-100 img-fluid hero-image-shadow md:h-[100vh] h-[50vh]"
         alt="carousel-individual"
       />
       <div className="carousel-caption  d-flex flex-column    justify-content-center h-100 top-0">

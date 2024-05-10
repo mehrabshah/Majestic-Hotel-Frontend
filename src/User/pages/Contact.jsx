@@ -1,10 +1,10 @@
 import React from "react";
 import ContactUs from "../components/forms/ContactUs/contactus";
-import Navbar from "../components/ui/Navbar/Navbar";
+import NavbarShared from "../components/ui/NavbarShared/NavbarShared";
 function Contact() {
   return (
     <>
-      <Navbar />
+      <NavbarShared/>
       <ContactUs />
     </>
   );

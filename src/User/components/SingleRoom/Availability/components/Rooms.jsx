@@ -3,19 +3,26 @@ import "../Availability.css";
 import Select from "../../../Shared/Select/Select";
 import { useForm } from "react-hook-form";
 import {formatNumber} from "../../../../utils/helpers"
+import { useBookingContext } from "../../../../contexts/BookingContext";
+
+
 function Rooms({
   imgSrc,
   heading,
   price,
   availableRooms,
   categoryId,
-  setBookingDetails,
-  setPriceDetails,
   description,
   capacityChild,
   capacity,
   currency
 }) {
+ 
+  const {
+    setBookingDetails,
+    setPriceDetails,
+  } = useBookingContext();
+
   const [showModal, setShowModal] = useState(false);
   //No of Adults allowed for each category
   const capacityArray = Array.from(

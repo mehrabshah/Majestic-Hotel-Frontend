@@ -11,10 +11,18 @@ import {
 import { formatedDate } from "../../../../utils/helpers";
 import useLocalStorage from "../../../../hooks/useLoacalStorage";
 import { formatNumber } from "../../../../utils/helpers";
-function Booking({ checkInOutDate, bookingDetails, PrizeDetails, currency }) {
+import { useBookingContext } from "../../../../contexts/BookingContext";
+
+function Booking({ checkInOutDate, currency }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
+
+  const {
+    bookingDetails,
+    priceDetails,
+  } = useBookingContext();
+
 
   useEffect(() => {
     if (checkInOutDate) {
@@ -32,7 +40,7 @@ function Booking({ checkInOutDate, bookingDetails, PrizeDetails, currency }) {
   // For sending the data to payment component
   const { setValue } = useLocalStorage();
   // Calculate total price using reduce method
-  const totalPrice = PrizeDetails.reduce(
+  const totalPrice = priceDetails.reduce(
     (accumulator, detail) => accumulator + detail.price,
     0
   );

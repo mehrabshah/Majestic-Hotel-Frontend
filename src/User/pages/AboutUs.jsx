@@ -1,10 +1,10 @@
 import React from "react";
 import AboutUs from "../components/AboutUs/aboutus";
-import Navbar from "../components/ui/Navbar/Navbar";
+import NavbarShared from "../components/ui/NavbarShared/NavbarShared";
 function About() {
   return (
     <>
-      <Navbar />
+      <NavbarShared/>
       <AboutUs />
     </>
   );

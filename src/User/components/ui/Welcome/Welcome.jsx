@@ -10,7 +10,7 @@ function Welcome() {
             <div className="col-lg-6 lg:pb-0  pb-3 text-center text-lg-start">
               <h3 className="main-heading-font">
                 Welcome to{" "}
-                <span className="me-2  text-[#f6d284]">
+                <span className="me-2  text-[#d0902e]">
                   Majestic <br className="d-none d-lg-block" />
                   the heaven
                 </span>
@@ -30,7 +30,7 @@ function Welcome() {
                 relaxation.
               </p>
               <Link to="/about-us">
-                <button className="mt-4 border-2 border-[#f6d284] pt-2 pb-2 ps-4 pe-4 text-[#f6d284] font-bold rounded-3xl">
+                <button className="mt-4 border-2 border-[#d0902e] pt-2 pb-2 ps-4 pe-4 text-[#d0902e] font-bold rounded-3xl">
                   Explore
                 </button>
               </Link>

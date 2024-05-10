@@ -30,7 +30,7 @@ function RoomsSection() {
           imageSrc="./assets/banner-4.jpg"
           title="Double Room"
           description="Indulge in the comfort and elegance of our contemporary double rooms, each featuring a plush double bed and a luxurious en-suite bathroom"
-          price={`$${doubleRoomPrice}/Night`}
+          price={`£${doubleRoomPrice}/Night`}
           bookText="Book Now"
         />
       </div>
@@ -39,7 +39,7 @@ function RoomsSection() {
           imageSrc="./assets/bed-2.jpg"
           title="Twim Room"
           description="Experience spacious comfort and exceptional value in our twin rooms, featuring two cozy single beds ideal for a relaxing stay"
-          price={`$${twimRoomPrice}/Night`}
+          price={`£${twimRoomPrice}/Night`}
           bookText="Book Now"
         />
       </div>
@@ -48,7 +48,7 @@ function RoomsSection() {
           imageSrc="./assets/bed-3.jpg"
           title="Single Room"
           description="Single rooms, where comfort meets convenience for the solo traveler & features a snug single bed designed for a peaceful night's rest."
-          price={`$${singleRoomPrice}/Night`}
+          price={`£${singleRoomPrice}/Night`}
           bookText="Book Now"
         />
       </div>

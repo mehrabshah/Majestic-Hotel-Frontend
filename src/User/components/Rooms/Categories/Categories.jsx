@@ -11,7 +11,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -22,7 +22,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -33,7 +33,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -44,7 +44,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -55,7 +55,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -66,7 +66,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -77,7 +77,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
   [
@@ -88,7 +88,7 @@ const features = [
     "Hair Dryer",
     "Non Smoking Rooms",
     "Wireless Internet",
-    "Lift to all flowers",
+    "Lift to all floors",
     "Multi-lingual Staff",
   ],
 ];

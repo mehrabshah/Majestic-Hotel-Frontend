@@ -76,7 +76,7 @@ const EventNCelebrations = () => {
 
       <EventsHero />
       <EventsWedding />
-      <ConferenceFacts />
+      
       <EventsSlider />
       <div
         className="bg-auto container bg-center"
@@ -193,7 +193,7 @@ const EventNCelebrations = () => {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-dark  text-brand-600 font-bold py-2 px-4 focus:outline-none"
+                className="bg-dark  text-[#d0902e] font-bold py-2 px-4 focus:outline-none"
               >
                 Submit
               </button>

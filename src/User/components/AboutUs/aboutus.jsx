@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div className="container-fluid about-us-background">
         <div className="row h-[80vh] mx-auto align-items-center">
           <div className="col-md-6 p-md-5 p-3">
-            <h1 className="el-messiri-bold text-brand-600 text-4xl md:text-8xl">
+            <h1 className="el-messiri-bold text-[#d0902e] text-4xl md:text-8xl">
               ABOUT
             </h1>
             <div className="row align-items-center justify-content-between">
@@ -42,11 +42,11 @@ const AboutUs = () => {
       {/* Section Two */}
       <div className="flex flex-col w-full mb-5 mb-md-3 3xlmax-w- mx-auto py-8">
         <h2 className="text-2xl md:text-4xl font-bold text-center my-5">
-          Our <span className="text-brand-600">History</span>
+          Our <span className="text-[#d0902e]">Facilities</span>
         </h2>
         <div className="flex flex-wrap align-items-center justify-content-around">
           <div className="flex flex-col items-center ">
-            <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full bg-[#d0902e] flex items-center justify-center">
               <Bed size={32} color="white" />
             </div>
             <div className="flex-grow  pb-2">
@@ -57,7 +57,7 @@ const AboutUs = () => {
             <p className="text-gray-700">Exceptional dining & impeccable hospitality</p>
           </div>
           <div className="flex flex-col items-center mt-4 lg:mt-0">
-            <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full bg-[#d0902e] flex items-center justify-center">
               <Champagne size={32} color="white" />
             </div>
             <div className="flex-grow  pb-2">
@@ -68,7 +68,7 @@ const AboutUs = () => {
             <p className="text-gray-700">Sea views, exquisite bar service</p>
           </div>
           <div className="flex flex-col items-center mt-4 lg:mt-0">
-            <div className="w-14 h-14 rounded-full bg-brand-600 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full bg-[#d0902e] flex items-center justify-center">
               <ForkKnife size={32} color="white" />
             </div>
             <div className="flex-grow  pb-2">
@@ -99,7 +99,7 @@ const AboutUs = () => {
               <p className="font-bold text-4xl text-white md:text-8xl ps-3">
                  Heritage
               </p>
-              <p className="ms-3 font-bold text-3xl text-brand-600 md:text-4xl pe-3">
+              <p className="ms-3 font-bold text-3xl text-[#d0902e] md:text-4xl pe-3">
                 Coastal Elegance awaits
               </p>
             </div>

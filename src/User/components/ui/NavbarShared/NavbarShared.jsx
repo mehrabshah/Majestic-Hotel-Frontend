@@ -1,10 +1,10 @@
 import React from "react";
-import "./Navbar.css";
+import "./NavbarShared.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-function Navbar() {
+function NavbarShared() {
   return (
-    <nav className="navbar lg:absolute w-[100%] lg:z-10  navbar-expand-xl  pt-0 px-0 px-md-3 pe-lg-5 pb-0 ">
+    <nav className="navbar   navbar-expand-xl  pt-0 px-0 px-md-3 pe-lg-5 pb-0 ">
       <div className="container-lg container-fluid nav-padding">
         <NavLink to="/home">
           <img
@@ -35,7 +35,7 @@ function Navbar() {
             <li className="nav-item ms-2 mt-lg-3">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-link nav-text lg:text-[#ffffff]" + (isActive ? " active" : "")
+                  "nav-link nav-text " + (isActive ? " active" : "")
                 }
                 to="/home"
               >
@@ -45,7 +45,7 @@ function Navbar() {
             <li className="nav-item ms-2 mt-lg-3">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-link nav-text  lg:text-[#ffffff]" + (isActive ? " active" : "")
+                  "nav-link nav-text " + (isActive ? " active" : "")
                 }
                 to="/about-us"
               >
@@ -55,7 +55,7 @@ function Navbar() {
             <li className="nav-item ms-2 mt-lg-3">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-link nav-text    lg:text-[#ffffff]" + (isActive ? " active" : "")
+                  "nav-link nav-text " + (isActive ? " active" : "")
                 }
                 to="/rooms"
               >
@@ -65,7 +65,7 @@ function Navbar() {
             <li className="nav-item ms-2 mt-lg-3">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-link nav-text lg:text-[#ffffff]" + (isActive ? " active" : "")
+                  "nav-link nav-text " + (isActive ? " active" : "")
                 }
                 to="/events-celebrations"
               >
@@ -75,7 +75,7 @@ function Navbar() {
             <li className="nav-item me-lg-5 mt-lg-3">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-link nav-text  lg:text-[#ffffff]" + (isActive ? " active" : "")
+                  "nav-link nav-text" + (isActive ? " active" : "")
                 }
                 to="/contact-us"
               >
@@ -101,4 +101,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarShared;

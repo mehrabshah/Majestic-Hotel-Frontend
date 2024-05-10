@@ -33,10 +33,10 @@ function Category({
               <Button
                 text={feature ? "SHOW DETAILS" : "Hide DETAILS"}
                 backgroundColor="bg-[#fff]"
-                color="text-[#f6d284]"
+                color="text-[#d0902e]"
                 padding="pt-2 pb-2 ps-2 pe-2"
-                border="border-t-[#f6d284] border-b-[#f6d284] border-t-2 border-b-2"
-                hover="hover:border-s-[#f6d284] hover:border-e-[#f6d284] hover:border-s-2 hover:border-e-2"
+                border="border-t-[#d0902e] border-b-[#f6d284] border-t-2 border-b-2"
+                hover="hover:border-s-[#d0902e] hover:border-e-[#d0902e] hover:border-s-2 hover:border-e-2"
                 onClick={onFeatureShow}
               />
             </div>
