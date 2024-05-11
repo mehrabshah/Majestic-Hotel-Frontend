@@ -193,7 +193,7 @@ const EventNCelebrations = () => {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-dark  text-[#d0902e] font-bold py-2 px-4 focus:outline-none"
+                className="bg-dark  text-[#f6d284] font-bold py-2 px-4 focus:outline-none"
               >
                 Submit
               </button>

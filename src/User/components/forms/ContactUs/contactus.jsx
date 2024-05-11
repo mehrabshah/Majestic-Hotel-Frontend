@@ -73,7 +73,7 @@ const ContactUs = () => {
                   onPhoneNumberChange={onTelephoneChange}
                 />
                 {errors.telephone && <span className="text-red-500 text-xs italic">Telephone is required</span>} */}
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="telephone">telephone</label>
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="telephone">Telephone</label>
                 <input {...register('telephone', { required: true })} className="appearance-none border-sidebottom-0 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" />
                 {errors.telephone && <span className="text-red-500 text-xs italic">telephone is required</span>}
 
@@ -96,7 +96,7 @@ const ContactUs = () => {
             </div>
 
             <div className="flex items-center justify-between">
-              <button type="submit" className="bg-dark  text-[#d0902e] font-bold py-2 px-4 focus:outline-none">
+              <button type="submit" className="bg-dark  text-[#f6d284] font-bold py-2 px-4 focus:outline-none">
                 Submit
               </button>
             </div>

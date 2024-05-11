@@ -14,7 +14,6 @@ const formatDate = (date) => {
     return `${monthNames[monthIndex]} ${day}, ${year}`;
   };
 
-
 /**
  * get current date
  * @param {Date} date

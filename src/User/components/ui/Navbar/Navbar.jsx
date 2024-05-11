@@ -90,8 +90,8 @@ function Navbar() {
                 }
                 to="/single-room"
               >
-                <span className="nav-text-book-now pe-4"> BOOK NOW </span>
-                <IoIosArrowForward size={20} color="#d0902e" />
+                <span className="nav-text-book-now text-[#f6d284] pe-4"> BOOK NOW </span>
+                <IoIosArrowForward size={20} color="#f6d284" />
               </NavLink>
             </li>
           </ul>

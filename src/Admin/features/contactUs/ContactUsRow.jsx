@@ -50,11 +50,11 @@ function ContactUsRow({ contactUs }) {
               </DropdownMenu.Item>
 
               {/* Delete contactUs */}
-              <Modal.Toggle toggleName="delete-contactUs">
+              {/* <Modal.Toggle toggleName="delete-contactUs">
                 <DropdownMenu.Item icon={<Trash size={20} />}>
                   Delete contactUs
                 </DropdownMenu.Item>
-              </Modal.Toggle>
+              </Modal.Toggle> */}
             </DropdownMenu.Content>
 
             <Modal.Window windowName="delete-contactUs">

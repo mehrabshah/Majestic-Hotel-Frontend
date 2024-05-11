@@ -64,7 +64,7 @@ function Footer() {
               <div className="row">
                 <div className="col-md-3 col-6">
                   <div className="sm:ml-0 ml-8 flex flex-col">
-                    <h2 className="text-base font-semibold leading-4 text-[#d0902e] bg-black p-3 py-2 w-fit dark:text-white">
+                    <h2 className="text-base font-semibold leading-4 text-[#f6d284] bg-black p-3 py-2 w-fit dark:text-white">
                       Company
                     </h2>
                     {companyLinks.map((link, index) => (
@@ -80,7 +80,7 @@ function Footer() {
                 </div>
                 <div className="col-md-3 col-6">
                   <div className="flex flex-col">
-                    <h2 className="text-base font-semibold leading-4 text-[#d0902e] bg-black p-3 py-2 w-fit dark:text-white">
+                    <h2 className="text-base font-semibold leading-4 text-[#f6d284] bg-black p-3 py-2 w-fit dark:text-white">
                       Support
                     </h2>
                     {supportLinks.map((link, index) => (

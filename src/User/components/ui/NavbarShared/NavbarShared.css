@@ -26,22 +26,22 @@
 .navbar .book-now-btn{
   padding: 8px 20px;
     margin-top: -4px;
-    color: #d0902e !important;
+    color: #f6d284 !important;
 }
 .nav-text-book-now{
   border-bottom: 0px solid rgba(250, 190, 57, 0);
   text-transform: uppercase;
-  color: #d0902e;
+  color: #f6d284 !important;
   font-family: "Jost", sans-serif;
   font-size: 0.850rem;
   cursor: pointer;
 
 }
 .active{
-  color:#FFC107 !important;
+  color:#f6d284 !important;
 }
 .navbar .nav-text:hover{
-  color: #FFC107;
+  color: #f6d284;
 }
 .navbar .heading-fonts{
   font-size: 1.5rem;

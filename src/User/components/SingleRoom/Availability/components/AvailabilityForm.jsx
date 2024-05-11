@@ -58,7 +58,6 @@ function AvailabilityForm({ submitAvailabilityForm }) {
 
     setValue("startDate", startDateValue);
     setValue("endDate", endDateValue);
-
     submitAvailabilityForm(data);
   };
 

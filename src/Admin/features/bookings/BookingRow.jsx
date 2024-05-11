@@ -76,6 +76,14 @@ function BookingRow({ booking }) {
                 See details 
               </DropdownMenu.Item>
 
+              <DropdownMenu.Item
+                icon={<Eye size={20} />}
+                onClick={() => navigate(`/editBookings/${orderId}`)}
+              >
+                Edit details 
+              </DropdownMenu.Item>
+
+
               {/* Delete contactUs */}
               <Modal.Toggle toggleName="delete-booking">
                 <DropdownMenu.Item icon={<Trash size={20} />}>

@@ -74,7 +74,7 @@ function JoinTeam() {
           love to hear from you! To apply for a position at The Majestic Hotel,
           please send your resume and a cover letter outlining your relevant
           experience and why you'd be a great fit for our team to{" "}
-          <span className="text-blue-500">[email address]</span>.
+          <span className="text-blue-500">reception@baymajestic.com</span>
         </p>
 
         <p className="mb-6">

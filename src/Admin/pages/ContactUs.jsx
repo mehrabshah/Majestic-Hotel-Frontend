@@ -8,7 +8,7 @@ function ContactUsAdmin() {
       <div className="mb-10 flex items-center justify-between">
         <span className="text-3xl font-semibold">All Contact Queries</span>
 
-        <ContactUsTableOperations />
+        {/* <ContactUsTableOperations /> */}
       </div>
 
       <ContactUsTable />

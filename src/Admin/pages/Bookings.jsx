@@ -7,7 +7,7 @@ function Bookings() {
       <div className="mb-10 flex items-center justify-between">
         <span className="text-3xl font-semibold">All bookings</span>
 
-        <BookingTableOperations />
+        {/* <BookingTableOperations /> */}
       </div>
 
       <BookingTable />

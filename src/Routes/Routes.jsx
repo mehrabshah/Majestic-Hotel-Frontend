@@ -28,6 +28,7 @@ import JoinTeam from "../User/pages/JoinTeam";
 import PrivacyPolicy from "../User/pages/PrivacyPolicy";
 import TermsCondition from "../User/pages/TermsCondition";
 import Confirmation from "../User/pages/Confirmation";
+import EditBookingDetails from "../Admin/pages/EditBookingDetails";
 
 function AppRoutes() {
   return (
@@ -44,6 +45,9 @@ function AppRoutes() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/bookings/:bookingId" element={<BookingDetails />} />
+        <Route path="/editBookings/:bookingId" element={<EditBookingDetails/>} />
+ 
+
         <Route path="/checkin/:bookingId" element={<BookingCheckin />} />
         <Route path="/contactUs" element={<ContactUsAdmin />} />
         <Route path="/contactUs/:contactUsId" element={<ContactUsDetail />} />
