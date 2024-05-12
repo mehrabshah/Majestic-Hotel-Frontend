@@ -26,11 +26,12 @@ function BookingTable() {
             <Table.Head />
           </Table.Row>
         </Table.Header>
+        -
 
         <Table.Body>
           {booking.map((booking) => (
             <BookingRow booking={booking} key={booking.id} />
-          ))}
+          ))} 
         </Table.Body>
       </Table>
 

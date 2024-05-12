@@ -5,6 +5,8 @@ import Button from "../../Shared/Button/Button";
 import { useNavigate } from 'react-router-dom';
 import {calculateNumberOfNights} from "../../../utils/helpers"
 import useLocalStorage from "../../../hooks/useLoacalStorage";
+import  {useBookingContext} from "../../../contexts/BookingContext"
+
 function Sidebar() {
   const navigate = useNavigate();
   const { getValue , removeValue }=useLocalStorage()
@@ -15,9 +17,37 @@ function Sidebar() {
   },[])
   const bookingData = getValue("Add-to-cart");
   const { totalPrice, totalRooms,startDate,endDate } = bookingData;
+  const  {setBookingDetails,  setPriceDetails} = useBookingContext()
+
   const Change=()=>{
     navigate('/rooms');
     removeValue() 
+    //Reset the bookings details
+    setBookingDetails(
+      [
+        { categoryId: 1, numberOfRooms: 0 },
+        { categoryId: 2, numberOfRooms: 0 },
+        { categoryId: 3, numberOfRooms: 0 },
+        { categoryId: 4, numberOfRooms: 0 },
+        { categoryId: 5, numberOfRooms: 0 },
+        { categoryId: 6, numberOfRooms: 0 },
+        { categoryId: 7, numberOfRooms: 0 },
+        { categoryId: 8, numberOfRooms: 0 },
+      ]
+    )
+    //Reset the price details
+    setPriceDetails(
+      [
+        { categoryId: 1, price: 0 },
+        { categoryId: 2, price: 0 },
+        { categoryId: 3, price: 0 },
+        { categoryId: 4, price: 0 },
+        { categoryId: 5, price: 0 },
+        { categoryId: 6, price: 0 },
+        { categoryId: 7, price: 0 },
+        { categoryId: 8, price: 0 },
+      ]
+    )
   }
   return (
     <div className="col-md-12 sidebar">
