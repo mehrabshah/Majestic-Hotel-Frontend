@@ -2,8 +2,10 @@ import { format, parseISO, isToday } from "date-fns";
 import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers";
 import { useForm } from "react-hook-form";
 import { FaStar } from "react-icons/fa";
-import { extractLocalDate } from "../../../../User/utils/helpers";
+import toast from 'react-hot-toast';
+import { extractLocalDate, formatedDate } from "../../../../User/utils/helpers";
 import Button from "../../../../User/components/Shared/Button/Button";
+import { useNavigate } from 'react-router-dom';
 import {
   getCurrentDate,
   getDateAfterCurrentDate,
@@ -15,9 +17,12 @@ import {
   Warehouse,
 } from "@phosphor-icons/react";
 import Date from "../../../components/ui/Date";
+import { updateBooking } from "../../../services/apiBookings";
 
 function EditBookingDataBox({ booking }) {
 
+
+  const navigate = useNavigate();
   const {
     handleSubmit,
     setValue,
@@ -27,44 +32,26 @@ function EditBookingDataBox({ booking }) {
 
   //Edit the booking details
   const onSubmit = async (data) => {
-    const startDateValue = extractLocalDate(data.startDate);
-    const endDateValue = extractLocalDate(data.endDate);
-
-    if (!data.startDate || !data.endDate) {
-      const newData = { ...data };
-      if (!data.startDate) {
-        newData.startDate = startDateValue;
-      }
-      if (!data.endDate) {
-        newData.endDate = endDateValue;
-      }
-      data = newData;
-    }
-    setValue("startDate", startDateValue);
-    setValue("endDate", endDateValue);
-
-
     const newOrderDetails = {
-        firstName: booking.firstName,        
-        lastName: booking.lastName,
-        status: "UpdatedStatus",
-        phoneNumber: booking.phoneNumber,
-        emailAddress: booking.emailAddress,
-        address: booking.address,
-        city: booking.city,
-        postalCode: booking.postalCode,
-        countryRegionCode:booking.countryRegionCode
+      firstName: booking.firstName,
+      lastName: booking.lastName,
+      status: "UpdatedStatus",
+      phoneNumber: booking.phoneNumber,
+      emailAddress: booking.emailAddress,
+      address: booking.address,
+      city: booking.city,
+      postalCode: booking.postalCode,
+      countryRegionCode: booking.countryRegionCode,
     };
-
-    const newData={
-       orderId:booking.orderId, 
-       startDate:data.startDate,
-       endDate:data.endDate,
-       newOrderDetails:newOrderDetails
-    }
-
-
-    console.log("edit booking new submit", newData);
+    const newData = {
+      orderId: booking.orderId,
+      startDate: formatedDate(extractLocalDate(data.startDate)),
+      endDate: formatedDate(extractLocalDate(data.endDate)),
+      newOrderDetails: newOrderDetails,
+    };
+    updateBooking(newData);
+    toast.success('Booking successfully deleted.');
+    navigate('/bookings');
   };
 
   return (

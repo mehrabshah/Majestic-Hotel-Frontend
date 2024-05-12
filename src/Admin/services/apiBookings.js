@@ -20,9 +20,9 @@ export async function getBookingDetail(id) {
   }
 }
 
-export async function updateBooking(id, dataObj) {
+export async function updateBooking(dataObj) {
   try {
-    const response = await axios.put(`${process.env.backendUrl}/bookings/${id}`, dataObj);
+    const response = await axios.post(`${backendUrl}booking/editMultipleBookings`, dataObj);
     return response.data;
   } catch (error) {
     throw new Error('We are unable to update booking at this time.');
@@ -31,7 +31,7 @@ export async function updateBooking(id, dataObj) {
 
 export async function deleteBooking(id) {
   try {
-    await axios.delete(`${process.env.backendUrl}/bookings/${id}`);
+    await axios.delete(`${backendUrl}booking/orders/${id}`);
   } catch (error) {
     throw new Error('We are unable to delete booking at this time.');
   }

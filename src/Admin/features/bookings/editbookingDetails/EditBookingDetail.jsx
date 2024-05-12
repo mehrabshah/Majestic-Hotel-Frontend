@@ -35,9 +35,8 @@ function EditBookingDetail() {
       <div className="mb-10 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <span className="text-3xl font-semibold">Edit Booking</span>
-        
         </div>
-
+        
         <button
           onClick={moveBack}
           className="flex items-center justify-center gap-2 text-sm font-medium text-gray-600 transition-all hover:text-gray-700"
@@ -47,11 +46,8 @@ function EditBookingDetail() {
         </button>
       </div>
 
-       <EditBookingDataBox booking={booking} />
-
-      
+       <EditBookingDataBox booking={booking}/>
     </>
- 
   );
 }
 

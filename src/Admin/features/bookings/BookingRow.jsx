@@ -33,7 +33,6 @@ function BookingRow({ booking }) {
     categories
   } =booking;
 
-
   const statusBadge = {
     unconfirmed: 'blue',
     'checked-in': 'green',
@@ -83,13 +82,13 @@ function BookingRow({ booking }) {
                 Edit details 
               </DropdownMenu.Item>
 
-
               {/* Delete contactUs */}
-              <Modal.Toggle toggleName="delete-booking">
+              {/* <Modal.Toggle toggleName="delete-booking">
                 <DropdownMenu.Item icon={<Trash size={20} />}>
                   Delete Booking
                 </DropdownMenu.Item>
-              </Modal.Toggle>
+              </Modal.Toggle> */}
+
             </DropdownMenu.Content>
 
             <Modal.Window windowName="delete-booking">
