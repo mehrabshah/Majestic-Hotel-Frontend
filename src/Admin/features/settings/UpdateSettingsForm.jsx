@@ -9,9 +9,7 @@ function UpdateSettingsForm() {
   const [btnDisable, setBtnDisable] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [categoryPrices, setCategoryPrices] = useState({});
-
   const { categories } = useGetCategories(setIsLoading);
-
   const {
     handleSubmit,
     register,
@@ -34,14 +32,12 @@ function UpdateSettingsForm() {
     setCategoryPrices({});
     handleValidate();
   }
-
   function handlePriceChange(categoryId, price) {
     setCategoryPrices(prevPrices => ({
       ...prevPrices,
       [categoryId]: price,
     }));
   }
-
   async function onSubmit() {
     setIsLoading(true)
     const updatedCategories = categories.map(category => ({

@@ -184,3 +184,19 @@
     margin-right: 8px !important;
   }
 }
+
+.fc-h-event {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+.fc-h-event .fc-event-main {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.fc-daygrid-day-events{
+  display: flex;
+  justify-content: center;
+}
