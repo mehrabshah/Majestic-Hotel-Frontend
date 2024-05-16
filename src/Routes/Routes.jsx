@@ -29,7 +29,6 @@ import PrivacyPolicy from "../User/pages/PrivacyPolicy";
 import TermsCondition from "../User/pages/TermsCondition";
 import Confirmation from "../User/pages/Confirmation";
 import EditBookingDetails from "../Admin/pages/EditBookingDetails";
-import Prices from "../Admin/pages/Prices";
 
 function AppRoutes() {
   return (
@@ -47,6 +46,8 @@ function AppRoutes() {
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/bookings/:bookingId" element={<BookingDetails />} />
         <Route path="/editBookings/:bookingId" element={<EditBookingDetails/>} />
+ 
+
         <Route path="/checkin/:bookingId" element={<BookingCheckin />} />
         <Route path="/contactUs" element={<ContactUsAdmin />} />
         <Route path="/contactUs/:contactUsId" element={<ContactUsDetail />} />
@@ -54,7 +55,6 @@ function AppRoutes() {
         <Route path="/users" element={<Users />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/price" element={<Prices/>} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<PageNotFound />} />
@@ -72,6 +72,7 @@ function AppRoutes() {
       <Route path="/privacypolicy"  element={<PrivacyPolicy/>} />
       <Route path="/termsCondition"  element={<TermsCondition/>} />    
       <Route path="/confirmation"  element={<Confirmation/>} />    
+
     </Routes>
   );
 }
