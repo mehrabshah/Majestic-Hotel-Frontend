@@ -41,10 +41,8 @@ function AvailabilityForm({ submitAvailabilityForm }) {
     const currentDate = new Date();
     const dateAfterCurrentDate = new Date(currentDate);
     dateAfterCurrentDate.setDate(currentDate.getDate() + 1);
-
     const startDateValue = data.startDate ? extractLocalDate(data.startDate) : extractLocalDate(currentDate);
     const endDateValue = data.endDate ? extractLocalDate(data.endDate) : extractLocalDate(dateAfterCurrentDate);
-
     if (!data.startDate || !data.endDate) {
       const newData = { ...data }; 
       if (!data.startDate) {

@@ -184,3 +184,17 @@
     margin-right: 8px !important;
   }
 }
+
+
+.fc-h-event {
+  background-color: #ffffff !important; 
+   border: #ffffff  !important;
+   display: flex !important;
+   justify-content: center !important;
+   font-size: 34px !important;
+}
+
+.fc-h-event .fc-event-main {
+  color: #000000 !important;
+  font-weight: bolder !important;
+}

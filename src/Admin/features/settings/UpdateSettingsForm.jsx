@@ -9,7 +9,6 @@ function UpdateSettingsForm() {
   const [btnDisable, setBtnDisable] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [categoryPrices, setCategoryPrices] = useState({});
-
   const { categories } = useGetCategories(setIsLoading);
 
   const {
@@ -96,7 +95,6 @@ function UpdateSettingsForm() {
           </button>
           <button
             type="submit"
-            // disabled={btnDisable}
             className="rounded-md bg-brand-600 px-3 py-2 text-sm font-medium text-brand-50 shadow-sm transition-all hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-brand-200"
           >
             Save changes

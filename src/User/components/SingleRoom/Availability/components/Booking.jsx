@@ -12,12 +12,10 @@ import { formatedDate } from "../../../../utils/helpers";
 import useLocalStorage from "../../../../hooks/useLoacalStorage";
 import { formatNumber } from "../../../../utils/helpers";
 import { useBookingContext } from "../../../../contexts/BookingContext";
-
 function Booking({ checkInOutDate, currency }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
-
   const {
     bookingDetails,
     priceDetails,
