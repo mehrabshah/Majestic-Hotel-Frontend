@@ -2,14 +2,11 @@ import React,{useEffect, useState} from "react";
 import "../Availability.css";
 import Booking from "./Booking";
 import Rooms from "../../Availability/components/Rooms";
-import NoRooms from "./NoRooms";
 import useLocalStorage from "../../../../hooks/useLoacalStorage"
 function RoomsSection({ RoomsData , checkInOutDate}) {
- 
-
   const  {getValue} = useLocalStorage() 
   const currencyRate = getValue("currency-rate")
-
+  
   return (
     <div className="ps-8 pe-8 mx-auto mt-16">
       <div className="row">
@@ -20,12 +17,11 @@ function RoomsSection({ RoomsData , checkInOutDate}) {
                 categoryId={Room.id}
                 imgSrc={Room.image}
                 heading={Room.name}
-                price={Room.price}
                 availableRooms={Room.availableRooms}
                 description={Room.description}
-                capacity={Room.capacity}
                 capacityChild={Room.capacityChild}
                 currency={currencyRate}
+                checkInOutDate={checkInOutDate}
               />
             </div>
           ))}

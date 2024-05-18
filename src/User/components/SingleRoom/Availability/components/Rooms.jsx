@@ -1,34 +1,34 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../Availability.css";
 import Select from "../../../Shared/Select/Select";
 import { useForm } from "react-hook-form";
-import {formatNumber} from "../../../../utils/helpers"
 import { useBookingContext } from "../../../../contexts/BookingContext";
-
+import {
+  extractLocalDate,
+  getCurrentDate,
+  getDateAfterCurrentDate,
+  formatedDate,
+} from "../../../../utils/helpers";
+import { calculateRoomsPrices } from "../../../../Services/Services";
 
 function Rooms({
   imgSrc,
   heading,
-  price,
+  checkInOutDate,
   availableRooms,
   categoryId,
   description,
   capacityChild,
   capacity,
-  currency
 }) {
- 
-  const {
-    setBookingDetails,
-    setPriceDetails,
-  } = useBookingContext();
+  const { bookingDetails, setBookingDetails ,totalPrice, setTotalPrice } =
+ useBookingContext();
 
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
   const [showModal, setShowModal] = useState(false);
   //No of Adults allowed for each category
-  const capacityArray = Array.from(
-    { length: capacity },
-    (_, index) => index
-  );
+  const capacityArray = Array.from({ length: capacity }, (_, index) => index);
   //No of childs allowed for each cetegory
   const childCapacityArray = Array.from(
     { length: capacityChild },
@@ -47,29 +47,62 @@ function Rooms({
     watch,
     formState: { errors },
   } = useForm();
+
+  //Function to select the number of rooms
+  const updateRooms = () => {
+    setBookingDetails((prevBookingDetails) => {
+      prevBookingDetails.forEach((bookingDetail, index) => {
+        if (bookingDetail.categoryId === categoryId) {
+          prevBookingDetails[index] = {
+            ...bookingDetail,
+            numberOfRooms: watch("numberOfRooms"),
+          };
+        }
+      });
+      return [...prevBookingDetails];
+    });
+  };
+
+  //Function to set the checkin and checkout date
+  //If the checkin and checkout date is null then we  will set the check in and checkout date to present date
+  const checkInCheckOut = () => {
+    if (checkInOutDate) {
+      const startDate = formatedDate(
+        extractLocalDate(checkInOutDate.startDate)
+      );
+      setStartDate(startDate);
+      const endDate = formatedDate(extractLocalDate(checkInOutDate.endDate));
+      setEndDate(endDate);
+    } else {
+      const startDate = formatedDate(getCurrentDate());
+      setStartDate(startDate);
+      const endDate = formatedDate(getDateAfterCurrentDate());
+      setEndDate(endDate);
+    }
+  };
+
+  //Function to fetch the the rooms prices
+  const fetchRoomPrices = async () => {
+    
+    const data = {
+      bookingDetails:bookingDetails,
+      startDate:startDate,
+      endDate:endDate
+    };
+
+    if (startDate != null) {
+      const response = await calculateRoomsPrices(data);
+      setTotalPrice(response)
+    }
+  };
+
   // Function to update booking details
   const updateBookingDetails = () => {
-    setBookingDetails((prevBookingDetails) => {
-      const updatedBookingDetails = [...prevBookingDetails];
-      updatedBookingDetails[categoryId - 1] = {
-        categoryId: categoryId,
-        numberOfRooms: watch("numberOfRooms"),
-      };
-      return updatedBookingDetails;
-    });
-    updatePriceDetails();
+    updateRooms();
+    checkInCheckOut();
+    fetchRoomPrices();
   };
-  // Function to update price details
-  const updatePriceDetails = () => {
-    setPriceDetails((prevPriceDetails) => {
-      const updatedPriceDetails = [...prevPriceDetails];
-      updatedPriceDetails[categoryId - 1] = {
-        categoryId: categoryId,
-        price: watch("numberOfRooms") * price,
-      };
-      return updatedPriceDetails;
-    });
-  };
+
   // Toggle modal visibility
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -87,30 +120,31 @@ function Rooms({
             <div>
               <h4 className="guest-heading">People Allowed</h4>
               <div className="flex flex-row mt-3 items-end">
-                {capacity!==4 ? capacityArray.map((guest, index) => (
-                  <img
-                    key={index}
-                    src="/assets/person.png"
-                    className="img-fluid me-2"
-                    alt={`Guest ${index + 1}`}
-                  />
-                )):(
+                {capacity !== 4 ? (
+                  capacityArray.map((guest, index) => (
+                    <img
+                      key={index}
+                      src="/assets/person.png"
+                      className="img-fluid me-2"
+                      alt={`Guest ${index + 1}`}
+                    />
+                  ))
+                ) : (
                   <>
-                  <img
-                  src="/assets/person.png"
-                  className="img-fluid me-2"
-                  alt="Guest Family"
-                />
-                <span className="">X 3</span>
-                </>
+                    <img
+                      src="/assets/person.png"
+                      className="img-fluid me-2"
+                      alt="Guest Family"
+                    />
+                    <span className="">X 3</span>
+                  </>
                 )}
-                 {childCapacityArray.map((guest, index) => (
+                {childCapacityArray.map((guest, index) => (
                   <img
                     key={index}
                     src="/assets/person.png"
                     className="child-image me-2"
                     alt={`Guest ${index + 1}`}
-                    
                   />
                 ))}
               </div>
@@ -130,9 +164,7 @@ function Rooms({
           <li className="col-3">
             <h1 className="d-prices">
               <span>
-                <span id="price" className="ft-16  uppercase">
-               {currency.code} {" "} {formatNumber(price*currency.rate)}
-                </span>
+                <span id="price" className="ft-16  uppercase"></span>
               </span>
               <br />
               <span></span>
@@ -163,14 +195,13 @@ function Rooms({
               <div className="modal-body p-0">
                 <img src={imgSrc} alt="imgSrc" className="modal-image" />
 
-              <div className="ps-3 pt-1 pe-2">
-                <h1 className="modal-title d-inline-block p-fair text-[#9b855b]  text-[22px]   mb-3 mt-2">
-                {heading}
-                </h1>
-                <h5 className="text-[#9b855b] text-[22px] ">Description</h5>
-                <p className="mt-3 text-sm">{description}</p>
-              </div>
-
+                <div className="ps-3 pt-1 pe-2">
+                  <h1 className="modal-title d-inline-block p-fair text-[#9b855b]  text-[22px]   mb-3 mt-2">
+                    {heading}
+                  </h1>
+                  <h5 className="text-[#9b855b] text-[22px] ">Description</h5>
+                  <p className="mt-3 text-sm">{description}</p>
+                </div>
               </div>
               <div className="modal-footer  border-t-0">
                 <button

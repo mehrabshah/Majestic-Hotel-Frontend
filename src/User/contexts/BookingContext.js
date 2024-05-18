@@ -16,20 +16,11 @@ export const BookingProvider = ({ children }) => {
     { categoryId: 8, numberOfRooms: 0 },
   ]);
 
-  const [priceDetails, setPriceDetails] = useState([
-    { categoryId: 1, price: 0 },
-    { categoryId: 2, price: 0 },
-    { categoryId: 3, price: 0 },
-    { categoryId: 4, price: 0 },
-    { categoryId: 5, price: 0 },
-    { categoryId: 6, price: 0 },
-    { categoryId: 7, price: 0 },
-    { categoryId: 8, price: 0 },
-  ]);
+  const [totalPrice,setTotalPrice]=useState(null)
 
   return (
     <BookingContext.Provider
-      value={{ bookingDetails, setBookingDetails, priceDetails, setPriceDetails }}
+      value={{ bookingDetails, setBookingDetails ,totalPrice, setTotalPrice }}
     >
       {children}
     </BookingContext.Provider>

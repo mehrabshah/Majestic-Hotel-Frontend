@@ -10,9 +10,10 @@ function Select({ label, register, options ,width, onClick }) {
       className ="form-select h-[40px]"
       {...register}
       onClick ={onClick}
+      
     >
       {options.map((option) => (
-        <option key ={option.value} value ={option.value}>
+        <option key ={option.value} value ={option.value} >
           {option.label}
         </option>
       ))}

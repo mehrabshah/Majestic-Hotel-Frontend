@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../../../Shared/Button/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import {formatNumber} from "../../../../utils/helpers"
 import {
   calculateNumberOfNights,
   extractLocalDate,
@@ -10,7 +11,6 @@ import {
 } from "../../../../utils/helpers";
 import { formatedDate } from "../../../../utils/helpers";
 import useLocalStorage from "../../../../hooks/useLoacalStorage";
-import { formatNumber } from "../../../../utils/helpers";
 import { useBookingContext } from "../../../../contexts/BookingContext";
 function Booking({ checkInOutDate, currency }) {
   const [startDate, setStartDate] = useState(null);
@@ -18,9 +18,8 @@ function Booking({ checkInOutDate, currency }) {
   const navigate = useNavigate();
   const {
     bookingDetails,
-    priceDetails,
+    totalPrice
   } = useBookingContext();
-
 
   useEffect(() => {
     if (checkInOutDate) {
@@ -37,12 +36,8 @@ function Booking({ checkInOutDate, currency }) {
   }, [checkInOutDate]);
   // For sending the data to payment component
   const { setValue } = useLocalStorage();
-  // Calculate total price using reduce method
-  const totalPrice = priceDetails.reduce(
-    (accumulator, detail) => accumulator + detail.price,
-    0
-  );
-  // Calculate total number of rooms using reduce method
+
+  // Calculate total number of rooms using reduce method  
   const totalRooms = bookingDetails.reduce(
     (accumulator, detail) => accumulator + parseInt(detail.numberOfRooms),
     0
@@ -80,7 +75,7 @@ function Booking({ checkInOutDate, currency }) {
             <strong>{totalRooms}</strong> Rooms
           </div>
           <div id="xhidn-tprice" className="green uppercase">
-            {currency.code} {formatNumber(totalPrice * currency.rate)}
+          <strong>{currency.code} { formatNumber(totalPrice*currency.rate)}</strong>
           </div>
         </div>
       )}

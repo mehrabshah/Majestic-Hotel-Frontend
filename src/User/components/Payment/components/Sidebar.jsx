@@ -17,7 +17,7 @@ function Sidebar() {
   },[])
   const bookingData = getValue("Add-to-cart");
   const { totalPrice, totalRooms,startDate,endDate } = bookingData;
-  const  {setBookingDetails,  setPriceDetails} = useBookingContext()
+  const  {setBookingDetails,setTotalPrice} = useBookingContext()
 
   const Change=()=>{
     navigate('/rooms');
@@ -36,18 +36,7 @@ function Sidebar() {
       ]
     )
     //Reset the price details
-    setPriceDetails(
-      [
-        { categoryId: 1, price: 0 },
-        { categoryId: 2, price: 0 },
-        { categoryId: 3, price: 0 },
-        { categoryId: 4, price: 0 },
-        { categoryId: 5, price: 0 },
-        { categoryId: 6, price: 0 },
-        { categoryId: 7, price: 0 },
-        { categoryId: 8, price: 0 },
-      ]
-    )
+    setTotalPrice(null)
   }
   return (
     <div className="col-md-12 sidebar">

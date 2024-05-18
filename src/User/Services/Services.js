@@ -57,3 +57,16 @@ export const getRoomsPrices = async (userData) => {
   }
 };
 
+//Function to calculate the room prices
+export const calculateRoomsPrices = async (userData) => {
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}booking/calculateTotalPrice`,
+      userData
+    );
+    return response.data.totalPrice;
+  } catch (error) {
+    throw error.response?.data || 'We are unable to fetch the rooms prices';
+  }
+};
+
