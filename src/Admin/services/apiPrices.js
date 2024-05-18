@@ -10,3 +10,14 @@ export async function getRoomsPrices(data) {
       throw new Error('Failed to fetch Rooms Prices.');
     }
   }
+
+
+  export async function addPrices(data) {
+    try {
+      const response = await axios.post(`${backendUrl}category/category/addPrice`,data);
+      return response.data;
+
+    } catch (error) {
+      throw new Error('Failed to fetch Rooms Prices.');
+    }
+  }
