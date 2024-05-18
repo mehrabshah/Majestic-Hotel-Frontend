@@ -5,12 +5,13 @@ import { useForm } from "react-hook-form";
 import { Input } from "../../components/ui/Input";
 import { addPrices } from "../../services/apiPrices";
 import Calender from "./Calender";
+import {usePriceDetails} from "./hooks/usePriceDetails"
 
 function AddCalenderPrice({ categoryId }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [date, setdDate] = useState(null);
   const [roomTotalPrices,setRoomTotalPrices]=useState(null)
-
+  const { price , fetchBookingPrices  } = usePriceDetails(categoryId);  
 
   //Function to opne the modal
   const openModal = () => {
@@ -42,12 +43,13 @@ function AddCalenderPrice({ categoryId }) {
     const response = await addPrices(objdata);
     setRoomTotalPrices(response)
     reset();
+    fetchBookingPrices();
     closeModal();
   };
 
   return (
     <>
-      <Calender handleDateClick={handleDateClick} categoryId={categoryId}/>
+      <Calender handleDateClick={handleDateClick} categoryId={categoryId} price={price} />
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text-2xl font-bold mb-3">Update Price</h2>

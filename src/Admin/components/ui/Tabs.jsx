@@ -21,7 +21,7 @@ function Tab({ children, index }) {
 
   return (
     <button
-      className={` py-2 border-b-2 border-transparent   font-extrabold  bg-brand-600 text-brand-50 text-sm    ${
+      className={` py-2 px-2 border-b-2 border-transparent   font-extrabold  bg-brand-600 text-brand-50 text-sm    ${
         activeTab === index ? 'border-blue-500' : 'text-gray-500'
       }`}
       onClick={() => setActiveTab(index)}
