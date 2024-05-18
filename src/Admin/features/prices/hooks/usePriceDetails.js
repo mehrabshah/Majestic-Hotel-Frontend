@@ -13,8 +13,6 @@ export const usePriceDetails = (categoryId) => {
             id:categoryId
         }
         const response = await getRoomsPrices(obj);
-        console.log("response",response)
-
         const newResponse = response.map(({ date, price }) => ({
           date,
           title: `£ ${price}`,
