@@ -81,6 +81,7 @@ const EventNCelebrations = () => {
       <div
         className="bg-auto container bg-center"
         style={{ backgroundImage: "url(assets/ONLY_DECOR1.png)" }}
+        name="enquiry"
       >
         <div className="flex justify-center items-center mt-5">
           <form

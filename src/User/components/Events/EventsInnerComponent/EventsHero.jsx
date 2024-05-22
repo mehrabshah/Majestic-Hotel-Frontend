@@ -1,3 +1,4 @@
+import { Link, Element, scroller } from "react-scroll";
 export default function EventsHero() {
   return (
     <>
@@ -32,12 +33,18 @@ export default function EventsHero() {
                 <br />
                 Majestic Hotel England's indoor and outdoor venues.
               </p>
-              <button
-                type="submit"
-                className="border-[#d0902e] border-2  mt-3 text-[#d0902e] font-bold py-2 px-4 focus:outline-none"
+              <div className="mt-3">
+              <Link
+                 to="enquiry"
+                 spy={true}
+                 smooth={true}
+                 duration={500}
+                className="border-[#d0902e] border-2 cursor-pointer  mt-3 text-[#d0902e] font-bold py-2 px-4 focus:outline-none"
               >
-                ENQUIRY NOW
-              </button>
+                ENQUIRE NOW
+              </Link>
+              </div>
+
             </div>
           </div>
         </div>

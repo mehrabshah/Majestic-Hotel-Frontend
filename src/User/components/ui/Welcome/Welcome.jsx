@@ -11,10 +11,9 @@ function Welcome() {
               <h3 className="main-heading-font">
                 Welcome to{" "}
                 <span className="me-2  text-[#d0902e]">
-                  Majestic <br className="d-none d-lg-block" />
-                  the heaven
+                  Majestic Hotel: <br className="d-none d-lg-block" />
                 </span>
-                of your weekend
+                Where Coastal Charm Meets Timeless Elegance
               </h3>
               <p className="pt-4 main-paragraph-font-welcome">
                 Located along the picturesque beachfront of Eastbourne lies The
