@@ -69,7 +69,7 @@ function Booking({ checkInOutDate, currency }) {
       <span className="g-book">
         {calculateNumberOfNights(startDate, endDate) || "1"} Night
       </span>
-      {totalPrice !== 0 && (
+      {totalRooms !== 0 && (
         <div className="room-type ">
           <div id="xhidn-trooms">
             <strong>{totalRooms}</strong> Rooms
@@ -79,7 +79,7 @@ function Booking({ checkInOutDate, currency }) {
           </div>
         </div>
       )}
-      {totalRooms > 0 ? (
+      {totalRooms !== 0 ? (
         <Link to="/payment">
           <Button
             text="BOOK NOW"
