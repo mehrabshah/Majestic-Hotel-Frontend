@@ -54,7 +54,7 @@ function Rooms({
         if (bookingDetail.categoryId === categoryId) {
           prevBookingDetails[index] = {
             ...bookingDetail,
-            numberOfRooms: watch("numberOfRooms"),
+            numberOfRooms: 1,
           };
         }
       });
@@ -116,7 +116,7 @@ function Rooms({
         <h2 className="p-fair room-heading">{heading}</h2>
         <ul className="room-ul-new row p-3">
           <li className="col-3">
-            <div>
+57            <div>
               <h4 className="guest-heading">People Allowed</h4>
               <div className="flex flex-row mt-3 items-end">
                 {capacity !== 4 ? (

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../../../Shared/Button/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import {formatNumber} from "../../../../utils/helpers"
+import { formatNumber } from "../../../../utils/helpers";
 import {
   calculateNumberOfNights,
   extractLocalDate,
@@ -16,10 +16,7 @@ function Booking({ checkInOutDate, currency }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
-  const {
-    bookingDetails,
-    totalPrice
-  } = useBookingContext();
+  const { bookingDetails, totalPrice } = useBookingContext();
 
   useEffect(() => {
     if (checkInOutDate) {
@@ -37,7 +34,7 @@ function Booking({ checkInOutDate, currency }) {
   // For sending the data to payment component
   const { setValue } = useLocalStorage();
 
-  // Calculate total number of rooms using reduce method  
+  // Calculate total number of rooms using reduce method
   const totalRooms = bookingDetails.reduce(
     (accumulator, detail) => accumulator + parseInt(detail.numberOfRooms),
     0
@@ -75,7 +72,9 @@ function Booking({ checkInOutDate, currency }) {
             <strong>{totalRooms}</strong> Rooms
           </div>
           <div id="xhidn-tprice" className="green uppercase">
-          <strong>{currency.code} { formatNumber(totalPrice*currency.rate)}</strong>
+            <strong>
+              {currency.code} {formatNumber(totalPrice * currency.rate)}
+            </strong>
           </div>
         </div>
       )}
