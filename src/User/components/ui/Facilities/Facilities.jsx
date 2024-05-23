@@ -12,15 +12,15 @@ const Facilities = () => {
             <div className="row">
               <div className="col-md-6 align-self-center text-center order-2 order-md-2 ps-2 pe-2">
                 <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
-                  Business Centre
+                Unparalleled Hospitality
                 </h5>
                 <h2 className=" ft-30 mb-4 main-heading-facilities">
                   Impeccable Service
                 </h2>
                 <p className="px-0 px-lg-5 lg:w-75 mx-auto mb-4 ps-2 pe-2  main-paragraph-facilities">
-                  Explore our meeting venues with a wide variety of
-                  well-equipped conference halls and meeting rooms, perfect for
-                  all your events.
+                  From the moment you step through our doors, our dedicated team
+                  is committed to ensuring your stay is nothing short of
+                  extraordinary.
                 </p>
               </div>
               <div className="col-md-6 align-self-center order-1 order-md-2 lg:p-0">
@@ -31,14 +31,13 @@ const Facilities = () => {
               </div>
               <div className="col-md-6 align-self-center text-center order-4 order-md-4 ps-2 pe-2">
                 <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
-                  Spa &amp; Wellness
+                Rejuvenate Your Senses
                 </h5>
                 <h2 className="main-heading-facilities ft-30 mb-4">
                   Relax &amp; Recover
                 </h2>
                 <p className="main-paragraph-facilities px-0 px-lg-5 lg:w-75 mx-auto mb-4 g-light">
-                  Embark on a soul-soothing journey in our Spa with a variety of
-                  treatments and massages.
+                Indulge in Opulent and Tranquil Soul-Soothing Treatments
                 </p>
               </div>
             </div>
