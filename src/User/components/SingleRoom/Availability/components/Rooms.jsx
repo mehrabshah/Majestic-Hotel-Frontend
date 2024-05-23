@@ -10,6 +10,7 @@ import {
   formatedDate,
 } from "../../../../utils/helpers";
 import { calculateRoomsPrices } from "../../../../Services/Services";
+import Button from "../../../Shared/Button/Button";
 
 function Rooms({
   imgSrc,
@@ -116,7 +117,7 @@ function Rooms({
         <h2 className="p-fair room-heading">{heading}</h2>
         <ul className="room-ul-new row p-3">
           <li className="col-3">
-57            <div>
+           <div>
               <h4 className="guest-heading">People Allowed</h4>
               <div className="flex flex-row mt-3 items-end">
                 {capacity !== 4 ? (
@@ -172,11 +173,12 @@ function Rooms({
           <li className="col-3">
             <h4 className="guest-heading">No of Room(s)</h4>
             <div className="mt-2">
-              <Select
+              {/* <Select
                 options={roomOptions}
                 register={register("numberOfRooms")}
                 onClick={updateBookingDetails}
-              />
+              /> */}
+            <Button onClick={updateBookingDetails} backgroundColor="bg-[#000000]" text="Select rooms" padding="px-6 py-1"/>
             </div>
           </li>
         </ul>
