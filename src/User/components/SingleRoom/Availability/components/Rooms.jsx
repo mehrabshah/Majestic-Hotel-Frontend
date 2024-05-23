@@ -23,7 +23,6 @@ function Rooms({
 }) {
   const { bookingDetails, setBookingDetails ,totalPrice, setTotalPrice } =
  useBookingContext();
-
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [showModal, setShowModal] = useState(false);
