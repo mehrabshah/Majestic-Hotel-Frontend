@@ -60,6 +60,8 @@ export const getRoomsPrices = async (userData) => {
 //Function to calculate the room prices
 export const calculateRoomsPrices = async (userData) => {
   try {
+
+    console.log("try catch data",userData)
     const response = await axios.post(
       `${API_BASE_URL}booking/calculateTotalPrice`,
       userData

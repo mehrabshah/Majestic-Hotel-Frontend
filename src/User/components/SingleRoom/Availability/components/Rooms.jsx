@@ -10,7 +10,6 @@ import {
   formatedDate,
 } from "../../../../utils/helpers";
 import { calculateRoomsPrices } from "../../../../Services/Services";
-import Button from "../../../Shared/Button/Button";
 
 function Rooms({
   imgSrc,
@@ -27,6 +26,15 @@ function Rooms({
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  useEffect(()=>{
+    checkInCheckOut();
+  },[checkInOutDate])
+
+
+  useEffect(() => {
+    fetchRoomPrices();
+  }, [bookingDetails, startDate, endDate]);
+
   //No of Adults allowed for each category
   const capacityArray = Array.from({ length: capacity }, (_, index) => index);
   //No of childs allowed for each cetegory
@@ -45,22 +53,30 @@ function Rooms({
   const {
     register,
     watch,
+    setValue,
     formState: { errors },
   } = useForm();
 
   //Function to select the number of rooms
   const updateRooms = () => {
+
     setBookingDetails((prevBookingDetails) => {
       prevBookingDetails.forEach((bookingDetail, index) => {
         if (bookingDetail.categoryId === categoryId) {
           prevBookingDetails[index] = {
             ...bookingDetail,
-            numberOfRooms: 1,
+            numberOfRooms: watch("numberOfRooms"),
           };
         }
       });
       return [...prevBookingDetails];
     });
+  };
+
+  const handleRoomsChange = (e) => {
+    const numberOfRooms = e.target.value;
+    setValue("numberOfRooms", numberOfRooms); 
+    onSubmit({ numberOfRooms }); 
   };
 
   //Function to set the checkin and checkout date
@@ -89,19 +105,15 @@ function Rooms({
       startDate:startDate,
       endDate:endDate
     };
-
-    if (startDate != null) {
+      
       const response = await calculateRoomsPrices(data);
       setTotalPrice(response)
-    }
   };
 
   // Function to update booking details
-  const updateBookingDetails = () => {
-    updateRooms();
-    checkInCheckOut();
-    fetchRoomPrices();
-  };
+  const onSubmit = (data) => {
+    updateRooms(data.numberOfRooms);
+  }
 
   // Toggle modal visibility
   const toggleModal = () => {
@@ -173,12 +185,11 @@ function Rooms({
           <li className="col-3">
             <h4 className="guest-heading">No of Room(s)</h4>
             <div className="mt-2">
-              {/* <Select
+              <Select
                 options={roomOptions}
                 register={register("numberOfRooms")}
-                onClick={updateBookingDetails}
-              /> */}
-            <Button onClick={updateBookingDetails} backgroundColor="bg-[#000000]" text="Select rooms" padding="px-6 py-1"/>
+                onChange={handleRoomsChange}
+              /> 
             </div>
           </li>
         </ul>
