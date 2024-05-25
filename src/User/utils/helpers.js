@@ -119,3 +119,22 @@ export const formatNumber = (number) => {
 
     return formattedNumber;
 };
+
+
+/**
+ * Returns the date one day before the given date.
+ * @param {string} dateString - The date string in "YYYY-MM-DD" format.
+ * @returns {string} The date one day before in "YYYY-MM-DD" format.
+ */
+export const getPreviousDate = (dateString) => {
+    const date = new Date(dateString);
+    date.setDate(date.getDate() - 1);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; 
+    const day = date.getDate();
+    
+    const formattedMonth = month < 10 ? `0${month}` : month;
+    const formattedDay = day < 10 ? `0${day}` : day;
+    
+    return `${year}-${formattedMonth}-${formattedDay}`;
+};

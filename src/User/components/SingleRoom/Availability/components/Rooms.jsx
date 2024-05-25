@@ -10,6 +10,7 @@ import {
   formatedDate,
 } from "../../../../utils/helpers";
 import { calculateRoomsPrices } from "../../../../Services/Services";
+import {getPreviousDate} from   "../../../../utils/helpers"
 
 function Rooms({
   imgSrc,
@@ -29,7 +30,6 @@ function Rooms({
   useEffect(()=>{
     checkInCheckOut();
   },[checkInOutDate])
-
 
   useEffect(() => {
     fetchRoomPrices();
@@ -59,7 +59,6 @@ function Rooms({
 
   //Function to select the number of rooms
   const updateRooms = () => {
-
     setBookingDetails((prevBookingDetails) => {
       prevBookingDetails.forEach((bookingDetail, index) => {
         if (bookingDetail.categoryId === categoryId) {
@@ -99,13 +98,13 @@ function Rooms({
 
   //Function to fetch the the rooms prices
   const fetchRoomPrices = async () => {
-    
     const data = {
       bookingDetails:bookingDetails,
       startDate:startDate,
-      endDate:endDate
+      endDate:getPreviousDate(endDate)
     };
-      
+      console.log("end date",endDate)
+
       const response = await calculateRoomsPrices(data);
       setTotalPrice(response)
   };
@@ -161,7 +160,7 @@ function Rooms({
                 ))}
               </div>
             </div>
-          </li>
+          </li> 
           <li className="col-3">
             <div>
               <button
