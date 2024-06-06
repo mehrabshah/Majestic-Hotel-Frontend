@@ -16,7 +16,7 @@ return(
           <span className="text-brand-600 ms-2 mb-0">FB: </span><a href="https://www.facebook.com/majestichotel/" target="_blank" rel="noopener noreferrer" className="text-white">www.facebook.com/majestichotel</a>
           <span className="text-brand-600 ms-2 mb-0">IG: </span><a href="https://www.instagram.com/majestichotel" target="_blank" rel="noopener noreferrer" className="text-white">www.instagram.com/majestichotel</a>
         </p>
-        <p className="g-book text-xl text-center text-white mt-0 mt-md-5 pt-1">123 Majestic Street, Majestic City, MC 12345</p>
+        <p className="g-book text-xl text-center text-white mt-0 mt-md-5 pt-1">26-34 Royal Parade, Eastbourne, BN227AN, United Kingdom</p>
       </div>
       <div className="address md:hidden text-left p-2">
         <p className="g-book text-xl text-white mb-0">
