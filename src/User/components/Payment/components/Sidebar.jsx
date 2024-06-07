@@ -53,7 +53,7 @@ function Sidebar() {
               <FaStar className="star-color ms-1" />
             </div>
             <p className="text-dark  varela-round mb-0 mb-md-2 text-[13px] break-words mt-2  pe-8 ">
-              123 Majestic Street, Majestic City, MC 12345
+            26-34 Royal Parade, Eastbourne, BN22 7AN, United Kingdom
             </p>
           </div>
         </div>
