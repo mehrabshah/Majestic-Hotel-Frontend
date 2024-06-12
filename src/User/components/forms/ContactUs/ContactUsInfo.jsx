@@ -1,3 +1,5 @@
+import { BsFillTelephoneFill } from "react-icons/bs";
+
 export default function ContactUsInfo(){
 return(
     <div className="text-center mt-auto mx-auto contact-info py-5 bg-cover bg-center" style={{ backgroundImage: 'url(assets/contact-bg.jpg)' }}>
@@ -8,11 +10,9 @@ return(
       <div className="address hidden md:block">
         <p className="g-book md:text-xl text-white mb-2">
           <span className="text-[#f6d284]"> T:</span> +441323 730311
-          <span className="text-[#f6d284] ms-2"> F: </span> +987 654 3210 
         </p>
         <p className="g-book md:text-xl text-white mb-0">
           <span className="text-[#f6d284] ms-2">E:</span> reservations@baymajestic.com
-          <span className="text-[#f6d284] ms-2 mb-0">W:</span> majestichotel.com  
           <span className="text-[#f6d284] ms-2 mb-0">FB: </span><a href="https://www.facebook.com/majestichotel/" target="_blank" rel="noopener noreferrer" className="text-white">www.facebook.com/majestichotel</a>
           <span className="text-[#f6d284] ms-2 mb-0">IG: </span><a href="https://www.instagram.com/majestichotel" target="_blank" rel="noopener noreferrer" className="text-white">www.instagram.com/majestichotel</a>
         </p>

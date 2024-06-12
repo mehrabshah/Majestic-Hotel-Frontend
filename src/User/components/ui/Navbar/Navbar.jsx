@@ -10,7 +10,7 @@ function Navbar() {
           <img
             src="./assets/Logo.jpeg"
             alt="Logo"
-            className="logo img-fluid py-2 w-auto"
+            className="h-[100px] md:h-[120px] py-2 w-auto"
           />
         </NavLink>
         <button
@@ -26,12 +26,7 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            {/* <h4
-              className="d-none ms-3 d-xl-block position-absolute text-uppercase heading-fonts"
-              style={{ top: 10 }}
-            >
-              The Majestic Hotel
-            </h4> */}
+           
             <li className="nav-item ms-2 mt-lg-3">
               <NavLink
                 className={({ isActive }) =>

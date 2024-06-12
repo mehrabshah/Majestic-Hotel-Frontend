@@ -107,9 +107,9 @@ function AvailabilityForm({ submitAvailabilityForm }) {
                 <Button
                   type="submit"
                   text="Check Availability"
-                  backgroundColor="bg-[#ebc880bf]"
+                  backgroundColor="bg-[#ebc880bf] font-bold"
                   color="text-[#000]"
-                  size="text-[13px]"
+                  size="text-[14px]"
                   padding="pt-2 pb-2 ps-12 pe-12"
                 />
               </div>

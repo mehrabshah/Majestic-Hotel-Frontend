@@ -9,7 +9,7 @@ function Hero() {
           <div className="col-lg-8 col-md-10 m-auto">
             <div className="banner-content text-center">
                 <h1 className="p-fair ">Classic Comfort</h1>
-                <h2 className="pt-4">Warm contemporary design</h2>
+                <h2 className="pt-4">‎Seamless blend of tradition and luxury.</h2>
             </div>
           </div>
         </div>

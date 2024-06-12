@@ -53,7 +53,7 @@ function Booking({ checkInOutDate, currency }) {
 
   return (
     <div className="bookings sm:sticky sm:top-0 flex flex-col">
-      <h4 className="p-fair heading">Majestic Hotel England</h4>
+      <h4 className=" text-center bg-black text-2xl py-3 text-[#f6d284]">Majestic Hotel</h4>
       <h6>Check In:</h6>
       <span className="g-book text-black">
         {startDate || formatedDate(getCurrentDate())}
@@ -71,7 +71,7 @@ function Booking({ checkInOutDate, currency }) {
           <div id="xhidn-trooms">
             <strong>{totalRooms}</strong> Rooms
           </div>
-          <div id="xhidn-tprice" className="green uppercase">
+          <div id="xhidn-tprice" className="green uppercase text-2xl">
             <strong>
               {currency.code} {formatNumber(totalPrice * currency.rate)}
             </strong>

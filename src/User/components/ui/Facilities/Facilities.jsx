@@ -12,7 +12,7 @@ const Facilities = () => {
             <div className="row">
               <div className="col-md-6 align-self-center text-center order-2 order-md-2 ps-2 pe-2">
                 <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
-                Unparalleled Hospitality
+                  Unparalleled Hospitality
                 </h5>
                 <h2 className=" ft-30 mb-4 main-heading-facilities">
                   Impeccable Service
@@ -31,13 +31,15 @@ const Facilities = () => {
               </div>
               <div className="col-md-6 align-self-center text-center order-4 order-md-4 ps-2 pe-2">
                 <h5 className="border-bottom text-[#ffffff] border-color-dark d-inline-block px-3 pb-2 mx-auto mb-4 g-light ft-12 mt-5 mt-md-0 text-uppercase">
-                Rejuvenate Your Senses
+                  Rejuvenate Your Senses
                 </h5>
                 <h2 className="main-heading-facilities ft-30 mb-4">
                   Relax &amp; Recover
                 </h2>
                 <p className="main-paragraph-facilities px-0 px-lg-5 lg:w-75 mx-auto mb-4 g-light">
-                Indulge in Opulent and Tranquil Soul-Soothing Treatments
+                  Let the ocean breeze and serene ambiance wash away your
+                  worries, leaving you refreshed, rejuvenated, and ready to
+                  embrace every moment of your seaside escape.
                 </p>
               </div>
             </div>

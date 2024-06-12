@@ -11,7 +11,7 @@ function Welcome() {
               <h3 className="main-heading-font">
                 Welcome to{" "}
                 <span className="me-2  text-[#d0902e]">
-                  Majestic Hotel: <br className="d-none d-lg-block" />
+                  Majestic Hotel <br className="d-none d-lg-block" />
                 </span>
                 Where Coastal Charm Meets Timeless Elegance
               </h3>

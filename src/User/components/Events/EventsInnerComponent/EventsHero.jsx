@@ -25,14 +25,12 @@ export default function EventsHero() {
           <div className="row">
             <div className="col-md-12 py-5 text-center">
               <h2 className="fontPlayfair text-xl md:text-2xl font-bold mb-2">
-                Majestic Hotel England
+                Majestic Hotel
               </h2>
-              <h4 className="text-xl mb-2">Begin Your Story With Us</h4>
-              <p>
-                Celebrate an unforgettable events at
-                <br />
-                Majestic Hotel England's indoor and outdoor venues.
-              </p>
+               <p>
+                 
+
+               </p>
               <div className="mt-3">
               <Link
                  to="enquiry"
