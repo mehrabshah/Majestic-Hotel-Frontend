@@ -2,10 +2,10 @@ import LoginForm from '../features/authentication/LoginForm';
 
 function Login() {
   return (
-    <div className="grid min-h-full grid-cols-[600px_minmax(440px,_1fr)] bg-gray-50">
+    <div className="grid min-h-full grid-cols-[700px_minmax(440px,_1fr)] bg-gray-50">
       <div className="relative">
         <img
-          src="assets/pattern.png"
+          src="assets/sea.jpg"
           alt="Pattern"
           className="h-screen w-full object-cover"
         />
@@ -17,7 +17,6 @@ function Login() {
           <h2 className="mb-10 mt-6 text-center text-2xl font-bold leading-9">
             Welcome to Majestic Hotel
           </h2>
-
           <LoginForm />
         </div>
       </div>

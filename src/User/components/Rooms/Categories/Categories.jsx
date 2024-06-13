@@ -3,7 +3,8 @@ import "./Categories.css";
 import Category from "./components/Category";
 import { useCategories } from "./hooks/useCategories";
 const features = [
-  [
+  [ 
+    "Accomodate upto 2",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -15,6 +16,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 2",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -26,6 +28,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 1",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -37,6 +40,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 2",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -48,6 +52,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 2",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -59,6 +64,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 2",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -70,6 +76,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 3",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",
@@ -81,6 +88,7 @@ const features = [
     "Multi-lingual Staff",
   ],
   [
+    "Accomodate upto 1",
     "Spacious work desk",
     "Flat screen Television",
     "Hospitality tray with Tea/Coffee",

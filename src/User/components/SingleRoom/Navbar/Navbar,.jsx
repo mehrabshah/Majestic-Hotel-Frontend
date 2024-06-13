@@ -46,6 +46,8 @@ const keysToKeep = [
   "kes",
   "zar",
 ];
+
+// Full names of the currencies
 const currenciesFullName = [
   "United States Dollar",
   "Euro",
@@ -83,37 +85,51 @@ const currenciesFullName = [
   "Swedish Krona",
   "Thai Baht",
   "Turkish Lira",
-  "United Arab Emirates ",
+  "United Arab Emirates Dirham",
   "Ghanaian Cedi",
   "Kenyan Shilling",
   "South African Rand"
 ];
-function Navbar({showModal,setShowModal}) {
-  const { currencyRate } = useCurrency("eur");
-  const currenciesData = currencyRate?.eur || {};
-  const [code,setCode]=useState("eur")
+
+function Navbar({ showModal, setShowModal }) {
+  const { currencyRate } = useCurrency("gbp");
+  const currenciesData = currencyRate?.gbp || {};
+  const [code, setCode] = useState("gbp");
   const { setValue } = useLocalStorage();
-  //Set the initial currency
-  useEffect(()=>{
-  setValue("currency-rate",{"code":"eur","rate":1})
-},[])
-  // Filter the currencies that we need to show on the screen
+
+  // Set the initial currency
+  useEffect(() => {
+    setValue("currency-rate", { code: "gbp", rate: 1 });
+  }, [setValue]);
+
+  // Filter and sort the currencies that we need to show on the screen
   const filteredCurrencies = Object.entries(currenciesData)
-  .filter(([key]) => keysToKeep.includes(key))
-  .map(([code, rate]) => ({
-    code,
-    rate,
-    fullName: currenciesFullName[keysToKeep.indexOf(code)],
-  }));
+    .filter(([key]) => keysToKeep.includes(key))
+    .map(([code, rate]) => ({
+      code,
+      rate,
+      fullName: currenciesFullName[keysToKeep.indexOf(code)],
+    }))
+    .sort((a, b) => {
+      const priority = ["eur", "usd", "sar"];
+      if (priority.includes(a.code) && priority.includes(b.code)) {
+        return priority.indexOf(a.code) - priority.indexOf(b.code);
+      }
+      if (priority.includes(a.code)) return -1;
+      if (priority.includes(b.code)) return 1;
+      return 0;
+    });
+
   // Toggle modal visibility
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-  //for changing the currency
-  const onCurrency = ( rate,code) => {
-    setShowModal(false)
-    setCode(code)
-    setValue("currency-rate", { "code": code, "rate": rate });
+
+  // Change the currency
+  const onCurrency = (rate, code) => {
+    setShowModal(false);
+    setCode(code);
+    setValue("currency-rate", { code, rate });
   };
 
   return (
@@ -131,7 +147,7 @@ function Navbar({showModal,setShowModal}) {
             <button
               type="button"
               onClick={toggleModal}
-              className="navbar-nav ms-auto mb-2 mb-lg-0  cursor-pointer"
+              className="navbar-nav ms-auto mb-2 mb-lg-0 cursor-pointer"
             >
               Currency <span className="ms-2 underline uppercase">{code}</span>
             </button>
