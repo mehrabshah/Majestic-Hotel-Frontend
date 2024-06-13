@@ -29,8 +29,8 @@ function DashboardLayout() {
         numDays={numDays}
         roomCount={rooms.length}
       />
-      <TodayActivity />
-      <StayDurationPieChart confirmedStays={confirmedStays} />
+      {/* <TodayActivity /> */}
+      {/* <StayDurationPieChart confirmedStays={confirmedStays} /> */}
       <SalesAreaChart bookings={bookings} numDays={numDays} />
     </div>
   );

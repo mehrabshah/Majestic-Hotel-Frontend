@@ -50,7 +50,7 @@ function EditBookingDataBox({ booking }) {
       newOrderDetails: newOrderDetails,
     };
     updateBooking(newData);
-    toast.success('Booking successfully deleted.');
+    toast.success('Booking successfully updated.');
     navigate('/bookings');
   };
 
