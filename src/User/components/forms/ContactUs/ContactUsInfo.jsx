@@ -20,22 +20,20 @@ return(
       </div>
       <div className="address md:hidden text-left p-3">
         <p className="g-book md:text-xl text-white mb-0">
-          <span className="text-brand-600">T:</span> +123 456 7890 
+          <span className="text-brand-600">T:</span> +441323 730311
         </p>
         <p className="g-book md:text-xl text-white mb-0">
-          <span className="text-brand-600">F: </span> +987 654 3210
-        </p>
-        <p className="g-book md:text-xl text-white mb-0">
-          <span className="text-brand-600">E:</span> info@majestichotel.com 
-        </p>
-        <p className="g-book md:text-xl text-white mb-0">
-          <span className="text-brand-600 mb-0">W:</span> majestichotel.com
+          <span className="text-brand-600">E:</span> reservations@baymajestic.com 
         </p>
         <p className="g-book md:text-xl text-white mb-0">
           <span className="text-brand-600 mb-0">FB: </span>
           <a href="https://www.facebook.com/majestichotel/" target="_blank" rel="noopener noreferrer" className="text-white">www.facebook.com/majestichotel</a>
         </p>
-        <p className="g-book md:text-xl text-left text-md-center text-white mt-0 mt-md-5 pt-1">123 Majestic Street, Majestic City, MC 12345</p>
+        <p>       
+           <span className="text-[#f6d284]  mb-0">IG: </span><a href="https://www.instagram.com/majestichotel" target="_blank" rel="noopener noreferrer" className="text-white">www.instagram.com/majestichotel</a>
+        </p>
+
+        <p className="g-book md:text-xl text-left text-md-center text-white mt-0 mt-md-5 pt-1">26-34 Royal Parade, Eastbourne, BN22 7AN, United Kingdom</p>
       </div>
     </div>
 )
