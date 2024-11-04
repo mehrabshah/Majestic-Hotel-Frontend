@@ -88,7 +88,7 @@ function NavbarShared() {
                   "nav-link bg-dark ml-0 ml-xl-4 text-center book-now-btn d-flex align-items-center ps-4 pe-5" +
                   (isActive ? " active" : "")
                 }
-                to="/single-room"
+                to="https://via.eviivo.com/MajesticHotelBN22"
               >
                 <span className="nav-text-book-now pe-4 text-[#f6d284]"> BOOK NOW </span>
                 <IoIosArrowForward size={20} color="#f6d284" />
