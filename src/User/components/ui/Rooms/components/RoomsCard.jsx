@@ -17,7 +17,7 @@ function RoomsCard({ imageSrc, title, description, price, bookText }) {
         <div className="day-book p">
           <ul className="d-flex day-book-inner row p-4 ">
             <li className="col-6">{price}</li>
-         <li className="col-6"><Link to="/single-room" className="cursor-pointer">{bookText}</Link> 
+         <li className="col-6"><Link to="https://via.eviivo.com/MajesticHotelBN22" className="cursor-pointer">{bookText}</Link> 
          </li> 
          
           </ul>

@@ -41,7 +41,7 @@ function Category({
               />
             </div>
             <div className="ms-2">
-              <Link  to="/single-room">
+              <Link  to="https://via.eviivo.com/MajesticHotelBN22">
                 <Button
                   text="RESERVE"
                   backgroundColor="bg-[#000]"
