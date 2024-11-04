@@ -12,18 +12,18 @@ function Hero() {
         >
           <div className="carousel-inner ">
             <CarouselItem
-              image="./assets/sea.jpg"
+              image="./assets/Hero1.jpg"
               title="The ultimate shopisticate and premium"
               subtitle="All Inclusive & Exclusive"
               active={true}
             />
             <CarouselItem
-              image="./assets/banner-2.jpg"
+              image="./assets/Hero2.jpg"
               title="One Prgrammme, Saving everyday, New Experiences  "
               subtitle="Your Loyalty Rewarded"
             />
             <CarouselItem
-              image="./assets/banner-7.jpg"
+              image="./assets/Hero3.jpg"
               title="Hospitality are the origins traditions Motto"
               subtitle="Generous & Authentic Approach"
             />

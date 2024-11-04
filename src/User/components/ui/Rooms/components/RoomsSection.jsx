@@ -27,7 +27,7 @@ function RoomsSection() {
     <div className="pt-5 pb-5 row ms-2 me-2">
       <div className="col-lg-4   mt-0 mt-lg-0">
         <RoomsCard
-          imageSrc="./assets/banner-4.jpg"
+          imageSrc="./assets/double-room.jpg"
           title="Double Room"
           description="Indulge in the comfort and elegance of our contemporary double rooms, each featuring a plush double bed and a luxurious en-suite bathroom"
           price={`£${doubleRoomPrice}/Night`}
@@ -36,7 +36,7 @@ function RoomsSection() {
       </div>
       <div className="col-lg-4 mt-5 mt-lg-0">
         <RoomsCard
-          imageSrc="./assets/bed-2.jpg"
+          imageSrc="./assets/twim-room.jpg"
           title="Twim Room"
           description="Experience spacious comfort and exceptional value in our twin rooms, featuring two cozy single beds ideal for a relaxing stay"
           price={`£${twimRoomPrice}/Night`}
@@ -45,7 +45,7 @@ function RoomsSection() {
       </div>
       <div className="col-lg-4 mt-5 mt-lg-0">
         <RoomsCard
-          imageSrc="./assets/bed-3.jpg"
+          imageSrc="./assets/single.jpg"
           title="Single Room"
           description="Single rooms, where comfort meets convenience for the solo traveler & features a snug single bed designed for a peaceful night's rest."
           price={`£${singleRoomPrice}/Night`}
