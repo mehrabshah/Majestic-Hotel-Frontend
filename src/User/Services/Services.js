@@ -10,6 +10,7 @@ export const getCategories = async () => {
       throw error.response.data || 'Something went wrong';
     }
 };
+  
 
 //Get availability of the rooms on the selected date
 export const getRoomsAvailability = async (userData) => {
