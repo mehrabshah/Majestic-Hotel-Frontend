@@ -18,6 +18,6 @@ function Awards() {
       </div>
     </div>
   );
-}
+}    
 
 export default Awards;
