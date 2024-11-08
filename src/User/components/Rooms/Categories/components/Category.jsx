@@ -18,7 +18,6 @@ function Category({
     showFeature(!feature);
   };
 
-  
   return (
     <div className="row category">
       <div className={`col-md-6   ${orderFirst}  p-0 m-0`}>
@@ -43,7 +42,7 @@ function Category({
             <div className="ms-2">
               <Link  to="https://via.eviivo.com/MajesticHotelBN22">
                 <Button
-                  text="RESERVE"
+                  text="BOOK NOW"
                   backgroundColor="bg-[#000]"
                   color="text-[#f6d284] font-bold"
                   padding="pt-2 pb-2 ps-6 pe-6"
