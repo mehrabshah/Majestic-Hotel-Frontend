@@ -7,7 +7,7 @@ function Accessibility() {
         className="text-center mt-auto mx-auto contact-info py-5 bg-cover bg-center"
         style={{ backgroundImage: "url(assets/contact-bg.jpg)" }}
       >
-        <p className="g-book text-uppercase text-white mb-2">Majestic Hotel</p>
+        <p className="g-book text-uppercase text-white mb-2">Bay Majestic Hotel</p>
         <h1 className="heading-fonts text-uppercase text-3xl md:text-6xl text-white mb-0">
           {" "}
           Accessibility

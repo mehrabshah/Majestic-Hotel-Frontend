@@ -7,14 +7,14 @@ function JoinTeam() {
         className="text-center mt-auto mx-auto contact-info py-5 bg-cover bg-center"
         style={{ backgroundImage: "url(assets/contact-bg.jpg)" }}
       >
-        <p className="g-book text-uppercase text-white mb-2">Majestic Hotel</p>
+        <p className="g-book text-uppercase text-white mb-2">Bay Majestic Hotel</p>
         <h1 className="heading-fonts text-uppercase text-3xl md:text-6xl text-white mb-0">
           Join Team
         </h1>
       </div>
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">
-          Join Our Team at The Majestic Hotel
+          Join Our Team at The  Majestic Hotel
         </h1>
         <p className="mb-6">
           Are you passionate about hospitality and dedicated to providing

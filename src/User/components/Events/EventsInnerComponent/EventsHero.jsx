@@ -25,7 +25,7 @@ export default function EventsHero() {
           <div className="row">
             <div className="col-md-12 py-5 text-center">
               <h2 className="fontPlayfair text-xl md:text-2xl font-bold mb-2">
-                Majestic Hotel
+                Bay Majestic Hotel
               </h2>
                <p>
                  
