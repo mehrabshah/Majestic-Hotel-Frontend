@@ -28,9 +28,7 @@ export default function EventsHero() {
                 Bay Majestic Hotel
               </h2>
                <p>
-                 
-
-               </p>
+              </p>
               <div className="mt-3">
               <Link
                  to="enquiry"
@@ -42,7 +40,6 @@ export default function EventsHero() {
                 ENQUIRE NOW
               </Link>
               </div>
-
             </div>
           </div>
         </div>

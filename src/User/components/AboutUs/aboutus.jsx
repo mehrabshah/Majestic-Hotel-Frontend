@@ -35,7 +35,7 @@ const AboutUs = () => {
           </div>
           <div className="col-md-6 p-md-5 p-3">
             <img
-              src="assets/345694611.jpg"
+              src="assets/_about.jpg"
               alt="345694611"
               className="img-fluid"
             />
@@ -102,25 +102,7 @@ const AboutUs = () => {
             <span className="w-1/3 h-px bg-white"></span>
           </div>
           <div className="flex flex-col items-center">
-            {/* <div className="flex text-center justify-center items-baseline">
-              <p className="font-bold text-4xl text-white md:text-8xl ps-3">
-                Heritage
-              </p>
-              <p className="ms-3 font-bold text-3xl text-[#d0902e] md:text-4xl pe-3">
-                Coastal Elegance awaits
-              </p>
-            </div>
-            <p className="text-white w-full md:w-1/2 mt-3  ps-3 pe-3">
-              Welcome to The Majestic Hotel, a historic landmark nestled in the
-              heart of Eastbourne, UK. Established in the late 1800s, our hotel
-              boasts a rich heritage and a prime location on Royal Parade,
-              overlooking the picturesque beachfront and offering stunning views
-              of the sea.Perched against the backdrop of the magnificent South
-              Downs, The Majestic Hotel exudes charm and elegance. Whether
-              you're seeking a tranquil retreat or an adventure-filled getaway,
-              our hotel provides the perfect setting for an unforgettable
-              experience.
-            </p> */}
+          
             <p className="text-white w-full md:w-1/2 mt-3  ps-3 pe-3">
               Located along the picturesque beachfront of Eastbourne lies Bay
               Majestic Hotel, a charming haven boasting 3-star accommodations
