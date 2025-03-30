@@ -22,12 +22,12 @@ const AboutUs = () => {
               </div>
             </div>
             <p className="text-white">
-              Welcome to The Bay Majestic Hotel, a historic landmark nestled in the
+              Welcome to The Horizon Hotel, a historic landmark nestled in the
               heart of Eastbourne, UK. Established in the late 1800s, our hotel
               boasts a rich heritage and a prime location on Royal Parade,
               overlooking the picturesque beachfront and offering stunning views
               of the sea. Perched against the backdrop of the magnificent South
-              Downs, The Bay Majestic Hotel exudes charm and elegance. Whether
+              Downs, Horizon Hotel exudes charm and elegance. Whether
               you're seeking a tranquil retreat or an adventure-filled getaway,
               our hotel provides the perfect setting for an unforgettable
               experience.
@@ -104,8 +104,8 @@ const AboutUs = () => {
           <div className="flex flex-col items-center">
           
             <p className="text-white w-full md:w-1/2 mt-3  ps-3 pe-3">
-              Located along the picturesque beachfront of Eastbourne lies Bay
-              Majestic Hotel, a charming haven boasting 3-star accommodations
+              Located along the picturesque beachfront of Eastbourne lies
+              Horizon Hotel, a charming haven boasting comfortable accommodations
               that promise a delightful retreat. With a splendid terrace
               overlooking the glistening waters, a cozy restaurant, and a
               stylish bar, this hotel invites guests to indulge in leisure and

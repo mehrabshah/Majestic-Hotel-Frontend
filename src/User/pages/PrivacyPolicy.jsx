@@ -7,7 +7,7 @@ function PrivacyPolicy() {
         className="text-center mt-auto mx-auto contact-info py-5 bg-cover bg-center"
         style={{ backgroundImage: "url(assets/contact-bg.jpg)" }}
       >
-        <p className="g-book text-uppercase text-white mb-2">Majestic Hotel</p>
+        <p className="g-book text-uppercase text-white mb-2">Horizon Hotel</p>
         <h1 className="heading-fonts text-uppercase text-3xl md:text-6xl text-white mb-0">
           Privacy Policy
         </h1>
@@ -16,7 +16,7 @@ function PrivacyPolicy() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
         <p className="mb-6">
-          At The Majestic Hotel, we are committed to protecting your privacy and
+          At The Horizon Hotel, we are committed to protecting your privacy and
           ensuring the security of your personal information. This Privacy
           Policy outlines how we collect, use, and safeguard your information
           when you visit our website or utilize our services.

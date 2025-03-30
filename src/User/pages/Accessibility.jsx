@@ -7,7 +7,7 @@ function Accessibility() {
         className="text-center mt-auto mx-auto contact-info py-5 bg-cover bg-center"
         style={{ backgroundImage: "url(assets/contact-bg.jpg)" }}
       >
-        <p className="g-book text-uppercase text-white mb-2">Bay Majestic Hotel</p>
+        <p className="g-book text-uppercase text-white mb-2">The Horizon Hotel</p>
         <h1 className="heading-fonts text-uppercase text-3xl md:text-6xl text-white mb-0">
           {" "}
           Accessibility
@@ -15,10 +15,10 @@ function Accessibility() {
       </div>
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">
-          Accessibility at The Majestic Hotel
+          Accessibility at The Horizon Hotel
         </h1>
         <p className="mb-6">
-          Welcome to The Majestic Hotel, where we strive to ensure all our
+          Welcome to The Horizon Hotel, where we strive to ensure all our
           guests have a comfortable and accessible stay. Our commitment to
           accessibility extends throughout our premises, from our accommodations
           to our amenities and services.
@@ -43,7 +43,7 @@ function Accessibility() {
         <h2 className="text-2xl font-bold my-4">Facilities:</h2>
         <ul className="list-disc list-inside mb-6">
           <li>
-            The Majestic Hotel features a lift for convenient access to all
+            The Horizon Hotel features a lift for convenient access to all
             floors.
           </li>
           <li>
@@ -78,7 +78,7 @@ function Accessibility() {
         <ul className="list-disc list-inside mb-6">
           <li>
             Nestled just 200 meters from Eastbourne Beach and 700 meters from
-            Eastbourne Pier, The Majestic Hotel offers easy access to the
+            Eastbourne Pier, The Horizon Hotel offers easy access to the
             stunning South Downs coast.
           </li>
           <li>
@@ -97,7 +97,7 @@ function Accessibility() {
         </ul>
 
         <p className="mb-6">
-          At The Majestic Hotel, we're committed to providing a welcoming and
+          At The Horizon Hotel, we're committed to providing a welcoming and
           inclusive environment for all our guests. If you have any specific
           accessibility requirements or questions, please don't hesitate to
           contact us. We look forward to welcoming you to our hotel for an

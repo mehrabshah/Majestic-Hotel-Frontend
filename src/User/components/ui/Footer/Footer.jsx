@@ -120,7 +120,7 @@ function Footer() {
         </div>
         <div className="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
           <p className="mb-6 text-sm text-left text-gray-600 md:mb-0">
-            © Copyright 2024 Majestic Hotel. All Rights Reserved.
+            © Copyright 2024 The Horizon Hotel. All Rights Reserved.
           </p>
           <div className="flex items-start justify-start space-x-6 md:items-center md:justify-center">
             <Link

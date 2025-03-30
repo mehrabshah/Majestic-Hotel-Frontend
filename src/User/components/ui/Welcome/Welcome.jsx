@@ -11,21 +11,21 @@ function Welcome() {
               <h3 className="main-heading-font">
                 Welcome to{" "}
                 <span className="me-2  text-[#d0902e]">
-                  Bay Majestic Hotel <br className="d-none d-lg-block" />
+                  The Horizon Hotel <br className="d-none d-lg-block" />
                 </span>
                 Where Coastal Charm Meets Timeless Elegance
               </h3>
               <p className="pt-4 main-paragraph-font-welcome">
-                Located along the picturesque beachfront of Eastbourne lies Bay
-                Majestic Hotel, a charming haven boasting 3-star accommodations
+                Located along the picturesque beachfront of Eastbourne lies
+                Horizon Hotel, a charming haven boasting comfortable accommodations
                 that promise a delightful retreat. With a splendid terrace
                 overlooking the glistening waters, a cozy restaurant, and a
                 stylish bar, this hotel invites guests to indulge in leisure and
                 relaxation.
               </p>
               <p className="pt-4 main-paragraph-font-welcome">
-                Experience seaside serenity and hospitality at its finest at Bay
-                Majestic Hotel, where every moment is infused with charm and
+                Experience seaside serenity and hospitality at its finest at
+                Horizon Hotel, where every moment is infused with charm and
                 relaxation.
               </p>
               <Link to="/about-us">

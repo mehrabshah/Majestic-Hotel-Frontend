@@ -44,7 +44,7 @@ function Sidebar() {
         <div className="flex shadow-sm mt-0 mt-md-4  box-border   p-3 bg-[#ffffff]  mb-3">
           <img src="/assets/banner-1.jpg" className="info-image" />
           <div className="flex flex-col ms-2 box-border">
-            <h5 className=" text-[15px]  leading-5">Majestic Hotel England</h5>
+            <h5 className=" text-[15px]  leading-5">Horizon Hotel England</h5>
             <div className="flex flex-row mt-1">
               <FaStar className="star-color" />
               <FaStar className="star-color ms-1" />

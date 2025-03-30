@@ -3,7 +3,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 export default function ContactUsInfo(){
 return(
     <div className="text-center mt-auto mx-auto contact-info py-5 bg-cover bg-center" style={{ backgroundImage: 'url(assets/contact-bg.jpg)' }}>
-    <p className="g-book text-uppercase text-white mb-2">Majestic Hotel</p>
+    <p className="g-book text-uppercase text-white mb-2">The Horizon Hotel</p>
       <h1 className="heading-fonts text-uppercase text-3xl md:text-6xl text-white mb-0">Contact us</h1>
       <div className="border-b border-white w-3/4 mx-auto my-2 my-md-4"></div>
       <h4 className="text-[#f6d284] md:text-xl g-book text-uppercase mb-2 mb-md-4 mt-0">Reservations</h4>

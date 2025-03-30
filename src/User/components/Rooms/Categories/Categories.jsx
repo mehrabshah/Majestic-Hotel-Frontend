@@ -111,7 +111,7 @@ function Categories() {
           </h2>
           <h4 className=" text-uppercase p-fair pt-2">Rooms Overview</h4>
           <p className=" pt-2 pb-16 px-4 col-12 col-md-6 col-lg-6 col-xl-3 mx-auto">
-            Choose from a total of 96 lavishly furnished rooms, with sleek and
+            Choose from a total of 102 lavishly furnished rooms, with sleek and
             inviting interior perfectly set to create an unforgettable luxury
             experience.
           </p>

@@ -53,7 +53,7 @@ function Booking({ checkInOutDate, currency }) {
 
   return (
     <div className="bookings sm:sticky sm:top-0 flex flex-col">
-      <h4 className=" text-center bg-black text-2xl py-3 text-[#f6d284]">Majestic Hotel</h4>
+      <h4 className=" text-center bg-black text-2xl py-3 text-[#f6d284]">The Horizon Hotel</h4>
       <h6>Check In:</h6>
       <span className="g-book text-black">
         {startDate || formatedDate(getCurrentDate())}
